@@ -12,10 +12,12 @@ const Home = () => {
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
   const messagesEndRef = useRef(null)
+  const messagesContainerRef = useRef(null)
   const inputRef = useRef(null)
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+    const el = messagesContainerRef.current
+    if (el) el.scrollTop = el.scrollHeight
   }
 
   useEffect(() => {
@@ -61,16 +63,40 @@ const Home = () => {
 
   return (
     <div id="top" className="w-full max-w-6xl mx-auto px-4 pt-24 pb-6">
-      <div className="h-[calc(110vh-200px)] rounded-2xl border-2 border-gray-200 dark:border-white/20 bg-white dark:bg-darkTheme/50 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01] transition-all duration-300 overflow-hidden flex flex-col">
+      <div className="h-[calc(110vh-200px)] rounded-2xl border-2 border-gray-200 dark:border-white/20 bg-white dark:bg-darkTheme/50 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01] transition-all duration-300 overflow-hidden flex flex-col font-[Inter]">
           {/* Header */}
-          <div className="py-4 px-6 bg-gradient-to-r from-white to-gray-50/50 dark:from-darkTheme/80 dark:to-darkHover/30 backdrop-blur-lg flex-shrink-0 relative border-b-2 border-gray-200 dark:border-white/20">
-            <h1 className="text-2xl md:text-3xl font-Ovo font-extrabold text-center bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent">
-              Trợ lý ảo Phường Tam Quan
-            </h1>
+          <div className="py-5 px-6 bg-gradient-to-r from-white via-gray-50/60 to-gray-100/70 dark:from-darkTheme/80 dark:via-darkHover/40 dark:to-darkHover/60 backdrop-blur-lg flex-shrink-0 relative border-b-2 border-gray-200 dark:border-white/20 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#b820e6]/10 via-transparent to-[#da7d20]/10 pointer-events-none"></div>
+            <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div className="flex items-start gap-3">
+              
+                <div>
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <h1 className="text-2xl md:text-3xl font-Ovo font-extrabold bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent">
+                      Trợ lý ảo Phường Tam Quan
+                    </h1>
+                    <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white shadow-sm">
+                      AI
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                    Kênh hỗ trợ & cung cấp thông tin chính thức của Phường Tam Quan.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 text-xs md:text-sm">
+                <div className="px-3 py-2 rounded-xl border border-gray-200 dark:border-white/20 bg-white/80 dark:bg-darkHover/50 shadow-sm">
+                  ⚡ Hỗ trợ nhanh
+                </div>
+                <div className="px-3 py-2 rounded-xl border border-gray-200 dark:border-white/20 bg-white/80 dark:bg-darkHover/50 shadow-sm">
+                  🛡️ Thông tin xác thực
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Messages Container */}
-          <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4 bg-gray-50/30 dark:bg-darkTheme/20">
+          {/* Messages Container - overscroll-contain: khóa scroll chuột trong khung chat, không kéo trang */}
+          <div ref={messagesContainerRef} className="flex-1 overflow-y-auto overscroll-contain px-4 py-6 space-y-4 bg-gray-50/30 dark:bg-darkTheme/20">
         {messages.map((message) => (
           <div
             key={message.id}
