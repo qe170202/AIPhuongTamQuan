@@ -40,12 +40,12 @@ const Navbar = ({ toggleTheme }) => {
           className="flex items-center gap-2.5 sm:gap-3 shrink-0 group"
         >
           <img
-            src="/assets/logovn.png"
+            src="/assets/logobaucu.jpg"
             alt="Logo Phường Tam Quan"
             className="w-14 h-14 sm:w-16 sm:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
           />
           <span className="text-lg sm:text-xl font-Ovo font-semibold text-gray-800 dark:text-white tracking-tight">
-            Tam Quan
+           Phường Tam Quan
           </span>
         </a>
 

@@ -93,7 +93,7 @@ const Home = () => {
                 <div>
                   <div className="flex items-center gap-3 flex-wrap">
                     <h1 className="text-2xl md:text-3xl font-Montserrat font-extrabold bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent">
-                      Trợ lý ảo Phường Tam Quan
+                      AI hỏi đáp bầu cử Phường Tam Quan
                     </h1>
                     <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white shadow-sm">
                       AI
