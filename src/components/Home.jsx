@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { createChatBotMessage } from 'react-chatbot-kit'
 import MessageParser from '../chatbot/MessageParser'
 import ActionProvider from '../chatbot/ActionProvider'
-import config from '../chatbot/config'
+import config from '../chatbot/config.jsx' // Cập nhật đường dẫn
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 const Home = () => {
@@ -13,7 +13,8 @@ const Home = () => {
       id: Date.now() + Math.random(),
       text: msg.message,
       sender: 'assistant',
-      timestamp: new Date()
+      timestamp: new Date(),
+      widget: msg.widget, // Giữ lại thuộc tính widget nếu có
     }));
   });
   const [inputValue, setInputValue] = useState('')
@@ -171,33 +172,50 @@ const Home = () => {
 
           {/* Messages Container - overscroll-contain: khóa scroll chuột trong khung chat, không kéo trang */}
           <div ref={messagesContainerRef} className="flex-1 overflow-y-auto overscroll-contain px-4 py-6 space-y-4 bg-gray-50/30 dark:bg-darkTheme/20">
-        {messages.map((message) => (
-          <div
-            key={message.id}
-            className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
-          >
-            <div
-              className={`max-w-[75%] md:max-w-[60%] rounded-2xl px-4 py-3 shadow-sm ${
-                message.sender === 'user'
-                  ? 'bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white rounded-br-sm'
-                  : 'bg-white dark:bg-darkHover/50 text-gray-800 dark:text-white border border-gray-200 dark:border-white/20 rounded-bl-sm'
-              }`}
-            >
-              <p className="text-sm md:text-base leading-relaxed whitespace-pre-wrap break-words">
-                {message.text}
-              </p>
-              <span
-                className={`text-xs mt-1 block ${
-                  message.sender === 'user'
-                    ? 'text-white/70'
-                    : 'text-gray-500 dark:text-gray-400'
-                }`}
+        {messages.map((message) => {
+            const WidgetComponent = message.widget && config.widgets.find(w => w.widgetName === message.widget)?.widgetFunc;
+            const botState = { // Tạo một đối tượng state giả lập cho widget nếu cần
+              messages: messages,
+              gist: {} // Thêm các state khác nếu cần, ví dụ: state từ mapStateToProps của widget
+            };
+
+            return (
+              <div
+                key={message.id}
+                className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
               >
-                {formatTime(message.timestamp)}
-              </span>
-            </div>
-          </div>
-        ))}
+                <div
+                  className={`max-w-[75%] md:max-w-[60%] rounded-2xl px-4 py-3 shadow-sm ${
+                    message.sender === 'user'
+                      ? 'bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white rounded-br-sm'
+                      : 'bg-white dark:bg-darkHover/50 text-gray-800 dark:text-white border border-gray-200 dark:border-white/20 rounded-bl-sm'
+                  }`}
+                >
+                  <p className="text-sm md:text-base leading-relaxed whitespace-pre-wrap break-words">
+                    {message.text}
+                  </p>
+                  {WidgetComponent && (
+                    <div className="mt-2">
+                      <WidgetComponent
+                        actionProvider={actionProviderRef.current}
+                        state={botState}
+                        suggestions={message.payload?.suggestions || []} // Truyền suggestions từ payload
+                      />
+                    </div>
+                  )}
+                  <span
+                    className={`text-xs mt-1 block ${
+                      message.sender === 'user'
+                        ? 'text-white/70'
+                        : 'text-gray-500 dark:text-gray-400'
+                    }`}
+                  >
+                    {formatTime(message.timestamp)}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
         
         {/* Typing Indicator */}
         {isTyping && (

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 
 const navLinks = [
   { href: 'top', label: 'AI Chat' },
@@ -10,6 +10,9 @@ const navLinks = [
 const Navbar = ({ toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('top')
+
+  const sectionIds = useMemo(() => navLinks.map((l) => l.href), [])
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -17,9 +20,56 @@ const Navbar = ({ toggleTheme }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    const getSectionIdFromHash = () => (window.location.hash || '#top').replace('#', '')
+
+    // Init from current hash (if user reloads at a section)
+    setActiveSection(getSectionIdFromHash())
+
+    const handleHashChange = () => setActiveSection(getSectionIdFromHash())
+    window.addEventListener('hashchange', handleHashChange)
+
+    // Track current section while scrolling
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean)
+
+    // If sections are missing, just rely on hashchange/click.
+    if (elements.length === 0) {
+      return () => window.removeEventListener('hashchange', handleHashChange)
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Pick the most visible intersecting section
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => (b.intersectionRatio ?? 0) - (a.intersectionRatio ?? 0))
+
+        const topEntry = visible[0]
+        if (topEntry?.target?.id) setActiveSection(topEntry.target.id)
+      },
+      {
+        root: null,
+        // Consider a section active when it's around the middle of viewport
+        rootMargin: '-40% 0px -55% 0px',
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+      }
+    )
+
+    elements.forEach((el) => observer.observe(el))
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+      observer.disconnect()
+    }
+  }, [sectionIds])
+
   const scrollToSection = (e, sectionId) => {
     e.preventDefault()
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+    setActiveSection(sectionId)
+    window.history.replaceState(null, '', `#${sectionId}`)
     setIsMenuOpen(false)
   }
 
@@ -62,7 +112,11 @@ const Navbar = ({ toggleTheme }) => {
               <a
                 href={`#${href}`}
                 onClick={(e) => scrollToSection(e, href)}
-                className="relative px-5 py-2.5 rounded-full text-inherit hover:text-[#b820e6] dark:hover:text-[#da7d20] transition-colors duration-200 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-1 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-[#b820e6] after:to-[#da7d20] after:rounded-full after:transition-all after:duration-200 hover:after:w-4"
+                className={`relative px-5 py-2.5 rounded-full text-inherit transition-colors duration-200 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-1 after:h-0.5 after:bg-gradient-to-r after:from-[#b820e6] after:to-[#da7d20] after:rounded-full after:transition-all after:duration-200 ${
+                  activeSection === href
+                    ? 'text-[#b820e6] dark:text-[#da7d20] after:w-4'
+                    : 'hover:text-[#b820e6] dark:hover:text-[#da7d20] after:w-0 hover:after:w-4'
+                }`}
               >
                 {label}
               </a>
@@ -135,7 +189,11 @@ const Navbar = ({ toggleTheme }) => {
                 key={href}
                 href={`#${href}`}
                 onClick={(e) => scrollToSection(e, href)}
-                className="py-3.5 px-4 rounded-xl font-Ovo text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-[#b820e6] dark:hover:text-[#da7d20] transition-colors"
+                className={`py-3.5 px-4 rounded-xl font-Ovo transition-colors ${
+                  activeSection === href
+                    ? 'bg-gray-50 dark:bg-white/5 text-[#b820e6] dark:text-[#da7d20]'
+                    : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-[#b820e6] dark:hover:text-[#da7d20]'
+                }`}
               >
                 {label}
               </a>
