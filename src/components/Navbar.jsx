@@ -1,4 +1,5 @@
 import { useMemo, useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 
 const navLinks = [
   { href: 'top', label: 'AI Chat' },
@@ -19,6 +20,26 @@ const Navbar = ({ toggleTheme }) => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Lock background scroll when mobile menu is open
+  useEffect(() => {
+    if (!isMenuOpen) return
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = prevOverflow
+    }
+  }, [isMenuOpen])
+
+  // Close on ESC
+  useEffect(() => {
+    if (!isMenuOpen) return
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setIsMenuOpen(false)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [isMenuOpen])
 
   useEffect(() => {
     const getSectionIdFromHash = () => (window.location.hash || '#top').replace('#', '')
@@ -74,15 +95,16 @@ const Navbar = ({ toggleTheme }) => {
   }
 
   return (
-    <nav
-      className={`w-full fixed left-0 right-0 top-0 z-50 px-4 sm:px-6 lg:px-10 xl:px-[8%] py-3 sm:py-4 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/80 dark:bg-darkTheme/90 backdrop-blur-xl shadow-lg shadow-black/5 dark:shadow-white/5 border-b border-gray-200/60 dark:border-white/10'
-          : 'bg-transparent'
-      }`}
-      aria-label="Điều hướng chính"
-    >
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+    <>
+      <nav
+        className={`w-full fixed left-0 right-0 top-0 z-50 px-4 sm:px-6 lg:px-10 xl:px-[8%] py-3 sm:py-4 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-white/80 dark:bg-darkTheme/90 backdrop-blur-xl shadow-lg shadow-black/5 dark:shadow-white/5 border-b border-gray-200/60 dark:border-white/10'
+            : 'bg-transparent'
+        }`}
+        aria-label="Điều hướng chính"
+      >
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         {/* Logo */}
         <a
           href="#top"
@@ -156,60 +178,68 @@ const Navbar = ({ toggleTheme }) => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`fixed inset-0 z-50 md:hidden transition-opacity duration-300 ${
-          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-        aria-hidden={!isMenuOpen}
-      >
-        <div
-          className="absolute inset-0 bg-black/40 dark:bg-black/60 backdrop-blur-sm"
-          onClick={() => setIsMenuOpen(false)}
-          aria-label="Đóng menu"
-        />
-        <aside
-          className={`absolute top-0 right-0 bottom-0 w-72 max-w-[85vw] bg-white dark:bg-darkTheme border-l border-gray-200 dark:border-white/10 shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
-            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        >
-          <div className="h-16 flex items-center justify-between px-5 border-b border-gray-100 dark:border-white/10">
-            <span className="font-Ovo font-semibold text-gray-800 dark:text-white">Menu</span>
-            <button
+      </nav>
+
+      {/* Mobile Menu (Portal to body to avoid stacking/overflow issues) */}
+      {typeof document !== 'undefined' &&
+        createPortal(
+          <div
+            className={`fixed inset-0 z-[9999] md:hidden transition-opacity duration-300 ${
+              isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            }`}
+            aria-hidden={!isMenuOpen}
+          >
+            <div
+              className="absolute inset-0 bg-black/40 dark:bg-black/60 backdrop-blur-sm"
               onClick={() => setIsMenuOpen(false)}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
-              aria-label="Đóng"
+              aria-label="Đóng menu"
+            />
+            <aside
+              role="dialog"
+              aria-modal="true"
+              className={`absolute top-0 right-0 bottom-0 w-72 max-w-[85vw] bg-white dark:bg-darkTheme border-l border-gray-200 dark:border-white/10 shadow-2xl flex flex-col overflow-y-auto overscroll-contain transition-transform duration-300 ease-out ${
+                isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+              }`}
             >
-              <img src="/assets/close-black.png" alt="" className="w-5 h-5 dark:hidden" />
-              <img src="/assets/close-white.png" alt="" className="w-5 h-5 hidden dark:block" />
-            </button>
-          </div>
-          <nav className="flex-1 py-6 px-4 flex flex-col gap-1">
-            {navLinks.map(({ href, label }) => (
-              <a
-                key={href}
-                href={`#${href}`}
-                onClick={(e) => scrollToSection(e, href)}
-                className={`py-3.5 px-4 rounded-xl font-Ovo transition-colors ${
-                  activeSection === href
-                    ? 'bg-gray-50 dark:bg-white/5 text-[#b820e6] dark:text-[#da7d20]'
-                    : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-[#b820e6] dark:hover:text-[#da7d20]'
-                }`}
-              >
-                {label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              onClick={(e) => scrollToSection(e, 'contact')}
-              className="mt-4 mx-4 py-3.5 px-4 rounded-xl font-Ovo font-medium text-center bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white hover:opacity-95 transition-opacity"
-            >
-              Bầu Cử
-            </a>
-          </nav>
-        </aside>
-      </div>
-    </nav>
+              <div className="h-16 flex items-center justify-between px-5 border-b border-gray-100 dark:border-white/10">
+                <span className="font-Ovo font-semibold text-gray-800 dark:text-white">Menu</span>
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
+                  aria-label="Đóng"
+                >
+                  <img src="/assets/close-black.png" alt="" className="w-5 h-5 dark:hidden" />
+                  <img src="/assets/close-white.png" alt="" className="w-5 h-5 hidden dark:block" />
+                </button>
+              </div>
+              <nav className="flex-1 py-6 px-4 flex flex-col gap-1">
+                {navLinks.map(({ href, label }) => (
+                  <a
+                    key={href}
+                    href={`#${href}`}
+                    onClick={(e) => scrollToSection(e, href)}
+                    className={`py-3.5 px-4 rounded-xl font-Ovo transition-colors break-words ${
+                      activeSection === href
+                        ? 'bg-gray-50 dark:bg-white/5 text-[#b820e6] dark:text-[#da7d20]'
+                        : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-[#b820e6] dark:hover:text-[#da7d20]'
+                    }`}
+                  >
+                    {label}
+                  </a>
+                ))}
+                <a
+                  href="#contact"
+                  onClick={(e) => scrollToSection(e, 'contact')}
+                  className="mt-4 mx-4 py-3.5 px-4 rounded-xl font-Ovo font-medium text-center bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white hover:opacity-95 transition-opacity"
+                >
+                  Bầu Cử
+                </a>
+              </nav>
+            </aside>
+          </div>,
+          document.body
+        )}
+    </>
   )
 }
 

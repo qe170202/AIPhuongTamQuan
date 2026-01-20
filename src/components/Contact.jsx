@@ -114,7 +114,7 @@ const Contact = () => {
       >
         <div className="text-center">
           <h3 className="text-xl font-bold font-Ovo mb-3 text-gray-800 dark:text-white">
-            📍 Địa chỉ: Phường Tam Quan, Tỉnh Gia Lai
+            UBND Phường Tam Quan, Tỉnh Gia Lai
           </h3>
           <p className="text-gray-700 dark:text-gray-200 font-Ovo">
             Để biết thêm thông tin chi tiết, vui lòng truy cập các kênh thông tin chính thức của phường

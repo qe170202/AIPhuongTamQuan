@@ -7,9 +7,10 @@ export default {
                 'auto': 'repeat(auto-fit, minmax(200px, 1fr))'
             },
             fontFamily: {
-                Outfit: ["Outfit", "sans-serif"],
-                Ovo: ["Ovo", "serif"],
-                Montserrat: ["Montserrat", "sans-serif"]
+                Inter: ["Inter", "Outfit", "system-ui", "sans-serif"],
+                Outfit: ["Outfit", "Inter", "system-ui", "sans-serif"],
+                Ovo: ["Ovo", "Noto Serif", "ui-serif", "Georgia", "serif"],
+                Montserrat: ["Montserrat", "Outfit", "Inter", "system-ui", "sans-serif"]
             },
             animation: {
                 spin_slow: 'spin 6s linear infinite'
