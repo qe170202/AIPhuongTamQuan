@@ -29,7 +29,8 @@ const Home = () => {
       createChatBotMessage,
       (stateUpdater) => { /* no-op, state handled by Home component */ },
       () => { /* no-op, client messages handled by Home component */ },
-      setMessages
+      setMessages,
+      setIsTyping
     );
     messageParserRef.current = new MessageParser(actionProviderRef.current, { messages });
   }, [setMessages]); // Re-run if setMessages changes (though it typically won't)

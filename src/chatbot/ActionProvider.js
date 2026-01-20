@@ -3,11 +3,12 @@ import { createChatBotMessage } from 'react-chatbot-kit';
 import Fuse from 'fuse.js'; // Import Fuse
 
 class ActionProvider {
-  constructor(createChatBotMessageFunc, setStateFunc, createClientMessage, setMessagesFunc) {
+  constructor(createChatBotMessageFunc, setStateFunc, createClientMessage, setMessagesFunc, setIsTypingFunc) {
     this.createChatBotMessageFunc = createChatBotMessageFunc;
     this.setState = setStateFunc;
     this.createClientMessage = createClientMessage;
     this.setMessages = setMessagesFunc;
+    this.setIsTyping = setIsTypingFunc;
   }
 
   greet = () => {
@@ -33,9 +34,9 @@ class ActionProvider {
       // Lấy câu trả lời từ kết quả phù hợp nhất
       responseText = results[0].item.answer;
     } else {
-      // Nếu không tìm thấy kết quả từ câu hỏi, thử tìm trong câu trả lời (cũng là một lựa chọn)
-      // Để đơn giản, hiện tại chúng ta chỉ tìm trong 'question'.
-      // Nếu muốn tìm trong cả 'answer', có thể thêm 'answer' vào `keys` hoặc tạo một Fuse instance thứ hai.
+      // If no result from question, try searching in answer (also an option)
+      // For simplicity, currently only searching in 'question'.
+      // If want to search in 'answer' too, can add 'answer' to `keys` or create a second Fuse instance.
     }
 
     const message = this.createChatBotMessageFunc(responseText);
@@ -49,6 +50,7 @@ class ActionProvider {
       sender: 'assistant',
       timestamp: new Date()
     }]);
+    this.setIsTyping(false); // Tắt dấu nháy đang nhập sau khi bot trả lời
   };
 }
 

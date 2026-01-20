@@ -8,7 +8,8 @@ export default {
             },
             fontFamily: {
                 Outfit: ["Outfit", "sans-serif"],
-                Roboto: ["Roboto", "sans-serif"]
+                Ovo: ["Ovo", "serif"],
+                Montserrat: ["Montserrat", "sans-serif"]
             },
             animation: {
                 spin_slow: 'spin 6s linear infinite'
