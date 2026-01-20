@@ -5,7 +5,7 @@ import SuggestionOptions from './widgets/SuggestionOptions'; // Import widget g�
 
 const config = {
   initialMessages: [
-    createChatBotMessage(`Xin chào! Tôi là AI hỏi đáp bầu cử của Phường Tam Quan. Bạn có câu hỏi nào không?`, {
+    createChatBotMessage(`Xin chào! Tôi là AI hỏi đáp bầu cử của Phường Tam Quan. Dưới đây là một vài gợi ý !!`, {
       widget: "learningOptions", // Hiển thị widget các câu hỏi gợi ý
     }),
   ],

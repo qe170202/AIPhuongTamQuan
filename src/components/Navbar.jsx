@@ -87,15 +87,16 @@ const Navbar = ({ toggleTheme }) => {
         <a
           href="#top"
           onClick={(e) => scrollToSection(e, 'top')}
-          className="flex items-center gap-2.5 sm:gap-3 shrink-0 group"
+          className="flex items-center gap-3 sm:gap-3.5 shrink-0 group rounded-2xl px-2 py-1.5 transition-all duration-200 hover:bg-white/60 hover:shadow-sm dark:hover:bg-white/5"
+          title="Về đầu trang"
         >
           <img
             src="/assets/logobaucu.jpg"
             alt="Logo Phường Tam Quan"
             className="w-14 h-14 sm:w-16 sm:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="text-lg sm:text-xl font-Ovo font-semibold text-gray-800 dark:text-white tracking-tight">
-           Phường Tam Quan
+          <span className="font-Ovo font-semibold text-gray-800 dark:text-white leading-tight tracking-tight text-[18px] sm:text-[20px] lg:text-[21px] bg-clip-text text-transparent bg-gradient-to-r from-[#b820e6] to-[#da7d20] drop-shadow-sm">
+            Phường Tam Quan
           </span>
         </a>
 

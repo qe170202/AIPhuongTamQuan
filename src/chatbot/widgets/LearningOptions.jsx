@@ -2,7 +2,7 @@ import React from "react";
 
 const LearningOptions = (props) => {
   const options = [
-    { text: "Danh sách các đơn vị bầu cử tại Phường Tam?", handler: () => props.actionProvider.handleUserQuery("Danh sách các đơn vị bầu cử tại Phường Tam?") },
+    { text: "Danh sách các đơn vị bầu cử tại Phường Tam Quan?", handler: () => props.actionProvider.handleUserQuery("Danh sách các đơn vị bầu cử tại Phường Tam?") },
     { text: "Các mốc thời gian quan trọng?", handler: () => props.actionProvider.handleUserQuery("Các mốc thời gian quan trọng?") },
     { text: "Bầu cử là gì?", handler: () => props.actionProvider.handleUserQuery("Bầu cử là gì?") },
     { text: "Quốc hội có những chức năng, nhiệm vụ, quyền hạn gì?", handler: () => props.actionProvider.handleUserQuery("Quốc hội có những chức năng, nhiệm vụ, quyền hạn gì?") },

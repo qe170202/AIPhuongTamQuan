@@ -13,7 +13,7 @@ class ActionProvider {
   }
 
   greet = () => {
-    const message = this.createChatBotMessageFunc("Xin chào! Tôi có thể giúp gì cho bạn?");
+    const message = this.createChatBotMessageFunc("Xin chào! Tôi AI hỏi đáp bầu cử Phường Tam Quan, hỗ trợ thông tin về bầu cử !!");
     this.addMessageToBotState(message);
   };
 
