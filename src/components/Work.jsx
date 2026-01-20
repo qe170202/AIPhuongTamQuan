@@ -78,10 +78,10 @@ const Work = () => {
             <div className="flex items-center gap-4 mb-8">
               <div className="text-4xl">{phase.icon}</div>
               <div className="flex-1">
-                <h3 className="text-sm text-gray-500 dark:text-gray-400 font-Ovo">
+                <h3 className="text-sm text-gray-500 dark:text-gray-400 font-Montserrat">
                   GIAI ĐOẠN 
                 </h3>
-                <h2 className={`text-2xl font-bold font-Ovo ${
+                <h2 className={`text-2xl font-bold font-Montserrat ${
                   phase.highlight 
                     ? 'bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent'
                     : 'text-gray-800 dark:text-white'
@@ -119,7 +119,7 @@ const Work = () => {
                       {event.items.map((item, itemIndex) => (
                         <li 
                           key={itemIndex}
-                          className={`flex items-start gap-2 ${
+                          className={`flex items-start gap-2 font-Ovo ${
                             event.special 
                               ? 'text-lg font-bold bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent'
                               : 'text-gray-700 dark:text-gray-200'

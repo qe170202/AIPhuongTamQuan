@@ -30,13 +30,13 @@ const Home = () => {
 
   // Danh sách banner - trái: 1,2 | phải: 3,4
   const leftBanners = [
-    '/assets/bannertuong1.JPG',
-    '/assets/bannertuong2.JPG'
+    '/assets/bannnertuong5.JPG',
+    '/assets/bannnertuong6.JPG'
   ];
 
   const rightBanners = [
-    '/assets/bannertuong3.JPG',
-    '/assets/bannertuong4.JPG'
+    '/assets/bannnertuong7.JPG',
+    '/assets/bannnertuong9.JPG'
   ];
 
   // Carousel tự động đồng bộ cho cả 2 banner

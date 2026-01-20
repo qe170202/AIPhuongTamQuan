@@ -21,7 +21,11 @@ const About = () => {
   }, [])
 
   return (
-    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div
+      id="about"
+      className="w-full px-[12%] py-10 scroll-mt-20"
+      style={{ zoom: 0.92 }}
+    >
       {/* Header giữ trên, canh giữa */}
       <div 
         ref={headerRef}
