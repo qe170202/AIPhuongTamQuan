@@ -1,65 +1,84 @@
 import { useState, useRef, useEffect } from 'react'
+import { createChatBotMessage } from 'react-chatbot-kit'
+import MessageParser from '../chatbot/MessageParser'
+import ActionProvider from '../chatbot/ActionProvider'
+import config from '../chatbot/config'
 
 const Home = () => {
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      text: 'Xin chào! Tôi là trợ lý ảo của Phường Tam Quan. Tôi có thể giúp gì cho bạn?',
+  const [messages, setMessages] = useState(() => {
+    // Initialize messages with initialMessages from config, formatted for your UI
+    return config.initialMessages.map(msg => ({
+      id: Date.now() + Math.random(),
+      text: msg.message,
       sender: 'assistant',
       timestamp: new Date()
-    }
-  ])
+    }));
+  });
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
   const messagesEndRef = useRef(null)
   const messagesContainerRef = useRef(null)
   const inputRef = useRef(null)
 
+  const actionProviderRef = useRef(null);
+  const messageParserRef = useRef(null);
+
+  useEffect(() => {
+    // Pass your setMessages to ActionProvider
+    actionProviderRef.current = new ActionProvider(
+      createChatBotMessage,
+      (stateUpdater) => { /* no-op, state handled by Home component */ },
+      () => { /* no-op, client messages handled by Home component */ },
+      setMessages
+    );
+    messageParserRef.current = new MessageParser(actionProviderRef.current, { messages });
+  }, [setMessages]); // Re-run if setMessages changes (though it typically won't)
+
+  useEffect(() => {
+    // Update state in MessageParser whenever messages change in Home
+    if (messageParserRef.current) {
+      messageParserRef.current.state = { messages };
+    }
+    scrollToBottom();
+  }, [messages]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const scrollToBottom = () => {
-    const el = messagesContainerRef.current
-    if (el) el.scrollTop = el.scrollHeight
-  }
+    const el = messagesContainerRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
+  };
 
-  useEffect(() => {
-    scrollToBottom()
-  }, [messages])
-
-  // Ensure page stays at top on mount
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
-  const handleSendMessage = (e) => {
-    e.preventDefault()
-    if (inputValue.trim() === '') return
+  const handleSendMessage = async (e) => {
+    e.preventDefault();
+    if (inputValue.trim() === '') return;
 
     const userMessage = {
-      id: messages.length + 1,
+      id: Date.now() + Math.random(),
       text: inputValue,
       sender: 'user',
       timestamp: new Date()
-    }
+    };
 
-    setMessages([...messages, userMessage])
-    setInputValue('')
-    setIsTyping(true)
+    // Add user message to your UI first
+    setMessages((prev) => [...prev, userMessage]);
+    setInputValue('');
+    setIsTyping(true);
 
-    // Simulate assistant response
+    // Let MessageParser handle the user input after a small delay
+    // to ensure user message is rendered before bot responds
     setTimeout(() => {
-      setIsTyping(false)
-      const assistantMessage = {
-        id: messages.length + 2,
-        text: 'Cảm ơn bạn đã liên hệ. Tôi đã nhận được tin nhắn của bạn và sẽ phản hồi sớm nhất có thể. Nếu bạn có câu hỏi cụ thể về các dịch vụ của Phường Tam Quan, vui lòng cho tôi biết!',
-        sender: 'assistant',
-        timestamp: new Date()
+      if (messageParserRef.current) {
+        messageParserRef.current.parse(inputValue);
       }
-      setMessages(prev => [...prev, assistantMessage])
-    }, 1500)
-  }
+    }, 300); // Adjust delay as needed
+  };
 
   const formatTime = (date) => {
-    return date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })
-  }
+    return date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+  };
 
   return (
     <div id="top" className="w-full max-w-6xl mx-auto px-4 pt-24 pb-6">
