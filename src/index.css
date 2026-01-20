@@ -20,3 +20,97 @@ html {
 .animate-fade-in {
     animation: fade-in 0.3s ease-out;
 }
+
+/* Animation xuất hiện cho các trang */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-scale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+}
+
+.animate-on-scroll.animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-on-scroll.animate-fade-in-down {
+    animation: fade-in-down 0.6s ease-out forwards;
+}
+
+.animate-on-scroll.animate-fade-in-left {
+    animation: fade-in-left 0.6s ease-out forwards;
+}
+
+.animate-on-scroll.animate-fade-in-right {
+    animation: fade-in-right 0.6s ease-out forwards;
+}
+
+.animate-on-scroll.animate-fade-in-scale {
+    animation: fade-in-scale 0.6s ease-out forwards;
+}
+
+/* Banner carousel animations - đơn giản, nhẹ nhàng */
+@keyframes banner-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.banner-fade {
+    animation: banner-fade 1s ease-in-out;
+}

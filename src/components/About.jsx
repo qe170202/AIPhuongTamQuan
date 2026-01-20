@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 const CAROUSEL_IMAGES = [
   { src: '/assets/baucu4.jpg', alt: 'AI Hỏi đáp bầu cử' },
@@ -7,6 +8,9 @@ const CAROUSEL_IMAGES = [
 ]
 
 const About = () => {
+  const [headerRef, isHeaderVisible] = useIntersectionObserver({ threshold: 0.2 })
+  const [carouselRef, isCarouselVisible] = useIntersectionObserver({ threshold: 0.2 })
+  const [contentRef, isContentVisible] = useIntersectionObserver({ threshold: 0.2 })
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
@@ -19,17 +23,25 @@ const About = () => {
   return (
     <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
       {/* Header giữ trên, canh giữa */}
-      <h4 className="text-center mb-2 text-lg font-Ovo text-gray-600 dark:text-gray-400">
-        Giới Thiệu
-      </h4>
-      <h2 className="text-center text-4xl sm:text-5xl font-Ovo text-gray-900 dark:text-white">
-        AI HỎI ĐÁP BẦU CỬ PHƯỜNG TAM QUAN
-      </h2>
+      <div 
+        ref={headerRef}
+        className={`animate-on-scroll ${isHeaderVisible ? 'animate-fade-in-down' : ''}`}
+      >
+        <h4 className="text-center mb-2 text-lg font-Ovo text-gray-600 dark:text-gray-400">
+          Giới Thiệu
+        </h4>
+        <h2 className="text-center text-4xl sm:text-5xl font-Ovo text-gray-900 dark:text-white">
+          AI HỎI ĐÁP BẦU CỬ PHƯỜNG TAM QUAN
+        </h2>
+      </div>
 
       {/* Hai cột 30/70: bên trái carousel (chỗ khung đỏ), bên phải đoạn văn + 3 thẻ */}
       <div className="flex w-full flex-col lg:flex-row items-stretch gap-8 lg:gap-10 my-16">
         {/* Cột 50% - Carousel cao bằng cột 50%, có khung viền */}
-        <div className="w-full lg:w-1/2 shrink-0 flex flex-col min-h-0">
+        <div 
+          ref={carouselRef}
+          className={`w-full lg:w-1/2 shrink-0 flex flex-col min-h-0 animate-on-scroll ${isCarouselVisible ? 'animate-fade-in-right' : ''}`}
+        >
           <div className="relative w-full aspect-video lg:aspect-auto lg:h-full rounded-xl overflow-hidden bg-gray-100 dark:bg-white/5 border border-gray-300 dark:border-white/30 shadow-xl">
             {CAROUSEL_IMAGES.map((img, i) => (
               <div
@@ -63,7 +75,10 @@ const About = () => {
         </div>
 
         {/* Cột 50% - Chỉ đoạn văn + 4 thẻ (2x2) */}
-        <div className="w-full lg:w-1/2 min-w-0 flex flex-col justify-center">
+        <div 
+          ref={contentRef}
+          className={`w-full lg:w-1/2 min-w-0 flex flex-col justify-center animate-on-scroll ${isContentVisible ? 'animate-fade-in-left' : ''}`}
+        >
           <p className="mb-8 max-w-2xl font-Ovo text-gray-700 dark:text-gray-300">
             Toàn Đảng, toàn dân, toàn quân thi đua lập thành tích chào mừng cuộc
             bầu cử đại biểu Quốc hội khóa XVI và đại biểu Hội đồng nhân dân các

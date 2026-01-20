@@ -1,4 +1,9 @@
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
+
 const Work = () => {
+  const [headerRef, isHeaderVisible] = useIntersectionObserver({ threshold: 0.2 })
+  const [timelineRef, isTimelineVisible] = useIntersectionObserver({ threshold: 0.1 })
+  
   const timelineData = [
     {
       phase: 2,
@@ -48,15 +53,27 @@ const Work = () => {
 
   return (
     <div id="work" className="w-full px-[12%] py-20 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg font-Ovo">Lịch trình</h4>
-      <h2 className="text-center text-5xl font-Ovo mb-4">Timeline Bầu Cử 2026</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-       Các mốc thời gian quan trọng trong quá trình bầu cử đại biểu Quốc hội và HĐND các cấp
-      </p>
+      <div 
+        ref={headerRef}
+        className={`animate-on-scroll ${isHeaderVisible ? 'animate-fade-in-down' : ''}`}
+      >
+        <h4 className="text-center mb-2 text-lg font-Ovo">Lịch trình</h4>
+        <h2 className="text-center text-5xl font-Ovo mb-4">Timeline Bầu Cử 2026</h2>
+        <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+         Các mốc thời gian quan trọng trong quá trình bầu cử đại biểu Quốc hội và HĐND các cấp
+        </p>
+      </div>
 
-      <div className="max-w-5xl mx-auto">
+      <div 
+        ref={timelineRef}
+        className="max-w-5xl mx-auto"
+      >
         {timelineData.map((phase, phaseIndex) => (
-          <div key={phase.phase} className="mb-16 last:mb-0">
+          <div 
+            key={phase.phase} 
+            className={`mb-16 last:mb-0 animate-on-scroll ${isTimelineVisible ? 'animate-fade-in-left' : ''}`}
+            style={{ animationDelay: `${phaseIndex * 0.15}s` }}
+          >
             {/* Phase Header */}
             <div className="flex items-center gap-4 mb-8">
               <div className="text-4xl">{phase.icon}</div>

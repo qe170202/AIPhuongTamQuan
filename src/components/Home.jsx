@@ -3,8 +3,10 @@ import { createChatBotMessage } from 'react-chatbot-kit'
 import MessageParser from '../chatbot/MessageParser'
 import ActionProvider from '../chatbot/ActionProvider'
 import config from '../chatbot/config'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 const Home = () => {
+  const [containerRef, isVisible] = useIntersectionObserver({ threshold: 0.1 })
   const [messages, setMessages] = useState(() => {
     // Initialize messages with initialMessages from config, formatted for your UI
     return config.initialMessages.map(msg => ({
@@ -16,12 +18,35 @@ const Home = () => {
   });
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
+  const [leftBannerIndex, setLeftBannerIndex] = useState(0)
+  const [rightBannerIndex, setRightBannerIndex] = useState(0)
   const messagesEndRef = useRef(null)
   const messagesContainerRef = useRef(null)
   const inputRef = useRef(null)
 
   const actionProviderRef = useRef(null);
   const messageParserRef = useRef(null);
+
+  // Danh sách banner - trái: 1,2 | phải: 3,4
+  const leftBanners = [
+    '/assets/bannertuong1.JPG',
+    '/assets/bannertuong2.JPG'
+  ];
+
+  const rightBanners = [
+    '/assets/bannertuong3.JPG',
+    '/assets/bannertuong4.JPG'
+  ];
+
+  // Carousel tự động đồng bộ cho cả 2 banner
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLeftBannerIndex((prev) => (prev + 1) % leftBanners.length);
+      setRightBannerIndex((prev) => (prev + 1) % rightBanners.length);
+    }, 3000); // Chuyển slide mỗi 3 giây, đồng bộ cả 2 bên
+
+    return () => clearInterval(interval);
+  }, [leftBanners.length, rightBanners.length]);
 
   useEffect(() => {
     // Pass your setMessages to ActionProvider
@@ -82,8 +107,37 @@ const Home = () => {
   };
 
   return (
-    <div id="top" className="w-full max-w-6xl mx-auto px-4 pt-24 pb-6">
-      <div className="h-[calc(110vh-200px)] rounded-2xl border-2 border-gray-200 dark:border-white/20 bg-white dark:bg-darkTheme/50 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01] transition-all duration-300 overflow-hidden flex flex-col font-[Inter]">
+    <div id="top" className="w-full pt-24 pb-6">
+      <div className="flex gap-4 justify-center items-start px-4">
+        {/* Banner trái - Carousel tự động (hình 1,2) */}
+        <div className="hidden xl:block flex-shrink-0 w-32 sticky top-32">
+          <div className="rounded-lg overflow-hidden shadow-md relative">
+            <img 
+              src={leftBanners[leftBannerIndex]} 
+              alt={`Banner trái ${leftBannerIndex + 1}`} 
+              className="w-full h-auto object-contain max-h-[80vh] transition-opacity duration-500"
+              key={leftBannerIndex}
+            />
+            {/* Dots indicator */}
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
+              {leftBanners.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-1.5 h-1.5 rounded-full transition-all ${
+                    index === leftBannerIndex ? 'bg-white' : 'bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Nội dung chính */}
+        <div className="w-full max-w-6xl">
+          <div 
+            ref={containerRef}
+            className={`h-[calc(110vh-200px)] rounded-2xl border-2 border-gray-200 dark:border-white/20 bg-white dark:bg-darkTheme/50 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01] transition-all duration-300 overflow-hidden flex flex-col font-[Inter] animate-on-scroll ${isVisible ? 'animate-fade-in-scale' : ''}`}
+          >
           {/* Header */}
           <div className="py-5 px-6 bg-gradient-to-r from-white via-gray-50/60 to-gray-100/70 dark:from-darkTheme/80 dark:via-darkHover/40 dark:to-darkHover/60 backdrop-blur-lg flex-shrink-0 relative border-b-2 border-gray-200 dark:border-white/20 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-[#b820e6]/10 via-transparent to-[#da7d20]/10 pointer-events-none"></div>
@@ -188,6 +242,31 @@ const Home = () => {
               <span className="hidden sm:inline">Gửi</span>
             </button>
           </form>
+        </div>
+          </div>
+        </div>
+
+        {/* Banner phải - Carousel tự động (hình 3,4) */}
+        <div className="hidden xl:block flex-shrink-0 w-32 sticky top-32">
+          <div className="rounded-lg overflow-hidden shadow-md relative">
+            <img 
+              src={rightBanners[rightBannerIndex]} 
+              alt={`Banner phải ${rightBannerIndex + 1}`} 
+              className="w-full h-auto object-contain max-h-[80vh] transition-opacity duration-500"
+              key={rightBannerIndex}
+            />
+            {/* Dots indicator */}
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
+              {rightBanners.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-1.5 h-1.5 rounded-full transition-all ${
+                    index === rightBannerIndex ? 'bg-white' : 'bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
