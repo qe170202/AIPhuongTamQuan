@@ -146,15 +146,15 @@ const Home = () => {
               <div className="flex items-start gap-3">
               
                 <div>
-                  <div className="flex items-center gap-3 flex-wrap">
-                    <h1 className="text-2xl md:text-3xl font-Montserrat font-extrabold bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent">
+                  <div className="flex items-center gap-2 sm:gap-3 flex-nowrap sm:flex-wrap">
+                    <h1 className="text-xl sm:text-2xl md:text-3xl font-Montserrat font-extrabold bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent leading-tight">
                       AI hỏi đáp bầu cử Phường Tam Quan
                     </h1>
                     <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white shadow-sm">
                       AI
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                  <p className="hidden sm:block text-sm text-gray-600 dark:text-gray-300 mt-1">
                     Kênh hỗ trợ & cung cấp thông tin chính thức của Phường Tam Quan.
                   </p>
                 </div>

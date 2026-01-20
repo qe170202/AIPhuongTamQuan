@@ -34,8 +34,8 @@ const About = () => {
         <h4 className="text-center mb-2 text-lg font-Ovo text-gray-600 dark:text-gray-400">
           Giới Thiệu
         </h4>
-        <h2 className="text-center text-4xl sm:text-5xl font-Ovo text-gray-900 dark:text-white">
-          AI HỎI ĐÁP BẦU CỬ PHƯỜNG TAM QUAN
+        <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-Ovo text-gray-900 dark:text-white mx-auto max-w-max md:max-w-full text-balance">
+          AI HỎI ĐÁP BẦU CỬ <span className="whitespace-nowrap">PHƯỜNG TAM QUAN</span>
         </h2>
       </div>
 

@@ -57,8 +57,8 @@ const Work = () => {
         ref={headerRef}
         className={`animate-on-scroll ${isHeaderVisible ? 'animate-fade-in-down' : ''}`}
       >
-        <h4 className="text-center mb-2 text-lg font-Ovo">Lịch trình</h4>
-        <h2 className="text-center text-5xl font-Ovo mb-4">Timeline Bầu Cử 2026</h2>
+        <h4 className="text-center mb-2 text-lg font-Ovo hidden sm:block">Lịch trình</h4>
+        <h2 className="text-center text-4xl sm:text-5xl font-Ovo mb-4"><span className="hidden sm:inline">Timeline </span>Bầu Cử 2026</h2>
         <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
          Các mốc thời gian quan trọng trong quá trình bầu cử đại biểu Quốc hội và HĐND các cấp
         </p>

@@ -44,7 +44,7 @@ const Contact = () => {
         className={`animate-on-scroll ${isHeaderVisible ? 'animate-fade-in-down' : ''}`}
       >
         <h4 className="text-center mb-2 text-lg font-Ovo">Kết nối với chúng tôi</h4>
-        <h2 className="text-center text-5xl font-Ovo mb-4">Cổng Thông Tin Phường Tam Quan</h2>
+        <h2 className="text-center text-4xl sm:text-5xl font-Ovo mb-4">Cổng Thông Tin <span className="hidden sm:inline">Phường Tam Quan</span></h2>
         <p className="text-center max-w-2xl mx-auto mt-5 mb-16 font-Ovo text-gray-600 dark:text-gray-300">
           Truy cập kênh thông tin chính thức để cập nhật tin tức, liên hệ với Phường Tam Quan
         </p>
