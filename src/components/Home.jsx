@@ -9,13 +9,21 @@ const Home = () => {
   const [containerRef, isVisible] = useIntersectionObserver({ threshold: 0.1 })
   const [messages, setMessages] = useState(() => {
     // Initialize messages with initialMessages from config, formatted for your UI
+    const storedMessages = localStorage.getItem('chat_messages');
+    if (storedMessages) {
+      // Parse dates back into Date objects
+      return JSON.parse(storedMessages).map(msg => ({
+        ...msg,
+        timestamp: new Date(msg.timestamp)
+      }));
+    }
     return config.initialMessages.map(msg => ({
       id: Date.now() + Math.random(),
       text: msg.message,
       sender: 'assistant',
       timestamp: new Date(),
-      widget: msg.widget, // Giữ lại thuộc tính widget nếu có
-      payload: msg.payload, // Giữ lại payload nếu có
+      widget: msg.widget,
+      payload: msg.payload,
     }));
   });
   const [inputValue, setInputValue] = useState('')
@@ -68,6 +76,11 @@ const Home = () => {
       messageParserRef.current.state = { messages };
     }
     scrollToBottom();
+  }, [messages]);
+
+  // Save messages to local storage whenever they change
+  useEffect(() => {
+    localStorage.setItem('chat_messages', JSON.stringify(messages));
   }, [messages]);
 
   useEffect(() => {
