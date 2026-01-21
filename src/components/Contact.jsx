@@ -16,7 +16,7 @@ const Contact = () => {
     },
     {
       id: 2,
-      title: "Facebook",
+      title: "Facebook Phường Tam Quan",
       description: "Theo dõi tin tức và hoạt động của phường trên Facebook",
       icon: "📘",
       url: "https://www.facebook.com/profile.php?id=61577776962364",
@@ -77,7 +77,7 @@ const Contact = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold font-Ovo mb-3 text-gray-800 dark:text-white group-hover:text-white transition-colors duration-300 shrink-0">
+                <h3 className="text-base font-bold font-Ovo mb-3 text-gray-800 dark:text-white group-hover:text-white transition-colors duration-300 shrink-0 whitespace-nowrap overflow-hidden text-ellipsis">
                   {contact.title}
                 </h3>
 
