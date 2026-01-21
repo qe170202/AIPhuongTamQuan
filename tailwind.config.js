@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ["./public/index.html", "./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+    content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
         extend: {
             gridTemplateColumns: {
@@ -9,7 +9,7 @@ export default {
             fontFamily: {
                 Inter: ["Inter", "Outfit", "system-ui", "sans-serif"],
                 Outfit: ["Outfit", "Inter", "system-ui", "sans-serif"],
-                Ovo: ["Ovo", "Noto Serif", "ui-serif", "Georgia", "serif"],
+                Ovo: ["Lora", "Noto Serif", "Georgia", "serif"],
                 Montserrat: ["Montserrat", "Outfit", "Inter", "system-ui", "sans-serif"]
             },
             animation: {
