@@ -284,21 +284,21 @@ const About = () => {
                     Gồm 04 khu phố
                   </h3>
                 </div>
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố 1</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố 1</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">Đang Cập Nhật</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố 2</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố 2</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">Đang Cập Nhật</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố 3</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố 3</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">Đang Cập Nhật</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố 9</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố 9</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">Đang Cập Nhật</span>
                   </div>
                 </div>
@@ -441,28 +441,28 @@ const About = () => {
                     Gồm 05 khu phố
                   </h3>
                 </div>
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố 4</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố 4</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố 5</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố 5</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố 6</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố 6</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố 7</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố 7</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố 8</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố 8</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                 
+
                 </div>
               </div>
 
@@ -603,28 +603,28 @@ const About = () => {
                     Gồm 04 khu phố
                   </h3>
                 </div>
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố An Quý Bắc</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố An Quý Bắc</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố An Quý Nam</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố An Quý Nam</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố Hội An</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố Hội An</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố Hội An Tây</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố Hội An Tây</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố Tân Trung</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố Tân Trung</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                  
+
                 </div>
               </div>
 
@@ -765,24 +765,24 @@ const About = () => {
                     Gồm 04 khu phố
                   </h3>
                 </div>
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố Tân An</span>
-                    <span className="text-lg font-semibold text-gray-900 dark:text-white">923 người</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố Thành Sơn </span>
-                    <span className="text-lg font-semibold text-gray-900 dark:text-white">856 người</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố Thành Sơn Tây</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố Tân An</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Khu phố An Sơn</span>
-                    <span className="text-lg font-semibold text-gray-900 dark:text-white">712 người</span>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố Thành Sơn</span>
+                    <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
                   </div>
-                 
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố Thành Sơn Tây</span>
+                    <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
+                  </div>
+                  <div className="flex flex-col items-center text-center p-3 bg-white dark:bg-darkTheme rounded-lg border border-gray-200 dark:border-white/10 hover:shadow-md transition-shadow">
+                    <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố An Sơn</span>
+                    <span className="text-lg font-semibold text-gray-900 dark:text-white">... người</span>
+                  </div>
+
                 </div>
               </div>
 
@@ -798,7 +798,7 @@ const About = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase mb-1">
-                       ....
+                      Địa điểm diễn ra bầu cử
                       </h3>
                       <p className="text-base text-gray-900 dark:text-white">
                         ......
