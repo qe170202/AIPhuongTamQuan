@@ -60,34 +60,34 @@ const Contact = () => {
             href={contact.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group relative overflow-hidden animate-on-scroll ${isCardsVisible ? 'animate-fade-in-up' : ''}`}
+            className={`group relative overflow-hidden animate-on-scroll flex flex-col h-full ${isCardsVisible ? 'animate-fade-in-up' : ''}`}
             style={{ animationDelay: `${index * 0.15}s` }}
           >
             {/* Card */}
-            <div className="relative p-8 bg-white dark:bg-darkHover/50 rounded-2xl border-2 border-gray-200 dark:border-white/20 hover:border-transparent hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="relative p-8 bg-white dark:bg-darkHover/50 rounded-2xl border-2 border-gray-200 dark:border-white/20 hover:border-transparent hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full flex-1 min-h-0">
               
               {/* Gradient Background on Hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${contact.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl`}></div>
               
               {/* Content */}
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col flex-1 min-h-0">
                 {/* Icon */}
-                <div className="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300 shrink-0">
                   {contact.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold font-Ovo mb-3 text-gray-800 dark:text-white group-hover:text-white transition-colors duration-300">
+                <h3 className="text-xl font-bold font-Ovo mb-3 text-gray-800 dark:text-white group-hover:text-white transition-colors duration-300 shrink-0">
                   {contact.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-white/90 transition-colors duration-300 mb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-white/90 transition-colors duration-300 mb-6 flex-1 min-h-0">
                   {contact.description}
                 </p>
 
                 {/* Arrow Icon */}
-                <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300 group-hover:text-white transition-colors duration-300">
+                <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300 group-hover:text-white transition-colors duration-300 shrink-0">
                   <span className="font-medium">Truy cập ngay</span>
                   <svg 
                     className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300" 
