@@ -140,30 +140,30 @@ const Home = () => {
             className={`h-[calc(110vh-200px)] rounded-2xl border-2 border-gray-200 dark:border-white/20 bg-white dark:bg-darkTheme/50 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01] transition-all duration-300 overflow-hidden flex flex-col font-Ovo animate-on-scroll ${isVisible ? 'animate-fade-in-scale' : ''}`}
           >
           {/* Header */}
-          <div className="py-5 px-6 bg-gradient-to-r from-white via-gray-50/60 to-gray-100/70 dark:from-darkTheme/80 dark:via-darkHover/40 dark:to-darkHover/60 backdrop-blur-lg flex-shrink-0 relative border-b-2 border-gray-200 dark:border-white/20 overflow-hidden">
+          <div className="py-3 px-4 bg-gradient-to-r from-white via-gray-50/60 to-gray-100/70 dark:from-darkTheme/80 dark:via-darkHover/40 dark:to-darkHover/60 backdrop-blur-lg flex-shrink-0 relative border-b-2 border-gray-200 dark:border-white/20 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-[#b820e6]/10 via-transparent to-[#da7d20]/10 pointer-events-none"></div>
-            <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div className="flex items-start gap-3">
+            <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+              <div className="flex items-start gap-2">
               
-                <div>
-                  <div className="flex items-center gap-2 sm:gap-3 flex-nowrap sm:flex-wrap">
-                    <h1 className="text-xl sm:text-2xl md:text-3xl font-Montserrat font-extrabold bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent leading-tight">
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-1.5 flex-nowrap">
+                    <h1 className="text-sm sm:text-xl md:text-2xl font-Montserrat font-extrabold bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
                       AI hỏi đáp bầu cử Phường Tam Quan
                     </h1>
-                    <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white shadow-sm">
+                    <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white shadow-sm flex-shrink-0">
                       AI
                     </span>
                   </div>
-                  <p className="hidden sm:block text-sm text-gray-600 dark:text-gray-300 mt-1">
+                  <p className="hidden sm:block text-xs text-gray-600 dark:text-gray-300 mt-0.5">
                     Kênh hỗ trợ & cung cấp thông tin chính thức của Phường Tam Quan.
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 text-xs md:text-sm">
-                <div className="px-3 py-2 rounded-xl border border-gray-200 dark:border-white/20 bg-white/80 dark:bg-darkHover/50 shadow-sm">
+              <div className="flex items-center gap-2 text-xs flex-shrink-0">
+                <div className="px-2.5 py-1.5 rounded-lg border border-gray-200 dark:border-white/20 bg-white/80 dark:bg-darkHover/50 shadow-sm whitespace-nowrap">
                   ⚡ Hỗ trợ nhanh
                 </div>
-                <div className="px-3 py-2 rounded-xl border border-gray-200 dark:border-white/20 bg-white/80 dark:bg-darkHover/50 shadow-sm">
+                <div className="px-2.5 py-1.5 rounded-lg border border-gray-200 dark:border-white/20 bg-white/80 dark:bg-darkHover/50 shadow-sm whitespace-nowrap">
                   🛡️ Thông tin xác thực
                 </div>
               </div>
