@@ -1,7 +1,72 @@
-import qaData from '../data/chatbot_qa.json';
-import { createChatBotMessage } from 'react-chatbot-kit';
-import Fuse from 'fuse.js'; // Import Fuse
-import config from './config.jsx'; // Import config để lấy widget
+// src/chatbot/ActionProvider.js
+import Fuse from "fuse.js";
+import qaDataRaw from "../data/chatbot_qa_enriched.json";
+import config from "./config.jsx";
+import { normalizeVI, expandAbbr, toKeywords } from "./utils/searchUtils";
+
+// --- Build index once (fast + consistent scoring) ---
+const qaIndex = qaDataRaw.map((item, idx) => {
+  const questions = item.questions?.length ? item.questions : [item.question];
+  const variantsNorm = questions.map((q) => expandAbbr(normalizeVI(q)));
+
+  const _q = variantsNorm.join(" | ");
+  const _kw = toKeywords(_q);
+
+  return {
+    ...item,
+    id: item.id ?? `q${idx + 1}`,
+    questions,
+    _q,
+    _kw,
+    displayQuestion: item.question, // for UI
+  };
+});
+
+const fuseOptions = {
+  includeScore: true,
+  shouldSort: true,
+  ignoreLocation: true,
+  threshold: 0.45, // wide-ish; we gate by score below
+  distance: 140,
+  minMatchCharLength: 2,
+  keys: [
+    { name: "_q", weight: 0.8 },
+    { name: "_kw", weight: 0.2 },
+  ],
+};
+
+const fuseAll = new Fuse(qaIndex, fuseOptions);
+const fuseLocal = new Fuse(
+  qaIndex.filter((x) => x.topic === "local_tamquan"),
+  fuseOptions
+);
+const fuseTimeline = new Fuse(
+  qaIndex.filter((x) => x.topic === "timeline"),
+  fuseOptions
+);
+
+function chooseFuse(queryNorm = "", lastTopic = null) {
+  const s = String(queryNorm);
+  if (s.includes("tam quan") || s.includes("khu pho")) return fuseLocal;
+  if (s.includes("moc thoi gian") || s.includes("ngay bau cu") || /\b\d{1,2}\/\d{1,2}\/\d{4}\b/.test(s)) return fuseTimeline;
+  if (lastTopic === "timeline") return fuseTimeline;
+  if (lastTopic === "local_tamquan") return fuseLocal;
+  return fuseAll;
+}
+
+function decide(results) {
+  if (!results.length) return "none";
+  const best = results[0];
+  const second = results[1];
+  const bestScore = best.score ?? 1;
+  const gap = second ? ( (second.score ?? 1) - bestScore ) : 1;
+
+  // score: smaller is better in Fuse
+  if (bestScore <= 0.22) return "answer";
+  if (bestScore <= 0.30 && gap >= 0.06) return "answer";
+  if (bestScore <= 0.38) return "answer_with_suggestions";
+  return "suggestions_only";
+}
 
 class ActionProvider {
   constructor(createChatBotMessageFunc, setStateFunc, createClientMessage, setMessagesFunc, setIsTypingFunc) {
@@ -10,69 +75,96 @@ class ActionProvider {
     this.createClientMessage = createClientMessage;
     this.setMessages = setMessagesFunc;
     this.setIsTyping = setIsTypingFunc;
+
+    // Light context: keep last topic to help follow-up questions
+    this.lastTopic = null;
   }
 
   greet = () => {
-    const message = this.createChatBotMessageFunc("Xin chào! Tôi AI hỏi đáp bầu cử Phường Tam Quan, hỗ trợ thông tin về bầu cử !!");
+    const message = this.createChatBotMessageFunc(
+      "Xin chào! Tôi là AI hỏi đáp bầu cử Phường Tam Quan, hỗ trợ thông tin về bầu cử."
+    );
     this.addMessageToBotState(message);
   };
 
   handleUserQuery = (userQuery) => {
-    const fuseOptions = {
-      keys: ['question'], // Tìm kiếm trong trường 'question' của dữ liệu Q&A
-      threshold: 0.3, // Độ nhạy của fuzzy matching (0 = khớp chính xác, 1 = khớp mọi thứ)
-      includeScore: true, // Bao gồm điểm số để đánh giá độ phù hợp
-      ignoreLocation: true, // Bỏ qua vị trí của từ khớp
-      minMatchCharLength: 3 // Chỉ khớp nếu có ít nhất 3 ký tự trùng khớp
-    };
+    this.setIsTyping?.(true);
 
-    const fuse = new Fuse(qaData, fuseOptions);
-    const results = fuse.search(userQuery);
+    const qNorm = expandAbbr(normalizeVI(userQuery));
+    const qKw = toKeywords(qNorm);
+    const queryForSearch = qKw || qNorm;
 
-    let responseText = "Xin lỗi, tôi không tìm thấy câu trả lời phù hợp. Bạn tham khảo một vài gợi ý !!";
+    const fuse = chooseFuse(queryForSearch, this.lastTopic);
+    let results = fuse.search(queryForSearch, { limit: 8 });
 
-    if (results.length > 0) {
-      // Lấy câu trả lời từ kết quả phù hợp nhất
-      responseText = results[0].item.answer;
-    } else {
-      // Nếu không tìm thấy kết quả phù hợp, tìm kiếm các câu hỏi gợi ý liên quan
-      const suggestionFuseOptions = {
-        keys: ['question'],
-        threshold: 0.5, // Giảm ngưỡng để tìm kiếm rộng hơn
-        includeScore: true,
-        ignoreLocation: true,
-        minMatchCharLength: 2,
-      };
-      const suggestionFuse = new Fuse(qaData, suggestionFuseOptions);
-      const suggestionResults = suggestionFuse.search(userQuery).slice(0, 3); // Lấy tối đa 3 gợi ý
-
-      if (suggestionResults.length > 0) {
-        const suggestionWidget = config.widgets.find(w => w.widgetName === "suggestionOptions");
-        if (suggestionWidget) {
-          const messageWithSuggestions = this.createChatBotMessageFunc(responseText, {
-            widget: "suggestionOptions",
-            payload: { suggestions: suggestionResults }
-          });
-          this.addMessageToBotState(messageWithSuggestions);
-          return; // Quan trọng: Return để không tạo tin nhắn lỗi thông thường
-        }
-      }
+    // Fallback to global search if topic-filtered search returns nothing
+    if (!results.length && fuse !== fuseAll) {
+      results = fuseAll.search(queryForSearch, { limit: 8 });
     }
 
-    const message = this.createChatBotMessageFunc(responseText);
-    this.addMessageToBotState(message);
+    const decision = decide(results);
+
+    const suggestions = results.slice(0, 3).map((r) => ({
+      id: r.item.id,
+      question: r.item.question,
+      questionShort: r.item.displayQuestion,
+      score: r.score,
+    }));
+
+    if (decision === "answer") {
+      const best = results[0].item;
+      this.lastTopic = best.topic ?? null;
+
+      const message = this.createChatBotMessageFunc(best.answer);
+      this.addMessageToBotState(message);
+      return;
+    }
+
+    if (decision === "answer_with_suggestions") {
+      const best = results[0].item;
+      this.lastTopic = best.topic ?? null;
+
+      const message = this.createChatBotMessageFunc(best.answer, {
+        widget: "suggestionOptions",
+        payload: { suggestions },
+      });
+      this.addMessageToBotState(message);
+      return;
+    }
+
+    // suggestions_only or none
+    const fallbackText =
+      suggestions.length > 0
+        ? "Mình chưa chắc bạn đang hỏi ý nào. Bạn chọn 1 gợi ý dưới đây nhé:"
+        : "Xin lỗi, mình chưa tìm thấy câu trả lời phù hợp. Bạn thử diễn đạt khác hoặc hỏi ngắn gọn hơn nhé.";
+
+    const suggestionWidget = config.widgets.find((w) => w.widgetName === "suggestionOptions");
+    if (suggestionWidget && suggestions.length > 0) {
+      const msg = this.createChatBotMessageFunc(fallbackText, {
+        widget: "suggestionOptions",
+        payload: { suggestions },
+      });
+      this.addMessageToBotState(msg);
+      return;
+    }
+
+    const msg = this.createChatBotMessageFunc(fallbackText);
+    this.addMessageToBotState(msg);
   };
 
   addMessageToBotState = (message) => {
-    this.setMessages((prev) => [...prev, {
-      id: Date.now() + Math.random(),
-      text: message.message,
-      sender: 'assistant',
-      timestamp: new Date(),
-      widget: message.widget, // Đảm bảo thuộc tính widget được giữ lại
-      payload: message.payload, // Đảm bảo thuộc tính payload được giữ lại
-    }]);
-    this.setIsTyping(false); // Tắt dấu nháy đang nhập sau khi bot trả lời
+    this.setMessages((prev) => [
+      ...prev,
+      {
+        id: Date.now() + Math.random(),
+        text: message.message,
+        sender: "assistant",
+        timestamp: new Date(),
+        widget: message.widget,
+        payload: message.payload,
+      },
+    ]);
+    this.setIsTyping?.(false);
   };
 }
 

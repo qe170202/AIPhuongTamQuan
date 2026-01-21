@@ -15,6 +15,7 @@ const Home = () => {
       sender: 'assistant',
       timestamp: new Date(),
       widget: msg.widget, // Giữ lại thuộc tính widget nếu có
+      payload: msg.payload, // Giữ lại payload nếu có
     }));
   });
   const [inputValue, setInputValue] = useState('')
@@ -199,7 +200,7 @@ const Home = () => {
                       <WidgetComponent
                         actionProvider={actionProviderRef.current}
                         state={botState}
-                        suggestions={message.payload?.suggestions || []} // Truyền suggestions từ payload
+                        payload={message.payload} // Truyền payload để widget có thể truy cập suggestions
                       />
                     </div>
                   )}
