@@ -117,7 +117,7 @@ const Navbar = ({ toggleTheme }) => {
             alt="Logo Phường Tam Quan"
             className="w-14 h-14 sm:w-16 sm:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="font-Ovo font-semibold text-gray-800 dark:text-white leading-tight tracking-tight text-[18px] sm:text-[20px] lg:text-[21px] bg-clip-text text-transparent bg-gradient-to-r from-[#b820e6] to-[#da7d20] drop-shadow-sm">
+          <span className="font-Ovo font-semibold text-gray-800 dark:text-white leading-tight tracking-tight text-[22px] sm:text-[24px] lg:text-[25px] bg-clip-text text-transparent bg-gradient-to-r from-[#b820e6] to-[#da7d20] drop-shadow-sm">
             Phường Tam Quan
           </span>
         </a>
