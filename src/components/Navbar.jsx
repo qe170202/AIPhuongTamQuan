@@ -113,7 +113,7 @@ const Navbar = ({ toggleTheme }) => {
           title="Về đầu trang"
         >
           <img
-            src="/assets/logobaucu.jpg"
+            src="/assets/logobaucu1.jpeg"
             alt="Logo Phường Tam Quan"
             className="w-14 h-14 sm:w-16 sm:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
           />
