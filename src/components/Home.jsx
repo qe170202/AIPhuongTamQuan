@@ -137,7 +137,7 @@ const Home = () => {
         <div className="w-full max-w-6xl">
           <div 
             ref={containerRef}
-            className={`h-[calc(100dvh-200px)] md:h-[calc(110vh-200px)] rounded-2xl border-2 border-gray-200 dark:border-white/20 bg-white dark:bg-darkTheme/50 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01] transition-all duration-300 overflow-hidden flex flex-col font-Ovo animate-on-scroll ${isVisible ? 'animate-fade-in-scale' : ''}`}
+            className={`h-[calc(110vh-200px)] rounded-2xl border-2 border-gray-200 dark:border-white/20 bg-white dark:bg-darkTheme/50 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01] transition-all duration-300 overflow-hidden flex flex-col font-Ovo animate-on-scroll ${isVisible ? 'animate-fade-in-scale' : ''}`}
           >
           {/* Header */}
           <div className="py-5 px-6 bg-gradient-to-r from-white via-gray-50/60 to-gray-100/70 dark:from-darkTheme/80 dark:via-darkHover/40 dark:to-darkHover/60 backdrop-blur-lg flex-shrink-0 relative border-b-2 border-gray-200 dark:border-white/20 overflow-hidden">
