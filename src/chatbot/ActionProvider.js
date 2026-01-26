@@ -3,6 +3,7 @@ import Fuse from "fuse.js";
 import qaDataRaw from "../data/chatbot_qa_enriched.json";
 import config from "./config.jsx";
 import { normalizeVI, expandAbbr, toKeywords } from "./utils/searchUtils";
+import { trackQuestion } from "../utils/analytics";
 
 // --- Build index once (fast + consistent scoring) ---
 const qaIndex = qaDataRaw.map((item, idx) => {
@@ -150,6 +151,68 @@ class ActionProvider {
 
     const msg = this.createChatBotMessageFunc(fallbackText);
     this.addMessageToBotState(msg);
+  };
+
+  // Handle suggestion click: add user message first, then process query
+  // If suggestionId is provided, find answer directly by ID to ensure we get the answer
+  handleSuggestionClick = (suggestionQuestion, suggestionId = null) => {
+    // First, add user message to UI
+    const userMessage = {
+      id: Date.now() + Math.random(),
+      text: suggestionQuestion,
+      sender: "user",
+      timestamp: new Date(),
+    };
+    this.setMessages((prev) => [...prev, userMessage]);
+
+    // Track question
+    trackQuestion(suggestionQuestion);
+
+    // If we have an ID, find the answer directly by ID
+    if (suggestionId) {
+      const item = qaIndex.find((x) => x.id === suggestionId);
+      if (item) {
+        this.setIsTyping?.(true);
+        this.lastTopic = item.topic ?? null;
+        
+        // Small delay to show typing indicator
+        setTimeout(() => {
+          const message = this.createChatBotMessageFunc(item.answer);
+          this.addMessageToBotState(message);
+        }, 300);
+        return;
+      }
+    }
+
+    // Otherwise, search but always return answer if results exist (don't show suggestions again)
+    this.setIsTyping?.(true);
+    setTimeout(() => {
+      const qNorm = expandAbbr(normalizeVI(suggestionQuestion));
+      const qKw = toKeywords(qNorm);
+      const queryForSearch = qKw || qNorm;
+
+      const fuse = chooseFuse(queryForSearch, this.lastTopic);
+      let results = fuse.search(queryForSearch, { limit: 8 });
+
+      // Fallback to global search if topic-filtered search returns nothing
+      if (!results.length && fuse !== fuseAll) {
+        results = fuseAll.search(queryForSearch, { limit: 8 });
+      }
+
+      // If we have results, always return the answer (user clicked a suggestion, so they want an answer)
+      if (results.length > 0) {
+        const best = results[0].item;
+        this.lastTopic = best.topic ?? null;
+        const message = this.createChatBotMessageFunc(best.answer);
+        this.addMessageToBotState(message);
+      } else {
+        // No results found
+        const msg = this.createChatBotMessageFunc(
+          "Xin lỗi, mình chưa tìm thấy câu trả lời phù hợp. Bạn thử diễn đạt khác hoặc hỏi ngắn gọn hơn nhé."
+        );
+        this.addMessageToBotState(msg);
+      }
+    }, 300);
   };
 
   addMessageToBotState = (message) => {

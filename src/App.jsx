@@ -4,6 +4,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Work from './components/Work'
 import Contact from './components/Contact'
+import { trackPageVisit } from './utils/analytics'
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -33,6 +34,11 @@ function App() {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual'
     }
+  }, [])
+
+  // Track page visit
+  useEffect(() => {
+    trackPageVisit()
   }, [])
 
   const toggleTheme = () => {

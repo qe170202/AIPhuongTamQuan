@@ -4,6 +4,7 @@ import MessageParser from '../chatbot/MessageParser'
 import ActionProvider from '../chatbot/ActionProvider'
 import config from '../chatbot/config.jsx' // Cập nhật đường dẫn
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
+import { trackQuestion } from '../utils/analytics'
 
 const Home = () => {
   const [containerRef, isVisible] = useIntersectionObserver({ threshold: 0.1 })
@@ -102,6 +103,9 @@ const Home = () => {
       sender: 'user',
       timestamp: new Date()
     };
+
+    // Track question
+    trackQuestion(inputValue);
 
     // Add user message to your UI first
     setMessages((prev) => [...prev, userMessage]);
