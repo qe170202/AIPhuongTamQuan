@@ -3,7 +3,6 @@ import Fuse from "fuse.js";
 import qaDataRaw from "../data/chatbot_qa_enriched.json";
 import config from "./config.jsx";
 import { normalizeVI, expandAbbr, toKeywords } from "./utils/searchUtils";
-import { trackQuestion } from "../utils/analytics";
 
 // --- Build index once (fast + consistent scoring) ---
 const qaIndex = qaDataRaw.map((item, idx) => {

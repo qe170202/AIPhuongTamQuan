@@ -10102,5 +10102,294 @@
     ],
     "tags": [],
     "topic": "general"
+  },
+  {
+    "id": "kvbp_q001",
+    "question": "Khu phố 1 bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Khu phố 1 thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 1 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 1 ở đâu?",
+      "Nhà Văn hóa Khu phố 1 là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 1 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố 1 thuộc Khu vực bỏ phiếu số 1, có 1.418 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố 1.",
+    "keywords": ["khu", "pho", "1", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q002",
+    "question": "Khu phố 2 bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Khu phố 2 thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 2 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 2 ở đâu?",
+      "Nhà Văn hóa Khu phố 2 là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 2 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố 2 thuộc Khu vực bỏ phiếu số 2, có 1.102 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố 2.",
+    "keywords": ["khu", "pho", "2", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q003",
+    "question": "Khu phố 9 bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Khu phố 9 thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 3 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 3 ở đâu?",
+      "Nhà Văn hóa Khu phố 9 là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 3 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố 9 thuộc Khu vực bỏ phiếu số 3, có 921 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố 9.",
+    "keywords": ["khu", "pho", "9", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+
+  {
+    "id": "kvbp_q004",
+    "question": "Khu phố 3 bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Khu phố 3 thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 4 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 4 ở đâu?",
+      "Nhà Văn hóa Khu phố 3 là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 4 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố 3 thuộc Khu vực bỏ phiếu số 4, có 1.239 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố 3.",
+    "keywords": ["khu", "pho", "3", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q005",
+    "question": "Khu phố 4 bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Khu phố 4 thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 5 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 5 ở đâu?",
+      "Nhà Văn hóa Khu phố 4 là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 5 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố 4 thuộc Khu vực bỏ phiếu số 5, có 1.138 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố 4.",
+    "keywords": ["khu", "pho", "4", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q006",
+    "question": "Khu phố 5 bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Khu phố 5 thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 6 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 6 ở đâu?",
+      "Nhà Văn hóa Khu phố 5 là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 6 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố 5 thuộc Khu vực bỏ phiếu số 6, có 1.175 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố 5.",
+    "keywords": ["khu", "pho", "5", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+
+  {
+    "id": "kvbp_q007",
+    "question": "Khu phố 6 bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Khu phố 6 thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 7 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 7 ở đâu?",
+      "Nhà Văn hóa Khu phố 6 là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 7 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố 6 thuộc Khu vực bỏ phiếu số 7, có 1.142 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố 6.",
+    "keywords": ["khu", "pho", "6", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q008",
+    "question": "Khu phố 7 bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Khu phố 7 thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 8 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 8 ở đâu?",
+      "Nhà Văn hóa Khu phố 7 là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 8 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố 7 thuộc Khu vực bỏ phiếu số 8, có 1.081 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố 7.",
+    "keywords": ["khu", "pho", "7", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q009",
+    "question": "Khu phố 8 bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Khu phố 8 thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 9 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 9 ở đâu?",
+      "Nhà Văn hóa Khu phố 8 là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 9 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố 8 thuộc Khu vực bỏ phiếu số 9, có 1.481 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố 8.",
+    "keywords": ["khu", "pho", "8", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+
+  {
+    "id": "kvbp_q010",
+    "question": "Khu phố An Quý Bắc bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "An Quý Bắc thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 10 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 10 ở đâu?",
+      "Nhà Văn hóa Khu phố An Quý Bắc là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 10 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố An Quý Bắc thuộc Khu vực bỏ phiếu số 10, có 1.351 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố An Quý Bắc.",
+    "keywords": ["an", "quy", "bac", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q011",
+    "question": "Khu phố An Quý Nam bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "An Quý Nam thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 11 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 11 ở đâu?",
+      "Nhà Văn hóa Khu phố An Quý Nam là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 11 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố An Quý Nam thuộc Khu vực bỏ phiếu số 11, có 1.042 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố An Quý Nam.",
+    "keywords": ["an", "quy", "nam", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q012",
+    "question": "Khu phố An Sơn bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "An Sơn thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 12 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 12 ở đâu?",
+      "Nhà Văn hóa Khu phố An Sơn là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 12 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố An Sơn thuộc Khu vực bỏ phiếu số 12, có 1.755 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố An Sơn.",
+    "keywords": ["an", "son", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+
+  {
+    "id": "kvbp_q013",
+    "question": "Khu phố Tân An bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Tân An thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 13 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 13 ở đâu?",
+      "Nhà Văn hóa Khu phố Tân An là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 13 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố Tân An thuộc Khu vực bỏ phiếu số 13, có 732 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố Tân An.",
+    "keywords": ["tan", "an", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q014",
+    "question": "Khu phố Hội An Tây bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Hội An Tây thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 14 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 14 ở đâu?",
+      "Nhà Văn hóa Khu phố Hội An Tây là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 14 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố Hội An Tây thuộc Khu vực bỏ phiếu số 14, có 586 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố Hội An Tây.",
+    "keywords": ["hoi", "an", "tay", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q015",
+    "question": "Khu phố Tân Trung bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Tân Trung thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 15 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 15 ở đâu?",
+      "Nhà Văn hóa Khu phố Tân Trung là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 15 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố Tân Trung thuộc Khu vực bỏ phiếu số 15, có 724 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố Tân Trung.",
+    "keywords": ["tan", "trung", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q016",
+    "question": "Khu phố Thành Sơn Tây bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Thành Sơn Tây thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 16 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 16 ở đâu?",
+      "Nhà Văn hóa Khu phố Thành Sơn Tây là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 16 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố Thành Sơn Tây thuộc Khu vực bỏ phiếu số 16, có 785 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố Thành Sơn Tây.",
+    "keywords": ["thanh", "son", "tay", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q017",
+    "question": "Khu phố Thành Sơn bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Thành Sơn thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 17 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 17 ở đâu?",
+      "Nhà Văn hóa Khu phố Thành Sơn là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 17 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố Thành Sơn thuộc Khu vực bỏ phiếu số 17, có 661 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố Thành Sơn.",
+    "keywords": ["thanh", "son", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "kvbp_q018",
+    "question": "Khu phố Hội An bỏ phiếu ở đâu và thuộc khu vực bỏ phiếu số mấy?",
+    "questions": [
+      "Hội An thuộc khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 18 thuộc khu phố nào?",
+      "Địa điểm bỏ phiếu của khu vực bỏ phiếu số 18 ở đâu?",
+      "Nhà Văn hóa Khu phố Hội An là địa điểm bỏ phiếu của khu vực bỏ phiếu số mấy?",
+      "Khu vực bỏ phiếu số 18 có bao nhiêu cử tri?"
+    ],
+    "answer": "Khu phố Hội An thuộc Khu vực bỏ phiếu số 18, có 738 cử tri, địa điểm bỏ phiếu tại Nhà Văn hóa Khu phố Hội An.",
+    "keywords": ["hoi", "an", "bo", "phieu", "o", "dau", "thuoc", "khu", "vuc", "bo", "phieu", "so", "may"],
+    "tags": [],
+    "topic": "local_tamquan"
+  },
+
+  {
+    "id": "kvbp_q019",
+    "question": "Phường Tam Quan có tổng cộng bao nhiêu khu vực bỏ phiếu và tổng số cử tri là bao nhiêu?",
+    "questions": [
+      "Tổng số khu vực bỏ phiếu của phường Tam Quan là bao nhiêu?",
+      "Tổng số cử tri toàn phường Tam Quan là bao nhiêu?",
+      "Phường Tam Quan có bao nhiêu khu phố?",
+      "Tổng số khu phố, tổng số cử tri và tổng số khu vực bỏ phiếu của phường Tam Quan là gì?"
+    ],
+    "answer": "Phường Tam Quan có 18 khu phố, tổng số 19.071 cử tri và xác định thành lập 18 khu vực bỏ phiếu.",
+    "keywords": ["phuong", "tam", "quan", "tong", "so", "khu", "vuc", "bo", "phieu", "tong", "so", "cu", "tri"],
+    "tags": [],
+    "topic": "local_tamquan"
   }
 ]
