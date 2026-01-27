@@ -369,679 +369,6 @@
     "topic": "general"
   },
   {
-    "id": "q16",
-    "question": "Danh sách các đơn vị bầu cử tại Phường Tam Quan gồm những gì và mỗi đơn vị bầu bao nhiêu đại biểu?",
-    "questions": [
-      "Danh sách các đơn vị bầu cử tại Phường Tam Quan gồm những gì và mỗi đơn vị bầu bao nhiêu đại biểu?"
-    ],
-    "answer": "Thông tin hiện đang cập nhật",
-    "keywords": [
-      "danh",
-      "sach",
-      "cac",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "tai",
-      "phuong",
-      "tam",
-      "quan",
-      "gom",
-      "nhung",
-      "va",
-      "moi",
-      "bao",
-      "nhieu",
-      "dai",
-      "bieu"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q17",
-    "question": "Phường Tam Quan có bao nhiêu đơn vị bầu cử?",
-    "questions": [
-      "Phường Tam Quan có bao nhiêu đơn vị bầu cử?"
-    ],
-    "answer": "Phường Tam có 4 đơn vị bầu cử (số 1 đến số 4).",
-    "keywords": [
-      "phuong",
-      "tam",
-      "quan",
-      "co",
-      "bao",
-      "nhieu",
-      "don",
-      "vi",
-      "bau",
-      "cu"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q18",
-    "question": "Tổng số dân của Phường Tam Quan là bao nhiêu người?",
-    "questions": [
-      "Tổng số dân của Phường Tam Quan là bao nhiêu người?"
-    ],
-    "answer": "Tổng số dân là 24.790 người.",
-    "keywords": [
-      "tong",
-      "so",
-      "dan",
-      "cua",
-      "phuong",
-      "tam",
-      "quan",
-      "bao",
-      "nhieu",
-      "nguoi"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q19",
-    "question": "Tổng số đại biểu được bầu theo bảng là bao nhiêu?",
-    "questions": [
-      "Tổng số đại biểu được bầu theo bảng là bao nhiêu?"
-    ],
-    "answer": "Tổng số đại biểu được bầu là 20 đại biểu.",
-    "keywords": [
-      "tong",
-      "so",
-      "dai",
-      "bieu",
-      "duoc",
-      "bau",
-      "theo",
-      "bang",
-      "bao",
-      "nhieu"
-    ],
-    "tags": [],
-    "topic": "general"
-  },
-  {
-    "id": "q20",
-    "question": "Mỗi đơn vị bầu cử tại Phường Tam Quan bao nhiêu đại biểu?",
-    "questions": [
-      "Mỗi đơn vị bầu cử tại Phường Tam Quan bao nhiêu đại biểu?"
-    ],
-    "answer": "Mỗi đơn vị bầu cử bầu 5 đại biểu.",
-    "keywords": [
-      "moi",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "tai",
-      "phuong",
-      "tam",
-      "quan",
-      "bao",
-      "nhieu",
-      "dai",
-      "bieu"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q21",
-    "question": "Đơn vị bầu cử số 1 gồm những khu phố nào?",
-    "questions": [
-      "Đơn vị bầu cử số 1 gồm những khu phố nào?"
-    ],
-    "answer": "Gồm Khu phố 1, Khu phố 2, Khu phố 3 và Khu phố 9.",
-    "keywords": [
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "gom",
-      "nhung",
-      "khu",
-      "pho"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q22",
-    "question": "Đơn vị bầu cử số 1 gồm bao nhiêu khu phố?",
-    "questions": [
-      "Đơn vị bầu cử số 1 gồm bao nhiêu khu phố?"
-    ],
-    "answer": "Đơn vị bầu cử số 1 gồm 4 khu phố.",
-    "keywords": [
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "gom",
-      "bao",
-      "nhieu",
-      "khu",
-      "pho"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q23",
-    "question": "Đơn vị bầu cử số 2 gồm những khu phố nào?",
-    "questions": [
-      "Đơn vị bầu cử số 2 gồm những khu phố nào?"
-    ],
-    "answer": "Gồm Khu phố 4, Khu phố 5, Khu phố 6, Khu phố 7 và Khu phố 8.",
-    "keywords": [
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "gom",
-      "nhung",
-      "khu",
-      "pho"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q24",
-    "question": "Đơn vị bầu cử số 2 gồm bao nhiêu khu phố?",
-    "questions": [
-      "Đơn vị bầu cử số 2 gồm bao nhiêu khu phố?"
-    ],
-    "answer": "Đơn vị bầu cử số 2 gồm 5 khu phố.",
-    "keywords": [
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "gom",
-      "bao",
-      "nhieu",
-      "khu",
-      "pho"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q25",
-    "question": "Đơn vị bầu cử số 3 gồm những khu phố nào?",
-    "questions": [
-      "Đơn vị bầu cử số 3 gồm những khu phố nào?"
-    ],
-    "answer": "Gồm Khu phố An Quý Bắc, Khu phố An Quý Nam, Khu phố Hội An, Khu phố Hội An Tây và Khu phố Tân Trung.",
-    "keywords": [
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "gom",
-      "nhung",
-      "khu",
-      "pho"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q26",
-    "question": "Đơn vị bầu cử số 3 gồm bao nhiêu khu phố?",
-    "questions": [
-      "Đơn vị bầu cử số 3 gồm bao nhiêu khu phố?"
-    ],
-    "answer": "Đơn vị bầu cử số 3 gồm 5 khu phố.",
-    "keywords": [
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "gom",
-      "bao",
-      "nhieu",
-      "khu",
-      "pho"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q27",
-    "question": "Đơn vị bầu cử số 4 gồm những khu phố nào?",
-    "questions": [
-      "Đơn vị bầu cử số 4 gồm những khu phố nào?"
-    ],
-    "answer": "Gồm Khu phố Tân An, Khu phố Thành Sơn Tây, Khu phố Thành Sơn và Khu phố An Sơn.",
-    "keywords": [
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "gom",
-      "nhung",
-      "khu",
-      "pho"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q28",
-    "question": "Đơn vị bầu cử số 4 gồm bao nhiêu khu phố?",
-    "questions": [
-      "Đơn vị bầu cử số 4 gồm bao nhiêu khu phố?"
-    ],
-    "answer": "Đơn vị bầu cử số 4 gồm 4 khu phố.",
-    "keywords": [
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "gom",
-      "bao",
-      "nhieu",
-      "khu",
-      "pho"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q29",
-    "question": "Khu phố 1 nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Khu phố 1 nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố 1 thuộc Đơn vị bầu cử số 1.",
-    "keywords": [
-      "khu",
-      "pho",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q30",
-    "question": "Khu phố 2 nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Khu phố 2 nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố 2 thuộc Đơn vị bầu cử số 1.",
-    "keywords": [
-      "khu",
-      "pho",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q31",
-    "question": "Khu phố 3 nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Khu phố 3 nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố 3 thuộc Đơn vị bầu cử số 1.",
-    "keywords": [
-      "khu",
-      "pho",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q32",
-    "question": "Khu phố 9 nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Khu phố 9 nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố 9 thuộc Đơn vị bầu cử số 1.",
-    "keywords": [
-      "khu",
-      "pho",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q33",
-    "question": "Khu phố 4 nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Khu phố 4 nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố 4 thuộc Đơn vị bầu cử số 2.",
-    "keywords": [
-      "khu",
-      "pho",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q34",
-    "question": "Khu phố 5 nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Khu phố 5 nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố 5 thuộc Đơn vị bầu cử số 2.",
-    "keywords": [
-      "khu",
-      "pho",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q35",
-    "question": "Khu phố 6 nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Khu phố 6 nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố 6 thuộc Đơn vị bầu cử số 2.",
-    "keywords": [
-      "khu",
-      "pho",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q36",
-    "question": "Khu phố 7 nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Khu phố 7 nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố 7 thuộc Đơn vị bầu cử số 2.",
-    "keywords": [
-      "khu",
-      "pho",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q37",
-    "question": "Khu phố 8 nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Khu phố 8 nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố 8 thuộc Đơn vị bầu cử số 2.",
-    "keywords": [
-      "khu",
-      "pho",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q38",
-    "question": "An Quý Bắc nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "An Quý Bắc nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố An Quý Bắc thuộc Đơn vị bầu cử số 3.",
-    "keywords": [
-      "an",
-      "quy",
-      "bac",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q39",
-    "question": "An Quý Nam nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "An Quý Nam nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố An Quý Nam thuộc Đơn vị bầu cử số 3.",
-    "keywords": [
-      "an",
-      "quy",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q40",
-    "question": "Hội An nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Hội An nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố Hội An thuộc Đơn vị bầu cử số 3.",
-    "keywords": [
-      "an",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q41",
-    "question": "Hội An Tây nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Hội An Tây nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố Hội An Tây thuộc Đơn vị bầu cử số 3.",
-    "keywords": [
-      "an",
-      "tay",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q42",
-    "question": "Tân Trung nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Tân Trung nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố Tân Trung thuộc Đơn vị bầu cử số 3.",
-    "keywords": [
-      "tan",
-      "trung",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q43",
-    "question": "Tân An nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Tân An nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố Tân An thuộc Đơn vị bầu cử số 4.",
-    "keywords": [
-      "tan",
-      "an",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q44",
-    "question": "Thành Sơn Tây nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Thành Sơn Tây nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố Thành Sơn Tây thuộc Đơn vị bầu cử số 4.",
-    "keywords": [
-      "thanh",
-      "son",
-      "tay",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q45",
-    "question": "Thành Sơn nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "Thành Sơn nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố Thành Sơn thuộc Đơn vị bầu cử số 4.",
-    "keywords": [
-      "thanh",
-      "son",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
-    "id": "q46",
-    "question": "An Sơn nằm ở đơn vị bầu cử số mấy?",
-    "questions": [
-      "An Sơn nằm ở đơn vị bầu cử số mấy?"
-    ],
-    "answer": "Khu phố An Sơn thuộc Đơn vị bầu cử số 4.",
-    "keywords": [
-      "an",
-      "son",
-      "nam",
-      "don",
-      "vi",
-      "bau",
-      "cu",
-      "so",
-      "may"
-    ],
-    "tags": [],
-    "topic": "local_tamquan"
-  },
-  {
     "id": "q47",
     "question": "Nhiệm vụ, quyền hạn của Hội đồng nhân dân cấp tỉnh được quy định như thế nào?",
     "questions": [
@@ -3235,7 +2562,7 @@
   },
   {
     "id": "q133",
-    "question": "Việc rưng tập người để hỗ trợ hoạt động của các tổ chức phụ trách bầu cử được thực hiện như thế nào?",
+    "question": "Việc trưng tập người để hỗ trợ hoạt động của các tổ chức phụ trách bầu cử được thực hiện như thế nào?",
     "questions": [
       "Việc rưng tập người để hỗ trợ hoạt động của các tổ chức phụ trách bầu cử được thực hiện như thế nào?"
     ],
@@ -3615,9 +2942,9 @@
   },
   {
     "id": "q146",
-    "question": "Những rường hợp nào cử tri chỉ được tham gia bầu cử đại biểu Quốc hội và đại biểu Hội đồng nhân dân cấp tỉnh?",
+    "question": "Những trường hợp nào cử tri chỉ được tham gia bầu cử đại biểu Quốc hội và đại biểu Hội đồng nhân dân cấp tỉnh?",
     "questions": [
-      "Những rường hợp nào cử tri chỉ được tham gia bầu cử đại biểu Quốc hội và đại biểu Hội đồng nhân dân cấp tỉnh?"
+      "Những trường hợp nào cử tri chỉ được tham gia bầu cử đại biểu Quốc hội và đại biểu Hội đồng nhân dân cấp tỉnh?"
     ],
     "answer": "- Cử tri là người tạm trú tại đơn vị hành chính cấp xã và có thời gian đăng ký tạm trú chưa đủ 12 tháng chỉ được ghi tên vào danh sách cử tri để tham gia bầu cử đại biểu Quốc hội, đại biểu Hội đồng nhân dân cấp tỉnh nơi mình đang tạm trú.\n- Cử tri là quân nhân ở các đơn vị vũ trang nhân dân được ghi tên vào danh sách cử tri để bầu cử đại biểu Quốc hội, đại biểu Hội đồng nhân dân cấp tỉnh ở nơi tạm trú hoặc đóng quân.\n- Công dân Việt Nam ở nước ngoài trở về Việt Nam trong khoảng thời gian từ sau khi danh sách cử tri đã được niêm yết đến trước thời điểm bắt đầu bỏ phiếu 24 giờ thì làm thủ tục để được ghi tên vào danh sách cử tri ở nơi tạm trú và tham gia bầu cử đại biểu Quốc hội và đại biểu Hội đồng nhân dân cấp tỉnh.\n- Người chuyển đến tạm trú ở nơi khác với đơn vị hành chính cấp xã mà mình đã được ghi tên vào danh sách cử tri và có nguyện vọng tham gia bầu cử ở nơi tạm trú mới thì được xóa tên trong danh sách cử tri ở nơi cư trú cũ và bổ sung vào danh sách cử tri tại nơi tạm trú mới để bầu đại biểu Quốc hội, đại biểu Hội đồng nhân dân cấp tỉnh.\n- Cử tri vì đi nơi khác, không thể tham gia bỏ phiếu ở nơi đã được ghi tên vào danh sách cử tri thì làm thủ tục để được bổ sung tên vào danh sách cử tri và tham gia bầu cử đại biểu Quốc hội, đại biểu Hội đồng nhân dân cấp tỉnh ở nơi mình có thể tham gia bỏ phiếu.\n- Cử tri là người đang bị tạm giam, tạm giữ, người đang chấp hành biện pháp đưa vào cơ sở giáo dục bắt buộc, cơ sở cai nghiện bắt buộc chỉ được ghi tên vào danh sách cử tri để tham gia bầu cử đại biểu Quốc hội và đại biểu Hội đồng nhân dân cấp tỉnh nơi người đó đang bị tạm giam, tạm giữ, đang chấp hành biện pháp đưa vào cơ sở giáo dục bắt buộc, cơ sở cai nghiện bắt buộc.",
     "keywords": [
@@ -3646,14 +2973,14 @@
   },
   {
     "id": "q147",
-    "question": "Những rường hợp nào cử tri được tham gia bầu cử đại biểu Quốc hội và bầu cử đại biểu Hội đồng nhân dân cấp tỉnh, cấp xã?",
+    "question": "Những trường hợp nào cử tri được tham gia bầu cử đại biểu Quốc hội và bầu cử đại biểu Hội đồng nhân dân cấp tỉnh, cấp xã?",
     "questions": [
       "Những rường hợp nào cử tri được tham gia bầu cử đại biểu Quốc hội và bầu cử đại biểu Hội đồng nhân dân cấp tỉnh, cấp xã?"
     ],
     "answer": "Cử tri được tham gia bầu cử đại biểu Quốc hội và đại biểu Hội đồng nhân dân cấp tỉnh, cấp xã khi thuộc các trường hợp sau đây:\n- Cử tri là người thường trú tại đơn vị hành chính cấp xã;\n- Cử tri là người tạm trú tại đơn vị hành chính cấp xã và có thời gian đăng ký tạm trú từ đủ 12 tháng trở lên;\n- Công dân Việt Nam ở nước ngoài trở về Việt Nam trong khoảng thời gian từ sau khi danh sách cử tri đã được niêm yết đến trước thời điểm bắt đầu bỏ phiếu 24 giờ đã làm thủ tục để được ghi tên vào danh sách cử tri ở nơi thường trú;\n- Người đang bị tạm giam, tạm giữ, người đang chấp hành biện pháp đưa vào cơ sở giáo dục bắt buộc, cơ sở cai nghiện bắt buộc nếu đến trước thời điểm bắt đầu bỏ phiếu 24 giờ mà được trả tự do hoặc đã hết thời gian giáo dục bắt buộc, cai nghiện bắt buộc và đã làm thủ tục để được xóa tên trong danh sách cử tri ở nơi có trại tạm giam, cơ sở giáo dục bắt buộc, cơ sở cai nghiện bắt buộc và được bổ sung vào danh sách cử tri tại nơi thường trú.",
     "keywords": [
       "nhung",
-      "ruong",
+      "truong",
       "hop",
       "cu",
       "tri",
@@ -4083,9 +3410,9 @@
   },
   {
     "id": "q162",
-    "question": "Thế nào là “c một quốc tịch là quốc tịch Việt am”?",
+    "question": "Thế nào là “có một quốc tịch là quốc tịch Việt Nam”?",
     "questions": [
-      "Thế nào là “c một quốc tịch là quốc tịch Việt am”?"
+      "Thế nào là “có một quốc tịch là quốc tịch Việt Nam”?"
     ],
     "answer": "Luật Tổ chức Quốc hội năm 2014 được sửa đổi, bổ sung năm 2020, 2025 và Luật Tổ chức chính quyền địa phương đã quy định một trong các tiêu chuẩn đối với đại biểu Quốc hội, đại biểu Hội đồng nhân dân là: “Có một quốc tịch là quốc tịch Việt Nam” Theo đó, căn cứ vào Luật Quốc tịch Việt Nam năm 2008 được sửa đổi, bổ sung năm 2014, 2025, người có quốc tịch Việt Nam là công dân Việt Nam được xác định theo các căn cứ quy định tại Chương II của Luật này. Người có một quốc tịch là quốc tịch Việt Nam phải là người không đồng thời có quốc tịch của một quốc gia khác. Về nguyên tắc, người đang có quốc tịch nước ngoài, người có nguyện vọng và đang thực hiện thủ tục xin gia nhập quốc tịch của quốc gia khác đều không đủ điều kiện để ứng cử đại biểu Quốc hội, ứng cử đại biểu Hội đồng nhân dân các cấp.\n\nDo đó, trong phần khai về quốc tịch trong đơn ứng cử và các tài liệu khác trong hồ sơ ứng cử, Hội đồng bầu cử quốc gia đã hướng dẫn người ứng cử cần ghi rõ: “Chỉ có 01 quốc tịch là quốc tịch Việt Nam và không trong thời gian thực hiện thủ tục xin gia nhập quốc tịch quốc gia hác”. Người ứng cử phải  cam đoan về các nội dung mình đã khai. Nếu phát hiện thông tin không đúng sự thật, không như nội dung đã kê khai thì người ứng cử phải hoàn toàn chịu trách nhiệm và tùy theo nội dung, mức độ vi phạm mà có thể bị loại khỏi danh sách người ứng cử; nếu đã trúng cử thì sẽ không được công nhận tư cách đại biểu hoặc bị bãi nhiệm đại biểu.",
     "keywords": [
@@ -4093,7 +3420,7 @@
       "quoc",
       "tich",
       "viet",
-      "am"
+      "Nam"
     ],
     "tags": [],
     "topic": "general"
@@ -7346,9 +6673,9 @@
   },
   {
     "id": "q272",
-    "question": "Ai phụ trách chịu trách nhiệm chỉ đạo, kiểm tra, đôn đốc công tác chuẩn bị nội dung, điều kiện cơ sở vật chất đảm bảo thông...?",
+    "question": "Ai phụ trách chịu trách nhiệm chỉ đạo, kiểm tra, đôn đốc công tác chuẩn bị nội dung, điều kiện cơ sở vật chất đảm bảo thông tin?",
     "questions": [
-      "Ai phụ trách chịu trách nhiệm chỉ đạo, kiểm tra, đôn đốc công tác chuẩn bị nội dung, điều kiện cơ sở vật chất đảm bảo thông...?"
+      "Ai phụ trách chịu trách nhiệm chỉ đạo, kiểm tra, đôn đốc công tác chuẩn bị nội dung, điều kiện cơ sở vật chất đảm bảo thông tin?"
     ],
     "answer": "Ông Võ Tấn Cương (Đảng ủy viên, Phó Chủ tịch Ủy ban nhân dân phường, Ủy viên Ủy ban bầu cử phường) phụ trách: Chịu trách nhiệm chỉ đạo, kiểm tra, đôn đốc công tác chuẩn bị nội dung, điều kiện cơ sở vật chất đảm bảo thông tin, tuyên truyền phục vụ cho công tác bầu cử. - Phụ trách công tác thông tin, tuyên truyền; công tác thi đua - khen thưởng về bầu cử; vận động cử tri tích cực tham gia bầu cử; phối hợp với Ban Xây dựng Đảng Đảng ủy phường nắm bắt thông tin dư luận xã hội, tham mưu Ban Chỉ đạo xử lý, giải quyết kịp thời những vấn đề bức xúc, nổi cộm trong Nhân dân. - Thực hiện các nhiệm vụ khác khi được Chủ tịch Ủy ban bầu cử phường phân công.",
     "keywords": [
@@ -7513,9 +6840,9 @@
   },
   {
     "id": "q278",
-    "question": "Ai phụ trách tuyên truyền, vận động hội viên nông dân tham gia bầu cử đầy đủ, hỗ trợ niêm yết danh sách cử tri, tổ chức các...?",
+    "question": "Ai phụ trách tuyên truyền, vận động hội viên nông dân tham gia bầu cử đầy đủ, hỗ trợ niêm yết danh sách cử tri, tổ chức các điểm?",
     "questions": [
-      "Ai phụ trách tuyên truyền, vận động hội viên nông dân tham gia bầu cử đầy đủ, hỗ trợ niêm yết danh sách cử tri, tổ chức các...?"
+      "Ai phụ trách tuyên truyền, vận động hội viên nông dân tham gia bầu cử đầy đủ, hỗ trợ niêm yết danh sách cử tri, tổ chức các điểm?"
     ],
     "answer": "Ông Trịnh Văn Mười (Đảng ủy viên, Phó Chủ tịch Thường trực Ủy ban Mặt trận Tổ quốc Việt Nam phường, Chủ tịch Hội Nông dân Việt Nam phường, Ủy viên Ủy ban bầu cử phường) phụ trách: Tuyên truyền, vận động hội viên nông dân tham gia bầu cử đầy đủ, hỗ trợ niêm yết danh sách cử tri, tổ chức các điểm hỗ trợ phù hợp (nếu cần); tham gia giải quyết khiếu nại, tố cáo liên quan đến bầu cử và thực hiện các nhiệm vụ khác khi được Chủ tịch Ủy ban bầu cử phường phân công.",
     "keywords": [
@@ -7683,9 +7010,9 @@
   },
   {
     "id": "q284",
-    "question": "Ai phụ trách phối hợp chặt chẽ với công an phường chủ động xây dựng phương án, tổ chức lực lượng triển khai thực hiện nhiệm...?",
+    "question": "Ai phụ trách phối hợp chặt chẽ với công an phường chủ động xây dựng phương án, tổ chức lực lượng triển khai thực hiện nhiệm vụ?",
     "questions": [
-      "Ai phụ trách phối hợp chặt chẽ với công an phường chủ động xây dựng phương án, tổ chức lực lượng triển khai thực hiện nhiệm...?"
+      "Ai phụ trách phối hợp chặt chẽ với công an phường chủ động xây dựng phương án, tổ chức lực lượng triển khai thực hiện nhiệm vụ?"
     ],
     "answer": "Ông Bùi Hoàng Lực (Phó Chỉ huy trưởng Ban chỉ huy Quân sự phường, Ủy viên Ủy ban bầu cử phường) phụ trách: Phối hợp chặt chẽ với Công an phường chủ động xây dựng phương án, tổ chức lực lượng triển khai thực hiện nhiệm vụ bảo vệ, bảo đảm an ninh chính trị và trật tự an toàn xã hội trên địa bàn phường trong thời gian trước, trong và sau bầu cử. - Thực hiện các nhiệm vụ khác khi được Chủ tịch Ủy ban bầu cử phường phân công.",
     "keywords": [
