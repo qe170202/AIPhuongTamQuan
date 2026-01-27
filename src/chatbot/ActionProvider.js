@@ -40,6 +40,12 @@ const fuseLocal = new Fuse(
   qaIndex.filter((x) => x.topic === "local_tamquan"),
   fuseOptions
 );
+const trackQuestionSafely = (question) => {
+  if (typeof window !== "undefined" && typeof window.trackQuestion === "function") {
+    window.trackQuestion(question);
+  }
+};
+
 const fuseTimeline = new Fuse(
   qaIndex.filter((x) => x.topic === "timeline"),
   fuseOptions
@@ -165,7 +171,7 @@ class ActionProvider {
     this.setMessages((prev) => [...prev, userMessage]);
 
     // Track question
-    trackQuestion(suggestionQuestion);
+    trackQuestionSafely(suggestionQuestion);
 
     // If we have an ID, find the answer directly by ID
     if (suggestionId) {
