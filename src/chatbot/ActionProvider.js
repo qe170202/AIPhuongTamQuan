@@ -2,11 +2,16 @@
 import Fuse from "fuse.js";
 import qaDataRaw from "../data/chatbot_qa_enriched.json";
 import config from "./config.jsx";
-import { normalizeVI, expandAbbr, toKeywords } from "./utils/searchUtils";
+import { normalizeVI, expandAbbr, toKeywords, shortText } from "./utils/searchUtils";
 
 // --- Build index once (fast + consistent scoring) ---
 const qaIndex = qaDataRaw.map((item, idx) => {
-  const questions = item.questions?.length ? item.questions : [item.question];
+  // Always include main question + all variants (dedupe)
+  const allQuestions = [
+    item.question,
+    ...(item.questions?.length ? item.questions : []),
+  ].filter(Boolean);
+  const questions = [...new Set(allQuestions)]; // dedupe
   const variantsNorm = questions.map((q) => expandAbbr(normalizeVI(q)));
 
   const _q = variantsNorm.join(" | ");
@@ -16,6 +21,7 @@ const qaIndex = qaDataRaw.map((item, idx) => {
     ...item,
     id: item.id ?? `q${idx + 1}`,
     questions,
+    variantsNorm,
     _q,
     _kw,
     displayQuestion: item.question, // for UI
@@ -60,6 +66,15 @@ function chooseFuse(queryNorm = "", lastTopic = null) {
   return fuseAll;
 }
 
+/** Find QA item whose normalized question variants exactly match user query (after normalize). */
+function findExactMatch(qNorm) {
+  const s = String(qNorm).trim();
+  if (!s) return null;
+  return qaIndex.find((item) =>
+    (item.variantsNorm || []).some((v) => String(v).trim() === s)
+  ) ?? null;
+}
+
 function decide(results) {
   if (!results.length) return "none";
   const best = results[0];
@@ -71,6 +86,8 @@ function decide(results) {
   if (bestScore <= 0.22) return "answer";
   if (bestScore <= 0.30 && gap >= 0.06) return "answer";
   if (bestScore <= 0.38) return "answer_with_suggestions";
+  // bestScore in (0.38, 0.45]: still reasonable match (e.g. question in JSON, long _q dilutes score) → answer with suggestions instead of suggest-only
+  if (bestScore <= 0.45) return "answer_with_suggestions";
   return "suggestions_only";
 }
 
@@ -100,6 +117,15 @@ class ActionProvider {
     const qKw = toKeywords(qNorm);
     const queryForSearch = qKw || qNorm;
 
+    // Exact match: user query (normalized) equals one of the item's question variants → always answer, never suggest
+    const exactItem = findExactMatch(qNorm);
+    if (exactItem) {
+      this.lastTopic = exactItem.topic ?? null;
+      const message = this.createChatBotMessageFunc(exactItem.answer);
+      this.addMessageToBotState(message);
+      return;
+    }
+
     const fuse = chooseFuse(queryForSearch, this.lastTopic);
     let results = fuse.search(queryForSearch, { limit: 8 });
 
@@ -109,27 +135,35 @@ class ActionProvider {
     }
 
     const decision = decide(results);
+    const best = results[0]?.item;
 
-    const suggestions = results.slice(0, 3).map((r) => ({
-      id: r.item.id,
-      question: r.item.question,
-      questionShort: r.item.displayQuestion,
-      score: r.score,
-    }));
+    // Build suggestions: top 3 related, exclude the one we're answering so we don't show same question again
+    const buildSuggestions = (resultList, excludeId = null) => {
+      const list = excludeId
+        ? resultList.filter((r) => r.item.id !== excludeId)
+        : resultList;
+      return list.slice(0, 3).map((r) => ({
+        id: r.item.id,
+        question: r.item.question,
+        questionShort: shortText(r.item.displayQuestion, 90),
+        score: r.score,
+      }));
+    };
+
+    const suggestions =
+      decision === "answer_with_suggestions" && best
+        ? buildSuggestions(results, best.id)
+        : buildSuggestions(results);
 
     if (decision === "answer") {
-      const best = results[0].item;
-      this.lastTopic = best.topic ?? null;
-
+      this.lastTopic = best?.topic ?? null;
       const message = this.createChatBotMessageFunc(best.answer);
       this.addMessageToBotState(message);
       return;
     }
 
     if (decision === "answer_with_suggestions") {
-      const best = results[0].item;
-      this.lastTopic = best.topic ?? null;
-
+      this.lastTopic = best?.topic ?? null;
       const message = this.createChatBotMessageFunc(best.answer, {
         widget: "suggestionOptions",
         payload: { suggestions },
