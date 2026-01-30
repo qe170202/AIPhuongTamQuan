@@ -6667,5 +6667,264 @@
     ],
     "tags": [],
     "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd19_nhansu",
+    "question": "Thành phần nhân sự của Tiểu ban an ninh, trật tự xã hội và y tế theo Quyết định 19/QĐ-UBBC gồm những ai?",
+    "questions": [
+      "Ai là Trưởng tiểu ban an ninh, trật tự xã hội và y tế phường Tam Quan?",
+      "Quyết định 19 kiện toàn bao nhiêu Phó Trưởng tiểu ban cho Tiểu ban an ninh và y tế?",
+      "Danh sách các ủy viên của Tiểu ban an ninh, trật tự xã hội và y tế gồm những ai?",
+      "Ông Lê Quốc Việt và ông Huỳnh Ngọc Trường giữ chức vụ gì trong Tiểu ban theo QĐ 19?",
+      "Trạm y tế phường có những đại diện nào tham gia vào Tiểu ban theo Quyết định 19?"
+    ],
+    "answer": "Theo Quyết định 19/QĐ-UBBC, Tiểu ban an ninh, trật tự xã hội và y tế được kiện toàn với các nhân sự sau: Trưởng tiểu ban là ông Lê Quốc Việt (Trưởng Công an phường); 02 Phó Trưởng tiểu ban là ông Huỳnh Ngọc Trường (Chỉ huy trưởng Ban Chỉ huy Quân sự phường) và ông Nguyễn Thanh Kim (Trưởng Trạm Y tế phường). Ngoài ra, Tiểu ban có 08 Ủy viên gồm các ông/bà: Trà Văn Châu, Nguyễn Thị Kim Chung, Nguyễn Văn Kết, Nguyễn Hoàng Thắng, Bùi Duy Diệu, Ngô Anh Phước, Nguyễn Văn Nam và Trần Văn Dũng.",
+    "keywords": ["nhan", "su", "tieu", "ban", "an", "ninh", "y", "te", "le", "quoc", "viet", "huynh", "ngoc", "truong", "quyet", "dinh", "19"],
+    "tags": ["nhân sự", "Tiểu ban an ninh", "UBBC Tam Quan"],
+    "topic": "local_tamquan"
+  },
+ 
+  {
+    "id": "ubbc_qd19_lequocviet",
+    "question": "Ông Lê Quốc Việt đảm nhận vai trò gì trong Tiểu ban an ninh, trật tự xã hội và y tế?",
+    "questions": [
+      "Ai là Trưởng tiểu ban an ninh, trật tự xã hội và y tế?",
+      "Nhiệm vụ của ông Lê Quốc Việt trong công tác bầu cử là gì?",
+      "Ông Lê Quốc Việt giữ chức vụ gì trong UBBC và Tiểu ban an ninh?"
+    ],
+    "answer": "Trong Tiểu ban này, ông Lê Quốc Việt giữ chức vụ Trưởng tiểu ban. Nhiệm vụ của ông là chịu trách nhiệm chỉ đạo thực hiện tốt công tác bảo vệ an ninh, đảm bảo an ninh, trật tự an toàn xã hội cho cuộc bầu cử trên địa bàn; đồng thời chủ động xây dựng phương án ngăn chặn, xử lý kịp thời các hành vi lợi dụng dân chủ để vi phạm pháp luật bầu cử.",
+    "keywords": ["le", "quoc", "viet", "truong", "tieu", "ban", "an", "ninh", "cong", "an"],
+    "tags": ["nhân sự", "Lê Quốc Việt", "Tiểu ban an ninh"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd19_huynhngoctruong",
+    "question": "Ông Huỳnh Ngọc Trường đảm nhận vai trò gì trong Tiểu ban an ninh, trật tự xã hội và y tế?",
+    "questions": [
+      "Vai trò của Chỉ huy trưởng Quân sự phường trong Tiểu ban an ninh là gì?",
+      "Ông Huỳnh Ngọc Trường có nhiệm vụ gì trong công tác bảo vệ bầu cử?",
+      "Ai là Phó Trưởng tiểu ban an ninh phụ trách lực lượng quân sự?"
+    ],
+    "answer": "Ông Huỳnh Ngọc Trường giữ chức vụ Phó Trưởng tiểu ban. Nhiệm vụ cụ thể của ông là phối hợp chặt chẽ với Công an phường để chủ động xây dựng phương án, tổ chức lực lượng triển khai các nhiệm vụ bảo vệ, bảo đảm an ninh chính trị và trật tự an toàn xã hội trên địa bàn trước, trong và sau bầu cử.",
+    "keywords": ["huynh", "ngoc", "truong", "pho", "truong", "tieu", "ban", "quan", "su"],
+    "tags": ["nhân sự", "Huỳnh Ngọc Trường", "Tiểu ban an ninh"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd19_nguyenthanhkim",
+    "question": "Ông Nguyễn Thanh Kim có vai trò gì trong Tiểu ban theo Quyết định 19?",
+    "questions": [
+      "Ai là Phó Trưởng tiểu ban phụ trách về Y tế?",
+      "Trưởng trạm y tế phường giữ chức vụ gì trong Tiểu ban an ninh và y tế?",
+      "Vai trò của ông Nguyễn Thanh Kim trong Tiểu ban bầu cử là gì?"
+    ],
+    "answer": "Ông Nguyễn Thanh Kim giữ chức vụ Phó Trưởng tiểu ban. Về chuyên môn, ông hiện đang là Trưởng Trạm Y tế phường Tam Quan, chịu trách nhiệm chính về các vấn đề y tế phục vụ cho công tác bầu cử.",
+    "keywords": ["nguyen", "thanh", "kim", "y", "te", "pho", "truong", "tieu", "ban"],
+    "tags": ["nhân sự", "Nguyễn Thanh Kim", "Y tế"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd19_travanchau",
+    "question": "Ông Trà Văn Châu đảm nhận vị trí nào trong Tiểu ban an ninh, trật tự xã hội và y tế?",
+    "questions": [
+      "Đại diện của Mặt trận Tổ quốc trong Tiểu ban an ninh là ai?",
+      "Ông Trà Văn Châu giữ chức vụ gì trong danh sách nhân sự QĐ 19?",
+      "Chủ tịch Hội Cựu chiến binh phường tham gia Tiểu ban với vai trò gì?"
+    ],
+    "answer": "Ông Trà Văn Châu là Ủy viên của Tiểu ban. Ông hiện đang đảm nhiệm chức vụ Phó Chủ tịch Ủy ban Mặt trận Tổ quốc Việt Nam phường và là Chủ tịch Hội Cựu chiến binh phường.",
+    "keywords": ["tra", "van", "chau", "uy", "vien", "mat", "tran", "cuu", "chien", "binh"],
+    "tags": ["nhân sự", "Trà Văn Châu", "Tiểu ban an ninh"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd19_nguyenthikimchung",
+    "question": "Bà Nguyễn Thị Kim Chung có vai trò gì trong Tiểu ban theo Quyết định 19?",
+    "questions": [
+      "Bà Nguyễn Thị Kim Chung giữ chức vụ gì tại Công an phường và Tiểu ban an ninh?",
+      "Ai là nữ ủy viên thuộc lực lượng Công an trong Tiểu ban an ninh?"
+    ],
+    "answer": "Bà Nguyễn Thị Kim Chung tham gia Tiểu ban với vai trò Ủy viên. Chức vụ hiện tại của bà là Phó Trưởng Công an phường Tam Quan.",
+    "keywords": ["nguyen", "thi", "kim", "chung", "uy", "vien", "cong", "an"],
+    "tags": ["nhân sự", "Nguyễn Thị Kim Chung"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd19_uyvien_congan",
+    "question": "Những đại diện nào của Công an phường tham gia làm Ủy viên trong Tiểu ban theo QĐ 19?",
+    "questions": [
+      "Các Phó trưởng Công an phường có tên trong Tiểu ban an ninh gồm những ai?",
+      "Vai trò của ông Nguyễn Văn Kết và Nguyễn Hoàng Thắng trong Tiểu ban 19 là gì?"
+    ],
+    "answer": "Ngoài bà Nguyễn Thị Kim Chung, lực lượng Công an phường còn có 02 đại diện khác giữ vai trò Ủy viên Tiểu ban là ông Nguyễn Văn Kết và ông Nguyễn Hoàng Thắng. Cả hai ông đều đang giữ chức vụ Phó Trưởng Công an phường Tam Quan.",
+    "keywords": ["nguyen", "van", "ket", "nguyen", "hoang", "thang", "uy", "vien", "cong", "an"],
+    "tags": ["nhân sự", "Công an", "Ủy viên"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd19_uyvien_phongban",
+    "question": "Các ông Bùi Duy Diệu và Ngô Anh Phước giữ vai trò gì trong Tiểu ban an ninh và y tế?",
+    "questions": [
+      "Đại diện phòng Văn hóa - Xã hội và Kinh tế trong Tiểu ban 19 là ai?",
+      "Chức vụ chuyên môn của ông Bùi Duy Diệu và Ngô Anh Phước là gì?"
+    ],
+    "answer": "Cả ông Bùi Duy Diệu và ông Ngô Anh Phước đều là Ủy viên của Tiểu ban. Ông Diệu hiện là Phó Trưởng Phòng Văn hóa – Xã hội, còn ông Phước là Phó Trưởng Phòng Kinh tế, Hạ tầng và Đô thị phường.",
+    "keywords": ["bui", "duy", "dieu", "ngo", "anh", "phuoc", "uy", "vien", "van", "hoa", "kinh", "te"],
+    "tags": ["nhân sự", "Ủy viên", "Phòng ban"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd19_uyvien_yte_quansu",
+    "question": "Ông Nguyễn Văn Nam và Trần Văn Dũng đảm nhận vị trí gì trong Tiểu ban theo QĐ 19?",
+    "questions": [
+      "Ai là Phó Trạm y tế tham gia Tiểu ban an ninh, trật tự xã hội và y tế?",
+      "Phó Chỉ huy trưởng Quân sự phường có vai trò gì trong Tiểu ban 19?"
+    ],
+    "answer": "Ông Nguyễn Văn Nam (Phó Trưởng Trạm Y tế) và ông Trần Văn Dũng (Phó Chỉ huy trưởng Ban Chỉ huy Quân sự phường) đều giữ vai trò Ủy viên trong Tiểu ban an ninh, trật tự xã hội và y tế.",
+    "keywords": ["nguyen", "van", "nam", "tran", "van", "dung", "uy", "vien", "y", "te", "quan", "su"],
+    "tags": ["nhân sự", "Ủy viên"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd20_tongquan",
+    "question": "Thành phần nhân sự của Tiểu ban giải quyết khiếu nại, tố cáo theo Quyết định 20/QĐ-UBBC gồm những ai?",
+    "questions": [
+      "Ai là Trưởng tiểu ban giải quyết khiếu nại, tố cáo phường Tam Quan?",
+      "Quyết định 20 kiện toàn bao nhiêu Phó Trưởng tiểu ban cho Tiểu ban giải quyết khiếu nại, tố cáo?",
+      "Danh sách các ủy viên của Tiểu ban giải quyết khiếu nại, tố cáo gồm những ai?",
+      "Bà Huỳnh Thị Tường Vy và ông Trịnh Văn Mười giữ chức vụ gì trong Tiểu ban theo QĐ 20?"
+    ],
+    "answer": "Theo Quyết định 20/QĐ-UBBC, Tiểu ban giải quyết khiếu nại, tố cáo gồm: Trưởng tiểu ban là bà Huỳnh Thị Tường Vy (Chủ nhiệm UB Kiểm tra Đảng ủy); 02 Phó Trưởng tiểu ban là ông Trịnh Văn Mười (Phó Chủ tịch UB MTTQVN phường) và ông Trương Quang Bình (Phó Chủ nhiệm UB Kiểm tra Đảng ủy) [1]. Tiểu ban có 06 Ủy viên gồm các ông/bà: Võ Đông Giang, Võ Xuân Cường, Lê Thái Hoàng, Nguyễn Thị Thanh Thúy, Huỳnh Ngọc Trung và Trương Thị Trà My.",
+    "keywords": ["nhan", "su", "tieu", "ban", "giai", "quyet", "khieu", "nai", "to", "cao", "huynh", "thi", "tuong", "vy", "qd", "20"],
+    "tags": ["nhân sự", "Tiểu ban khiếu nại tố cáo", "UBBC Tam Quan"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd20_huynhtituongvy",
+    "question": "Bà Huỳnh Thị Tường Vy đảm nhận vai trò và nhiệm vụ gì trong Tiểu ban giải quyết khiếu nại, tố cáo?",
+    "questions": [
+      "Trưởng tiểu ban giải quyết khiếu nại, tố cáo có trách nhiệm gì?",
+      "Ai chịu trách nhiệm tiếp nhận và phân loại đơn thư khiếu nại, tố cáo trong bầu cử?",
+      "Bà Huỳnh Thị Tường Vy hiện đang đảm nhận công việc gì trong Tiểu ban theo QĐ 20?"
+    ],
+    "answer": "Trong Tiểu ban này, bà Huỳnh Thị Tường Vy giữ chức vụ Trưởng tiểu ban. Nhiệm vụ của bà là chịu trách nhiệm tiếp nhận đơn tố cáo, khiếu nại; phân loại, phối hợp chặt chẽ với các cơ quan liên quan để xác minh, kết luận giải quyết đơn thư; thẩm tra, xác minh đối với những người ứng cử đại biểu HĐND các cấp và xem xét hồ sơ người ứng cử do các tổ chức chính trị - xã hội giới thiệu.",
+    "keywords": ["huynh", "thi", "tuong", "vy", "truong", "tieu", "ban", "khieu", "nai", "to", "cao", "nhiem", "vu"],
+    "tags": ["nhân sự", "nhiệm vụ", "Huỳnh Thị Tường Vy"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd20_trinhvanmuoi",
+    "question": "Ông Trịnh Văn Mười đảm nhận vai trò gì trong Tiểu ban giải quyết khiếu nại, tố cáo?",
+    "questions": [
+      "Ai là Phó Trưởng tiểu ban giải quyết khiếu nại, tố cáo đại diện cho Mặt trận Tổ quốc?",
+      "Vai trò của ông Trịnh Văn Mười trong QĐ 20 là gì?",
+      "Ông Trịnh Văn Mười hỗ trợ công tác giải quyết khiếu nại, tố cáo như thế nào?"
+    ],
+    "answer": "Ông Trịnh Văn Mười giữ chức vụ Phó Trưởng tiểu ban giải quyết khiếu nại, tố cáo. Ngoài ra, theo phân công nhiệm vụ, ông còn có trách nhiệm tuyên truyền, vận động hội viên nông dân tham gia bầu cử và tham gia giải quyết khiếu nại, tố cáo liên quan đến bầu cử khi được Chủ tịch UBBC phường phân công.",
+    "keywords": ["trinh", "van", "muoi", "pho", "truong", "tieu", "ban", "mat", "tran", "nong", "dan"],
+    "tags": ["nhân sự", "Trịnh Văn Mười"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd20_truongquangbinh",
+    "question": "Ông Trương Quang Bình có vai trò gì trong Tiểu ban theo Quyết định 20?",
+    "questions": [
+      "Phó Chủ nhiệm Ủy ban Kiểm tra Đảng ủy phường giữ chức vụ gì trong Tiểu ban khiếu nại?",
+      "Ai là Phó Trưởng tiểu ban hỗ trợ bà Huỳnh Thị Tường Vy tại UB Kiểm tra Đảng ủy?"
+    ],
+    "answer": "Ông Trương Quang Bình giữ chức vụ Phó Trưởng tiểu ban giải quyết khiếu nại, tố cáo. Về mặt Đảng, ông hiện là Đảng ủy viên và giữ chức vụ Phó Chủ nhiệm Ủy ban Kiểm tra Đảng ủy phường Tam Quan.",
+    "keywords": ["truong", "quang", "binh", "pho", "truong", "tieu", "ban", "kiem", "tra", "dang", "uy"],
+    "tags": ["nhân sự", "Trương Quang Bình"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd20_uyvien_chuyenvien",
+    "question": "Những chuyên viên nào tham gia làm Ủy viên trong Tiểu ban giải quyết khiếu nại, tố cáo theo QĐ 20?",
+    "questions": [
+      "Bà Nguyễn Thị Thanh Thúy và ông Huỳnh Ngọc Trung có vai trò gì trong Tiểu ban 20?",
+      "Các chuyên viên Văn phòng HĐND và UBND phường tham gia Tiểu ban khiếu nại gồm những ai?"
+    ],
+    "answer": "Các chuyên viên tham gia với vai trò Ủy viên Tiểu ban gồm: Lê Thái Hoàng (Văn phòng Đảng ủy), Nguyễn Thị Thanh Thúy (UB Kiểm tra Đảng ủy), Huỳnh Ngọc Trung và Trương Thị Trà My (cùng thuộc Văn phòng HĐND và UBND phường).",
+    "keywords": ["le", "thai", "hoang", "nguyen", "thi", "thanh", "thuy", "huynh", "ngoc", "trung", "truong", "thi", "tra", "my", "uy", "vien"],
+    "tags": ["nhân sự", "Ủy viên", "chuyên viên"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd20_uyvien_lanhdao",
+    "question": "Ông Võ Đông Giang và ông Võ Xuân Cường đảm nhận vị trí nào trong Tiểu ban 20?",
+    "questions": [
+      "Trưởng phòng Văn hóa - Xã hội có tham gia Tiểu ban giải quyết khiếu nại không?",
+      "Chánh Văn phòng HĐND và UBND phường giữ vai trò gì trong Quyết định 20?"
+    ],
+    "answer": "Cả ông Võ Đông Giang (Trưởng phòng Văn hóa – Xã hội) và ông Võ Xuân Cường (Chánh Văn phòng HĐND và UBND phường) đều giữ vai trò Ủy viên của Tiểu ban giải quyết khiếu nại, tố cáo.",
+    "keywords": ["vo", "dong", "giang", "vo", "xuan", "cuong", "uy", "vien", "van", "hoa", "van", "phong"],
+    "tags": ["nhân sự", "Ủy viên"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd21_tongquan",
+    "question": "Thành phần nhân sự của Tiểu ban Thông tin tuyên truyền theo Quyết định 21/QĐ-UBBC gồm những ai?",
+    "questions": [
+      "Ai là Trưởng tiểu ban Thông tin tuyên truyền phường Tam Quan?",
+      "Quyết định 21 kiện toàn bao nhiêu Phó Trưởng tiểu ban cho Tiểu ban Thông tin tuyên truyền?",
+      "Danh sách các ủy viên của Tiểu ban Thông tin tuyên truyền gồm những ai?",
+      "Ông Võ Thanh Điệp và ông Võ Tấn Cương giữ chức vụ gì trong Tiểu ban theo QĐ 21?"
+    ],
+    "answer": "Theo Quyết định 21/QĐ-UBBC, Tiểu ban Thông tin tuyên truyền gồm: Trưởng tiểu ban là ông Võ Thanh Điệp (Trưởng ban Ban Xây dựng Đảng Đảng ủy); 01 Phó Trưởng tiểu ban là ông Võ Tấn Cương (Phó Chủ tịch UBND phường). Tiểu ban có 13 Ủy viên gồm các ông/bà: Nguyễn Minh Trí, Trịnh Văn Mười, Nguyễn Đức Minh, Trà Văn Châu, Hoàng Thị Kim Giang, Lê Đức Anh, Nguyễn Chí Hùng, Bùi Duy Diệu, Trương Nam Phú, Phạm Xuân Bay, Phạm Trung Giang, Nguyễn Thị Thái Ngân và Lê Bình.",
+    "keywords": ["nhan", "su", "tieu", "ban", "thong", "tin", "tuyen", "truyen", "vo", "thanh", "diep", "vo", "tan", "cuong", "qd", "21"],
+    "tags": ["nhân sự", "Tiểu ban Thông tin tuyên truyền", "UBBC Tam Quan"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd21_vothanhdiep",
+    "question": "Ông Võ Thanh Điệp đảm nhận vai trò và nhiệm vụ gì trong Tiểu ban Thông tin tuyên truyền?",
+    "questions": [
+      "Trưởng tiểu ban Thông tin tuyên truyền có trách nhiệm gì trong công tác bầu cử?",
+      "Ai là người chủ trì tổ chức tuyên truyền Luật Bầu cử và nắm bắt tình hình tư tưởng Nhân dân?",
+      "Ông Võ Thanh Điệp hiện đang đảm nhận công việc gì trong Tiểu ban theo QĐ 21?"
+    ],
+    "answer": "Trong Tiểu ban này, ông Võ Thanh Điệp giữ chức vụ Trưởng tiểu ban. Nhiệm vụ của ông là chủ trì phối hợp tổ chức tuyên truyền Luật Bầu cử; kiểm tra, theo dõi các hoạt động tuyên truyền; chủ động nắm bắt tình hình tư tưởng, tâm trạng của cán bộ, đảng viên và Nhân dân để định hướng dư luận xã hội. Ngoài ra, ông còn tham mưu UBBC xét hồ sơ người ứng cử và dự kiến cơ cấu, số lượng người ứng cử đại biểu HĐND phường.",
+    "keywords": ["vo", "thanh", "diep", "truong", "tieu", "ban", "thong", "tin", "tuyen", "truyen", "nhiem", "vu"],
+    "tags": ["nhân sự", "nhiệm vụ", "Võ Thanh Điệp"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd21_votancuong",
+    "question": "Ông Võ Tấn Cương đảm nhận vai trò và nhiệm vụ gì trong Tiểu ban Thông tin tuyên truyền?",
+    "questions": [
+      "Ai chịu trách nhiệm đôn đốc công tác chuẩn bị cơ sở vật chất cho thông tin, tuyên truyền bầu cử?",
+      "Vai trò của Phó Chủ tịch UBND phường Võ Tấn Cương trong Tiểu ban 21 là gì?",
+      "Ông Võ Tấn Cương phụ trách công tác thi đua - khen thưởng về bầu cử như thế nào?"
+    ],
+    "answer": "Ông Võ Tấn Cương giữ chức vụ Phó Trưởng tiểu ban. Nhiệm vụ của ông là chỉ đạo, kiểm tra, đôn đốc chuẩn bị nội dung và cơ sở vật chất cho thông tin tuyên truyền; phụ trách công tác thi đua - khen thưởng về bầu cử; vận động cử tri tham gia bầu cử và phối hợp với Ban Xây dựng Đảng nắm bắt thông tin dư luận xã hội.",
+    "keywords": ["vo", "tan", "cuong", "pho", "truong", "tieu", "ban", "thong", "tin", "tuyen", "truyen", "thi", "dua"],
+    "tags": ["nhân sự", "nhiệm vụ", "Võ Tấn Cương"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd21_doanthe",
+    "question": "Các thành viên đại diện cho các hội đoàn thể trong Tiểu ban Thông tin tuyên truyền gồm những ai và nhiệm vụ của họ là gì?",
+    "questions": [
+      "Nhiệm vụ của ông Trịnh Văn Mười và bà Hoàng Thị Kim Giang trong Tiểu ban 21 là gì?",
+      "Vai trò của Hội Nông dân và Hội Liên hiệp Phụ nữ trong công tác tuyên truyền bầu cử?",
+      "Ai phụ trách vận động hội viên phụ nữ và nông dân tham gia bầu cử đầy đủ?"
+    ],
+    "answer": "Các Ủy viên đại diện đoàn thể gồm ông Trịnh Văn Mười (Chủ tịch Hội Nông dân) và bà Hoàng Thị Kim Giang (Chủ tịch Hội Liên hiệp Phụ nữ). Nhiệm vụ của họ là tuyên truyền, vận động hội viên của mình tham gia bầu cử đầy đủ, hỗ trợ niêm yết danh sách cử tri và tổ chức các điểm hỗ trợ phù hợp khi cần thiết. Ngoài ra còn có ông Trà Văn Châu (Hội Cựu chiến binh) và ông Lê Đức Anh (Đoàn Thanh niên) cũng tham gia với vai trò Ủy viên.",
+    "keywords": ["trinh", "van", "muoi", "hoang", "thi", "kim", "giang", "nong", "dan", "phu", "nu", "doan", "the"],
+    "tags": ["nhân sự", "đoàn thể", "vận động bầu cử"],
+    "topic": "local_tamquan"
+  },
+  {
+    "id": "ubbc_qd21_chuyenvien",
+    "question": "Các chuyên viên thuộc phòng Văn hóa – Xã hội tham gia Tiểu ban Thông tin tuyên truyền gồm những ai?",
+    "questions": [
+      "Đại diện phòng Văn hóa - Xã hội trong Tiểu ban 21 là ai?",
+      "Ông Phạm Trung Giang và bà Nguyễn Thị Thái Ngân có vai trò gì trong QĐ 21?",
+      "Chuyên viên nào hỗ trợ công tác chuyên môn cho Tiểu ban Thông tin tuyên truyền?"
+    ],
+    "answer": "Các chuyên viên từ phòng Văn hóa – Xã hội tham gia với vai trò Ủy viên gồm: ông Phạm Trung Giang, bà Nguyễn Thị Thái Ngân và ông Lê Bình. Ngoài ra, ông Bùi Duy Diệu (Phó Trưởng phòng Văn hóa – Xã hội) cũng là Ủy viên của Tiểu ban này.",
+    "keywords": ["pham", "trung", "giang", "nguyen", "thi", "thai", "ngan", "le", "binh", "van", "hoa", "xa", "hoi"],
+    "tags": ["nhân sự", "chuyên viên", "Văn hóa Xã hội"],
+    "topic": "local_tamquan"
   }
+  
 ]

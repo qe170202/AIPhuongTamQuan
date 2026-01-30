@@ -18,11 +18,11 @@ const SuggestionOptions = (props) => {
           key={s.id}
           type="button"
           onClick={() => props.actionProvider.handleSuggestionClick(s.question, s.id)}
-          className="suggestion-option-button bg-gray-100 text-gray-800 dark:bg-darkHover/50 dark:text-white px-3 py-2 rounded-md border border-transparent hover:border-[#da7d20] hover:text-[#da7d20] transition-all duration-200 text-sm text-left"
+          className="suggestion-option-button bg-gray-100 text-gray-800 dark:bg-darkHover/50 dark:text-white px-3 py-2 rounded-md border border-transparent hover:border-[#da7d20] hover:text-[#da7d20] transition-all duration-200 text-sm text-left whitespace-normal break-words"
           title={s.question}
-          aria-label={s.questionShort || s.question}
+          aria-label={s.question}
         >
-          {s.questionShort || s.question}
+          {s.question}
         </button>
       ))}
     </div>
