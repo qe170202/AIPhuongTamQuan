@@ -103,3 +103,71 @@ export function shortText(s = "", max = 110) {
   const str = String(s);
   return str.length > max ? `${str.slice(0, max - 1)}…` : str;
 }
+
+// --- Smart Suggestion Utilities ---
+
+/**
+ * Extract meaningful keywords from a normalized query
+ * Filters out stopwords and short words, returns as Set for easy comparison
+ */
+export function extractQueryKeywords(normQuery = "") {
+  const words = String(normQuery).split(" ").filter((w) => w.length >= 2 && !STOPWORDS.has(w));
+  return new Set(words);
+}
+
+/**
+ * Calculate keyword overlap score between item keywords and query keywords
+ * Returns value 0-1: higher = more overlap
+ */
+export function calculateKeywordOverlap(itemKeywords = [], queryKeywords = new Set()) {
+  if (!itemKeywords.length || !queryKeywords.size) return 0;
+
+  let matchCount = 0;
+  for (const kw of itemKeywords) {
+    // Check if any query keyword is part of item keyword or vice versa
+    for (const qkw of queryKeywords) {
+      if (kw.includes(qkw) || qkw.includes(kw)) {
+        matchCount++;
+        break;
+      }
+    }
+  }
+
+  // Normalize by query keyword count (how much of user's intent is covered)
+  return Math.min(1, matchCount / queryKeywords.size);
+}
+
+/**
+ * Diversify suggestions to avoid showing too many from same topic
+ * Ensures at most 2 suggestions from same topic, fills rest from other topics
+ */
+export function diversifySuggestions(candidates = [], limit = 3) {
+  const result = [];
+  const topicCount = {};
+
+  // First pass: add items respecting topic diversity
+  for (const candidate of candidates) {
+    const topic = candidate.item?.topic || "general";
+    const currentCount = topicCount[topic] || 0;
+
+    // Allow max 2 from same topic
+    if (currentCount < 2) {
+      result.push(candidate);
+      topicCount[topic] = currentCount + 1;
+    }
+
+    if (result.length >= limit) break;
+  }
+
+  // Second pass: fill remaining slots if needed
+  if (result.length < limit) {
+    for (const candidate of candidates) {
+      if (!result.includes(candidate)) {
+        result.push(candidate);
+        if (result.length >= limit) break;
+      }
+    }
+  }
+
+  return result;
+}

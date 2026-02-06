@@ -3,8 +3,8 @@ import React from "react";
 const LearningOptions = (props) => {
   const options = [
     { text: "Phường Tam Quan có tổng cộng bao nhiêu khu vực bỏ phiếu và tổng số cử tri là bao nhiêu?", handler: () => props.actionProvider.handleUserQuery("Phường Tam Quan có tổng cộng bao nhiêu khu vực bỏ phiếu và tổng số cử tri là bao nhiêu?") },
-    { text: "Danh sách, số lượng đơn vị bầu cử đại biểu Quốc Hội tại Tỉnh Gia Lai?", handler: () => props.actionProvider.handleUserQuery("Danh sách, số lượng đơn vị bầu cử đại biểu Quốc Hội tại Tỉnh Gia Lai?") },
-    { text: "Các mốc thời gian quan trọng?", handler: () => props.actionProvider.handleUserQuery("Các mốc thời gian quan trọng?") },
+    { text: "Danh sách, số lượng đơn vị bầu cử đại biểu Quốc Hội tại Tỉnh Gia Lai?", handler: () => props.actionProvider.handleUserQuery("Thông tin về đơn vị bầu cử và số lượng đại biểu Quốc hội tại Tỉnh Gia Lai?") },
+    { text: "Ngày bầu cử và quy định?", handler: () => props.actionProvider.handleUserQuery("Ngày bầu cử") },
     { text: "Quốc hội có những chức năng, nhiệm vụ, quyền hạn gì?", handler: () => props.actionProvider.handleUserQuery("Quốc hội có những chức năng, nhiệm vụ, quyền hạn gì?") },
   ];
   return (

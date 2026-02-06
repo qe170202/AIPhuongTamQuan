@@ -2,7 +2,7 @@
 import Fuse from "fuse.js";
 import qaDataRaw from "../data/chatbot_qa_enriched.json";
 import config from "./config.jsx";
-import { normalizeVI, expandAbbr, toKeywords, shortText } from "./utils/searchUtils";
+import { normalizeVI, expandAbbr, toKeywords, shortText, extractQueryKeywords, calculateKeywordOverlap, diversifySuggestions } from "./utils/searchUtils";
 
 // --- Build index once (fast + consistent scoring) ---
 const qaIndex = qaDataRaw.map((item, idx) => {
@@ -42,8 +42,10 @@ const fuseOptions = {
 };
 
 const fuseAll = new Fuse(qaIndex, fuseOptions);
+
+// Include both local_tamquan and local_tamquan_tasks topics
 const fuseLocal = new Fuse(
-  qaIndex.filter((x) => x.topic === "local_tamquan"),
+  qaIndex.filter((x) => x.topic?.startsWith("local_tamquan")),
   fuseOptions
 );
 const trackQuestionSafely = (question) => {
@@ -59,10 +61,10 @@ const fuseTimeline = new Fuse(
 
 function chooseFuse(queryNorm = "", lastTopic = null) {
   const s = String(queryNorm);
-  if (s.includes("tam quan") || s.includes("khu pho")) return fuseLocal;
+  if (s.includes("tam quan") || s.includes("khu pho") || s.includes("phuong tam quan")) return fuseLocal;
   if (s.includes("moc thoi gian") || s.includes("ngay bau cu") || /\b\d{1,2}\/\d{1,2}\/\d{4}\b/.test(s)) return fuseTimeline;
   if (lastTopic === "timeline") return fuseTimeline;
-  if (lastTopic === "local_tamquan") return fuseLocal;
+  if (lastTopic?.startsWith("local_tamquan")) return fuseLocal;
   return fuseAll;
 }
 
@@ -80,7 +82,7 @@ function decide(results) {
   const best = results[0];
   const second = results[1];
   const bestScore = best.score ?? 1;
-  const gap = second ? ( (second.score ?? 1) - bestScore ) : 1;
+  const gap = second ? ((second.score ?? 1) - bestScore) : 1;
 
   // score: smaller is better in Fuse
   if (bestScore <= 0.22) return "answer";
@@ -137,23 +139,98 @@ class ActionProvider {
     const decision = decide(results);
     const best = results[0]?.item;
 
-    // Build suggestions: top 3 related, exclude the one we're answering so we don't show same question again
-    const buildSuggestions = (resultList, excludeId = null) => {
-      const list = excludeId
+    // Find the best matching question variant from item's questions array
+    const findBestMatchingQuestion = (item, queryNormalized) => {
+      if (!item.questions?.length) return item.question;
+
+      const qNormLower = String(queryNormalized).toLowerCase();
+      let bestMatch = item.question;
+      let bestScore = 0;
+
+      // Check each question variant for keyword overlap with user query
+      for (const variant of item.questions) {
+        const variantNorm = normalizeVI(variant).toLowerCase();
+
+        // Simple word overlap scoring
+        const queryWords = qNormLower.split(" ").filter(w => w.length >= 2);
+        const variantWords = variantNorm.split(" ").filter(w => w.length >= 2);
+
+        let matchCount = 0;
+        for (const qw of queryWords) {
+          for (const vw of variantWords) {
+            if (vw.includes(qw) || qw.includes(vw)) {
+              matchCount++;
+              break;
+            }
+          }
+        }
+
+        const score = queryWords.length > 0 ? matchCount / queryWords.length : 0;
+        if (score > bestScore) {
+          bestScore = score;
+          bestMatch = variant;
+        }
+      }
+
+      return bestMatch;
+    };
+
+    // Build suggestions: top 3 related, with smart ranking based on topic + keywords
+    const buildSuggestions = (resultList, excludeId = null, currentTopic = null, queryKeywords = new Set()) => {
+      // 1. Filter out excluded item (the one we're answering)
+      let candidates = excludeId
         ? resultList.filter((r) => r.item.id !== excludeId)
         : resultList;
-      return list.slice(0, 3).map((r) => ({
-        id: r.item.id,
-        question: r.item.question,
-        questionShort: shortText(r.item.displayQuestion, 90),
-        score: r.score,
-      }));
+
+      if (!candidates.length) return [];
+
+      // 2. Calculate adjusted scores with topic bonus + keyword overlap
+      candidates = candidates.map((r) => {
+        let adjustedScore = r.score ?? 1;
+
+        // Topic bonus: same topic as current answer gets -0.08 (lower = better in Fuse)
+        if (currentTopic && r.item.topic === currentTopic) {
+          adjustedScore -= 0.08;
+        }
+
+        // Keyword overlap bonus: more overlap = better match
+        const keywordOverlap = calculateKeywordOverlap(
+          r.item.keywords || [],
+          queryKeywords
+        );
+        // Up to -0.12 bonus for full keyword match
+        adjustedScore -= keywordOverlap * 0.12;
+
+        return { ...r, adjustedScore };
+      });
+
+      // 3. Sort by adjusted score (lower = better)
+      candidates.sort((a, b) => a.adjustedScore - b.adjustedScore);
+
+      // 4. Diversify: avoid 3 suggestions from exact same topic
+      const diversified = diversifySuggestions(candidates, 3);
+
+      return diversified.map((r) => {
+        // Find the best matching question variant for display
+        const displayQuestion = findBestMatchingQuestion(r.item, qNorm);
+        return {
+          id: r.item.id,
+          question: displayQuestion,
+          questionShort: shortText(displayQuestion, 90),
+          score: r.adjustedScore,
+          topic: r.item.topic,
+        };
+      });
     };
+
+    // Extract keywords from user query for smart matching
+    const queryKeywords = extractQueryKeywords(qNorm);
+    const currentTopic = best?.topic ?? this.lastTopic;
 
     const suggestions =
       decision === "answer_with_suggestions" && best
-        ? buildSuggestions(results, best.id)
-        : buildSuggestions(results);
+        ? buildSuggestions(results, best.id, currentTopic, queryKeywords)
+        : buildSuggestions(results, null, currentTopic, queryKeywords);
 
     if (decision === "answer") {
       this.lastTopic = best?.topic ?? null;
@@ -213,7 +290,7 @@ class ActionProvider {
       if (item) {
         this.setIsTyping?.(true);
         this.lastTopic = item.topic ?? null;
-        
+
         // Small delay to show typing indicator
         setTimeout(() => {
           const message = this.createChatBotMessageFunc(item.answer);
