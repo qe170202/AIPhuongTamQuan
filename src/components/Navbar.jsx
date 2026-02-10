@@ -97,86 +97,74 @@ const Navbar = ({ toggleTheme }) => {
   return (
     <>
       <nav
-        className={`w-full fixed left-0 right-0 top-0 z-50 px-4 sm:px-6 lg:px-10 xl:px-[8%] py-3 sm:py-4 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-white/80 dark:bg-darkTheme/90 backdrop-blur-xl shadow-lg shadow-black/5 dark:shadow-white/5 border-b border-gray-200/60 dark:border-white/10'
-            : 'bg-transparent'
-        }`}
+        className={`w-full fixed left-0 right-0 top-0 z-50 px-4 sm:px-6 lg:px-10 xl:px-[8%] py-3 sm:py-4 transition-all duration-300 ${isScrolled
+          ? 'bg-white/80 dark:bg-darkTheme/90 backdrop-blur-xl shadow-lg shadow-black/5 dark:shadow-white/5 border-b border-gray-200/60 dark:border-white/10'
+          : 'bg-transparent'
+          }`}
         aria-label="Điều hướng chính"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-        {/* Logo */}
-        <a
-          href="#top"
-          onClick={(e) => scrollToSection(e, 'top')}
-          className="flex items-center gap-3 sm:gap-3.5 shrink-0 group rounded-2xl px-2 py-1.5 transition-all duration-200 hover:bg-white/60 hover:shadow-sm dark:hover:bg-white/5"
-          title="Về đầu trang"
-        >
-          <img
-            src="/assets/logobaucu1.jpeg"
-            alt="Logo Phường Tam Quan"
-            className="w-14 h-14 sm:w-16 sm:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
-          />
-          <span className="font-Ovo font-semibold text-gray-800 dark:text-white leading-tight tracking-tight text-[22px] sm:text-[24px] lg:text-[25px] bg-clip-text text-transparent bg-gradient-to-r from-[#b820e6] to-[#da7d20] drop-shadow-sm">
-            Phường Tam Quan
-          </span>
-        </a>
-
-        {/* Desktop: Nav links */}
-        <ul
-          className={`hidden md:flex items-center gap-1 rounded-full font-Ovo text-[15px] ${
-            isScrolled
-              ? 'text-gray-600 dark:text-gray-300'
-              : 'bg-white/70 dark:bg-white/5 backdrop-blur-md border border-gray-200/80 dark:border-white/20 text-gray-700 dark:text-gray-200 shadow-sm'
-          }`}
-        >
-          {navLinks.map(({ href, label }) => (
-            <li key={href}>
-              <a
-                href={`#${href}`}
-                onClick={(e) => scrollToSection(e, href)}
-                className={`relative px-5 py-2.5 rounded-full text-inherit transition-colors duration-200 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-1 after:h-0.5 after:bg-gradient-to-r after:from-[#b820e6] after:to-[#da7d20] after:rounded-full after:transition-all after:duration-200 ${
-                  activeSection === href
-                    ? 'text-[#b820e6] dark:text-[#da7d20] after:w-4'
-                    : 'hover:text-[#b820e6] dark:hover:text-[#da7d20] after:w-0 hover:after:w-4'
-                }`}
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Right: theme toggle, CTA, mobile menu btn */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          <button
-            onClick={toggleTheme}
-            aria-label="Chuyển giao diện sáng / tối"
-            className="p-2.5 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white transition-all duration-200"
-          >
-            <img src="/assets/moon_icon.png" alt="" className="w-5 h-5 dark:hidden" />
-            <img src="/assets/sun_icon.png" alt="" className="w-5 h-5 hidden dark:block" />
-          </button>
-
+          {/* Logo */}
           <a
-            href="#contact"
-            onClick={(e) => scrollToSection(e, 'contact')}
-            className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white text-[15px] font-Ovo font-medium shadow-md shadow-[#b820e6]/25 hover:shadow-lg hover:shadow-[#b820e6]/30 hover:-translate-y-0.5 transition-all duration-200"
+            href="#top"
+            onClick={(e) => scrollToSection(e, 'top')}
+            className="flex items-center gap-3 sm:gap-3.5 shrink-0 group rounded-2xl px-2 py-1.5 transition-all duration-200 hover:bg-white/60 hover:shadow-sm dark:hover:bg-white/5"
+            title="Về đầu trang"
           >
-            Bầu Cử
-          
+            <img
+              src="/assets/logobaucu1.jpeg"
+              alt="Logo Phường Tam Quan"
+              className="w-14 h-14 sm:w-16 sm:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+            <span className="font-Ovo font-bold leading-tight tracking-tight text-[22px] sm:text-[24px] lg:text-[25px]" style={{ color: '#003366', textShadow: '0 0 8px rgba(255, 0, 0, 0.4), 0 0 20px rgba(255, 0, 0, 0.2)' }}>
+              Phường Tam Quan
+            </span>
           </a>
 
-          <button
-            onClick={() => setIsMenuOpen(true)}
-            aria-label="Mở menu"
-            className="md:hidden p-2.5 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
+          {/* Desktop: Nav links */}
+          <ul
+            className={`hidden md:flex items-center gap-1 rounded-full font-Ovo text-[15px] ${isScrolled
+              ? 'text-gray-600 dark:text-gray-300'
+              : 'bg-white/70 dark:bg-white/5 backdrop-blur-md border border-gray-200/80 dark:border-white/20 text-gray-700 dark:text-gray-200 shadow-sm'
+              }`}
           >
-            <img src="/assets/menu-black.png" alt="" className="w-6 h-6 dark:hidden" />
-            <img src="/assets/menu-white.png" alt="" className="w-6 h-6 hidden dark:block" />
-          </button>
+            {navLinks.map(({ href, label }) => (
+              <li key={href}>
+                <a
+                  href={`#${href}`}
+                  onClick={(e) => scrollToSection(e, href)}
+                  className={`relative px-5 py-2.5 rounded-full text-inherit transition-colors duration-200 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-1 after:h-0.5 after:bg-gradient-to-r after:from-[#007BFF] after:to-[#00BFFF] after:rounded-full after:transition-all after:duration-200 ${activeSection === href
+                    ? 'text-[#007BFF] dark:text-[#00BFFF] after:w-4'
+                    : 'hover:text-[#007BFF] dark:hover:text-[#00BFFF] after:w-0 hover:after:w-4'
+                    }`}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Right: theme toggle, CTA, mobile menu btn */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <button
+              onClick={toggleTheme}
+              aria-label="Chuyển giao diện sáng / tối"
+              className="p-2.5 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white transition-all duration-200"
+            >
+              <img src="/assets/moon_icon.png" alt="" className="w-5 h-5 dark:hidden" />
+              <img src="/assets/sun_icon.png" alt="" className="w-5 h-5 hidden dark:block" />
+            </button>
+
+            <button
+              onClick={() => setIsMenuOpen(true)}
+              aria-label="Mở menu"
+              className="md:hidden p-2.5 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
+            >
+              <img src="/assets/menu-black.png" alt="" className="w-6 h-6 dark:hidden" />
+              <img src="/assets/menu-white.png" alt="" className="w-6 h-6 hidden dark:block" />
+            </button>
+          </div>
         </div>
-      </div>
 
       </nav>
 
@@ -184,9 +172,8 @@ const Navbar = ({ toggleTheme }) => {
       {typeof document !== 'undefined' &&
         createPortal(
           <div
-            className={`fixed inset-0 z-[9999] md:hidden transition-opacity duration-300 ${
-              isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-            }`}
+            className={`fixed inset-0 z-[9999] md:hidden transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
             aria-hidden={!isMenuOpen}
           >
             <div
@@ -197,9 +184,8 @@ const Navbar = ({ toggleTheme }) => {
             <aside
               role="dialog"
               aria-modal="true"
-              className={`absolute top-0 right-0 bottom-0 w-72 max-w-[85vw] bg-white dark:bg-darkTheme border-l border-gray-200 dark:border-white/10 shadow-2xl flex flex-col overflow-y-auto overscroll-contain transition-transform duration-300 ease-out ${
-                isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-              }`}
+              className={`absolute top-0 right-0 bottom-0 w-72 max-w-[85vw] bg-white dark:bg-darkTheme border-l border-gray-200 dark:border-white/10 shadow-2xl flex flex-col overflow-y-auto overscroll-contain transition-transform duration-300 ease-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                }`}
             >
               <div className="h-16 flex items-center justify-between px-5 border-b border-gray-100 dark:border-white/10">
                 <span className="font-Ovo font-semibold text-gray-800 dark:text-white">Menu</span>
@@ -218,22 +204,15 @@ const Navbar = ({ toggleTheme }) => {
                     key={href}
                     href={`#${href}`}
                     onClick={(e) => scrollToSection(e, href)}
-                    className={`py-3.5 px-4 rounded-xl font-Ovo transition-colors break-words ${
-                      activeSection === href
-                        ? 'bg-gray-50 dark:bg-white/5 text-[#b820e6] dark:text-[#da7d20]'
-                        : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-[#b820e6] dark:hover:text-[#da7d20]'
-                    }`}
+                    className={`py-3.5 px-4 rounded-xl font-Ovo transition-colors break-words ${activeSection === href
+                      ? 'bg-gray-50 dark:bg-white/5 text-[#007BFF] dark:text-[#00BFFF]'
+                      : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-[#007BFF] dark:hover:text-[#00BFFF]'
+                      }`}
                   >
                     {label}
                   </a>
                 ))}
-                <a
-                  href="#contact"
-                  onClick={(e) => scrollToSection(e, 'contact')}
-                  className="mt-4 mx-4 py-3.5 px-4 rounded-xl font-Ovo font-medium text-center bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white hover:opacity-95 transition-opacity"
-                >
-                  Bầu Cử
-                </a>
+
               </nav>
             </aside>
           </div>,

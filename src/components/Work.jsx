@@ -1,456 +1,531 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 
-const AUTO_SLIDE_MS = 2000
-const INNER_SLIDE_MS = 2000
-
-const clamp = (n, min, max) => Math.max(min, Math.min(max, n))
-
-const shouldUseInnerCarousel = (items = []) => {
-  if (!Array.isArray(items)) return false
-  if (items.length >= 2) return true
-  const t = String(items[0] ?? '').trim()
-  return t.length > 120
+// Parse DD/MM/YYYY → Date object (midnight local)
+const parseDate = (str) => {
+  const [d, m, y] = str.split('/').map(Number)
+  return new Date(y, m - 1, d)
 }
 
-const MilestoneContent = ({ items, special, isOuterPaused }) => {
-  const useCarousel = shouldUseInnerCarousel(items)
-  const slides = useMemo(() => {
-    if (!Array.isArray(items)) return []
-    if (!useCarousel) return [String(items[0] ?? '')]
-    return items.map((s) => String(s ?? ''))
-  }, [items, useCarousel])
+// Number of days between two dates
+const daysBetween = (a, b) => Math.round((b - a) / (1000 * 60 * 60 * 24))
 
-  const [idx, setIdx] = useState(0)
-  const [isHover, setIsHover] = useState(false)
-
-  useEffect(() => {
-    setIdx(0)
-  }, [slides.length])
-
-  useEffect(() => {
-    if (!useCarousel) return
-    if (slides.length <= 1) return
-    if (isOuterPaused || isHover) return
-
-    const id = window.setInterval(() => {
-      setIdx((v) => (v + 1) % slides.length)
-    }, INNER_SLIDE_MS)
-
-    return () => window.clearInterval(id)
-  }, [isOuterPaused, isHover, slides.length, useCarousel])
-
-  return (
-    <div onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className="h-full flex flex-col">
-      <div
-        className={`font-Ovo antialiased text-sm leading-relaxed ${special
-          ? 'font-semibold bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent'
-          : 'text-gray-700 dark:text-gray-100 group-hover:text-white'
-          }`}
-      >
-        {/* Text content - Fixed 64px for 3 lines with breathing room */}
-        <div className="h-[64px] overflow-hidden">
-          <p className="line-clamp-3">{slides[idx] || ''}</p>
-        </div>
-
-        {/* Carousel controls - ~28px */}
-        {useCarousel && slides.length > 1 && (
-          <div className="mt-3 flex items-center justify-between">
-            <div className="flex items-center gap-1.5">
-              {slides.slice(0, 8).map((_, i) => (
-                <span
-                  key={i}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${i === idx
-                    ? 'w-5 bg-[#da7d20] group-hover:bg-white'
-                    : 'w-1.5 bg-gray-300/70 dark:bg-white/20 group-hover:bg-white/40'
-                    }`}
-                />
-              ))}
-            </div>
-            <div className="text-xs text-gray-500 dark:text-gray-300 font-Montserrat group-hover:text-white/80">
-              {idx + 1}/{slides.length}
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  )
-}
+// How many days before a milestone we start showing the progress bar
+const NEAR_FUTURE_DAYS = 20
 
 const Work = () => {
-  const [headerRef, isHeaderVisible] = useIntersectionObserver({ threshold: 0.2 })
-  const [timelineRef, isTimelineVisible] = useIntersectionObserver({ threshold: 0.1 })
-
-  const timelineData = [
+  const rawTimeline = [
     {
-      phase: 2,
-      title: "NHÂN SỰ – HỒ SƠ ỨNG CỬ",
-      icon: "📋",
-      events: [
-        { date: "31/01/2026", items: ["Kết thúc Đại hội Đảng", "Thành lập các Tổ bầu cử"] },
-        { date: "01/02/2026", items: ["Hạn cuối nộp hồ sơ ứng cử"] },
-        { date: "03/02/2026", items: ["Hoàn thành Hiệp thương lần 2", "Lập danh sách sơ bộ người ứng cử", "Lấy ý kiến cử tri nơi cư trú", "Niêm yết danh sách cử tri"] },
-        { date: "05/02/2026", items: ["Điều chỉnh cơ cấu, số lượng ứng cử (lần 2 – ĐBQH)"] },
-        { date: "08/02/2026", items: ["Hoàn thành xác minh, trả lời ý kiến cử tri về người ứng cử"] }
-      ]
+      phase: 'Mốc 1',
+      date: '31/01/2026',
+      title: 'Nhân sự – Hồ sơ ứng cử',
+      description: 'Kết thúc Đại hội Đảng. Chuẩn bị nhân sự và hồ sơ ứng cử viên các cấp theo quy định của Luật Bầu cử.',
+      color: 'primary',
     },
     {
-      phase: 3,
-      title: "CHỐT DANH SÁCH – VẬN ĐỘNG BẦU CỬ",
-      icon: "📝",
-      events: [
-        { date: "20/02/2026", items: ["Hoàn thành Hiệp thương lần 3", "Lập danh sách người đủ tiêu chuẩn ứng cử"] },
-        { date: "22/02/2026", items: ["Gửi biên bản hiệp thương và hồ sơ ứng cử"] },
-        { date: "26/02/2026", items: ["Công bố danh sách chính thức người ứng cử", "Phân phối tài liệu, phiếu bầu"] },
-        { date: "27/02/2026", items: ["Niêm yết danh sách ứng cử tại khu vực bỏ phiếu", "Bắt đầu vận động bầu cử (15 ngày)"] }
-      ]
+      phase: 'Mốc 2',
+      date: '01/02/2026',
+      title: 'Hạn cuối nộp hồ sơ',
+      description: 'Thời hạn cuối cùng để Ủy ban Bầu cử tiếp nhận hồ sơ ứng cử đại biểu Quốc hội và HĐND các cấp.',
+      color: 'sky',
     },
     {
-      phase: 4,
-      title: "BẦU CỬ – KIỂM PHIẾU – CÔNG BỐ",
-      icon: "🗳️",
+      phase: 'Mốc 3',
+      date: '03/02/2026',
+      title: 'Hiệp thương lần 2 & Niêm yết cử tri',
+      description: 'UBTWMTTQVN và UBMTTQVN cấp tỉnh, cấp xã tổ chức hội nghị hiệp thương lần thứ hai. Niêm yết danh sách cử tri. Cử tri khiếu nại về việc lập danh sách cử tri trong vòng 30 ngày kể từ ngày niêm yết.',
+      color: 'primary',
+    },
+    {
+      phase: 'Mốc 4',
+      date: '05/02/2026',
+      title: 'Điều chỉnh cơ cấu ứng cử ĐBQH',
+      description: 'UBTVQH điều chỉnh lần thứ hai cơ cấu, thành phần, số lượng người của cơ quan, tổ chức, đơn vị ở trung ương và địa phương được giới thiệu ứng cử ĐBQH.',
+      color: 'sky',
+    },
+    {
+      phase: 'Mốc 5',
+      date: '20/02/2026',
+      title: 'Hiệp thương lần 3',
+      description: 'UBTWMTTQVN và UBMTTQVN cấp tỉnh, cấp xã tổ chức hội nghị hiệp thương lần thứ ba. Lập danh sách chính thức người đủ tiêu chuẩn ứng cử.',
+      color: 'primary',
+    },
+    {
+      phase: 'Mốc 6',
+      date: '22/02/2026',
+      title: 'Gửi biên bản hiệp thương',
+      description: 'Ban thường trực UBTWMTTQVN, Ban thường trực UBMTTQVN các cấp gửi biên bản hội nghị hiệp thương lần thứ ba và danh sách những người đủ tiêu chuẩn ứng cử đến HĐBCQG và các cơ quan, tổ chức theo quy định.',
+      color: 'sky',
+    },
+    {
+      phase: 'Mốc 7',
+      date: '26/02/2026',
+      title: 'Công bố danh sách chính thức',
+      description: 'HĐBCQG lập và công bố danh sách chính thức những người ứng cử ĐBQH theo từng đơn vị bầu cử. Ủy ban bầu cử lập và công bố danh sách chính thức những người ứng cử ĐBQH, đại biểu HĐND theo từng đơn vị bầu cử.',
+      color: 'primary',
+    },
+    {
+      phase: 'Mốc 8',
+      date: '27/02/2026',
+      title: 'Niêm yết danh sách ứng cử',
+      description: 'Tổ bầu cử niêm yết danh sách chính thức những người ứng cử ĐBQH, người ứng cử đại biểu HĐND tại khu vực bỏ phiếu.',
+      color: 'sky',
+    },
+    {
+      phase: 'Mốc 9',
+      date: '02/03/2026',
+      title: 'Phân phối tài liệu & phiếu bầu',
+      description: 'Ban bầu cử nhận và phân phối tài liệu, phiếu bầu cử cho Tổ bầu cử.',
+      color: 'primary',
+    },
+    {
+      phase: 'Mốc 10',
+      date: '03/03/2026',
+      title: 'Bắt đầu vận động bầu cử',
+      description: 'Thời gian vận động bầu cử được bắt đầu từ ngày công bố danh sách chính thức ứng cử và kết thúc trước thời điểm bắt đầu bỏ phiếu 24 giờ.',
+      color: 'sky',
+    },
+    {
+      phase: 'Mốc 11',
+      date: '05/03/2026',
+      title: 'Điều chỉnh cơ cấu bổ sung',
+      description: 'UBTVQH điều chỉnh lần thứ hai cơ cấu, thành phần, số lượng người của cơ quan, tổ chức, đơn vị ở trung ương và địa phương được giới thiệu ứng cử ĐBQH.',
+      color: 'primary',
+    },
+    {
+      phase: 'Mốc 12',
+      date: '10/03/2026',
+      title: 'Giải quyết khiếu nại danh sách cử tri',
+      description: 'Cơ quan lập danh sách cử tri giải quyết khiếu nại về bổ sung danh sách cử tri.',
+      color: 'sky',
+    },
+    {
+      phase: 'Mốc 13',
+      date: '15/03/2026',
+      title: '🗳️ NGÀY BẦU CỬ TOÀN QUỐC',
+      description: 'Ngày Bầu cử đại biểu Quốc hội khóa XVI và đại biểu Hội đồng nhân dân các cấp nhiệm kỳ 2026–2031.',
       highlight: true,
-      events: [
-        { date: "15/03/2026", items: ["🗳️ NGÀY BẦU CỬ"], special: true },
-        { date: "18/03/2026", items: ["Tổ bầu cử gửi biên bản kiểm phiếu"] },
-        { date: "20/03/2026", items: ["Ban bầu cử gửi biên bản xác định kết quả"] },
-        { date: "22/03/2026", items: ["UBBC tỉnh gửi kết quả bầu cử ĐBQH", "Hạn cuối bầu cử thêm/bầu cử lại (nếu có)"] },
-        { date: "25/03/2026", items: ["Công bố kết quả bầu cử và danh sách trúng cử", "Giải quyết khiếu nại kết quả bầu cử"] }
-      ]
+      color: 'primary',
     },
-    {
-      phase: 5,
-      title: "SAU BẦU CỬ",
-      icon: "🎯",
-      events: [
-        { date: "06/04/2026", items: ["Có thể khai mạc kỳ họp thứ nhất Quốc hội khóa mới / HĐND nhiệm kỳ mới"] }
-      ]
-    }
   ]
 
-  const milestones = useMemo(() => {
-    const flat = []
-    for (const phase of timelineData) {
-      for (const event of phase.events) {
-        flat.push({
-          date: event.date,
-          items: event.items,
-          special: Boolean(event.special),
-          phaseTitle: phase.title
-        })
+  // Auto-compute progress & urgent based on current date
+  const timelineData = useMemo(() => {
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+
+    return rawTimeline.map((item) => {
+      const target = parseDate(item.date)
+      const daysLeft = daysBetween(today, target)
+
+      let progress = null
+      let urgent = false
+
+      if (daysLeft <= 0) {
+        progress = 100
+      } else if (daysLeft <= NEAR_FUTURE_DAYS) {
+        progress = Math.round(((NEAR_FUTURE_DAYS - daysLeft) / NEAR_FUTURE_DAYS) * 100)
+        if (daysLeft <= 5) urgent = true
       }
-    }
-    return flat
+
+      return { ...item, progress, urgent }
+    })
+  }, [])
+
+  // Find current active milestone index (first one not yet completed)
+  const currentIndex = useMemo(() => {
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+    const idx = timelineData.findIndex((item) => {
+      const target = parseDate(item.date)
+      return target > today
+    })
+    // If all are past, show the last one; if none past, show first
+    return idx === -1 ? timelineData.length - 1 : Math.max(0, idx)
   }, [timelineData])
 
-  const scrollerRef = useRef(null)
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
-  const scrollTimeoutRef = useRef(null)
-  const isManualScrollRef = useRef(false)
-  const isDraggingRef = useRef(false)
-  const dragStartXRef = useRef(0)
-  const scrollLeftRef = useRef(0)
+  const scrollContainerRef = useRef(null)
+  const itemRefs = useRef([])
+  const sectionRef = useRef(null)
+  const [sectionVisible, setSectionVisible] = useState(false)
+  const hasScrolledRef = useRef(false)
 
-  const outerPaused = isPaused
-
-  const scrollToIndex = (idx, smooth = true) => {
-    const clampedIdx = clamp(idx, 0, milestones.length - 1)
-    setActiveIndex(clampedIdx)
-    isManualScrollRef.current = true
-
-    const scroller = scrollerRef.current
-    const el = scroller?.querySelector?.(`[data-milestone-index="${clampedIdx}"]`)
-
-    // Only scroll if the element exists AND the timeline is currently visible
-    if (el && isTimelineVisible && scroller) {
-      // Calculate scroll position manually to avoid page-level scrolling
-      const scrollerRect = scroller.getBoundingClientRect()
-      const elRect = el.getBoundingClientRect()
-      const scrollerCenter = scrollerRect.width / 2
-      const elCenter = elRect.left - scrollerRect.left + elRect.width / 2
-      const scrollOffset = elCenter - scrollerCenter
-
-      scroller.scrollBy({
-        left: scrollOffset,
-        behavior: smooth ? 'smooth' : 'auto'
-      })
-
-      // Reset manual scroll flag after animation
-      setTimeout(() => {
-        isManualScrollRef.current = false
-      }, smooth ? 600 : 0)
-    } else {
-      // If not visible, still reset the flag
-      isManualScrollRef.current = false
-    }
-  }
-
-  // Sync active index based on scroll position (like Slick's afterChange)
+  // Section visibility observer
   useEffect(() => {
-    const scroller = scrollerRef.current
-    if (!scroller) return
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setSectionVisible(true)
+      },
+      { threshold: 0.1 }
+    )
+    if (sectionRef.current) obs.observe(sectionRef.current)
+    return () => obs.disconnect()
+  }, [])
 
-    const handleScroll = () => {
-      if (isManualScrollRef.current) return
+  // Auto-scroll to current milestone on first render
+  useLayoutEffect(() => {
+    if (hasScrolledRef.current) return
+    hasScrolledRef.current = true
 
-      // Clear existing timeout
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current)
+    // Use rAF to ensure DOM is fully laid out (zoom:0.8 affects getBoundingClientRect)
+    requestAnimationFrame(() => {
+      const container = scrollContainerRef.current
+      const targetEl = itemRefs.current[currentIndex]
+      if (!container || !targetEl) return
+
+      // Use offsetTop which is not affected by CSS zoom
+      // Walk up the offset parents until we reach the scroll container
+      let offsetSum = 0
+      let el = targetEl
+      while (el && el !== container) {
+        offsetSum += el.offsetTop
+        el = el.offsetParent
       }
 
-      // Debounce to detect which slide is most centered
-      scrollTimeoutRef.current = setTimeout(() => {
-        const scrollerRect = scroller.getBoundingClientRect()
-        const scrollerCenter = scrollerRect.left + scrollerRect.width / 2
+      // Place the current milestone flush at the top of the scroll container
+      container.scrollTop = offsetSum
+    })
+  }, [currentIndex, timelineData])
 
-        let closestIndex = 0
-        let closestDistance = Infinity
+  // Scroll-reveal for items inside the scroll container
+  // Items animate IN when entering viewport, and reset when leaving so the animation replays
+  const [visibleItems, setVisibleItems] = useState(new Set())
 
-        const slides = scroller.querySelectorAll('[data-milestone-index]')
-        slides.forEach((slide) => {
-          const slideRect = slide.getBoundingClientRect()
-          const slideCenter = slideRect.left + slideRect.width / 2
-          const distance = Math.abs(slideCenter - scrollerCenter)
+  useEffect(() => {
+    const container = scrollContainerRef.current
+    if (!container) return
 
-          if (distance < closestDistance) {
-            closestDistance = distance
-            closestIndex = parseInt(slide.getAttribute('data-milestone-index'), 10)
-          }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        setVisibleItems((prev) => {
+          const next = new Set(prev)
+          entries.forEach((entry) => {
+            const idx = Number(entry.target.dataset.idx)
+            if (entry.isIntersecting) {
+              next.add(idx)
+            } else {
+              next.delete(idx) // Remove so animation replays on re-enter
+            }
+          })
+          return next
         })
+      },
+      { root: container, threshold: 0.1, rootMargin: '20px 0px' }
+    )
 
-        if (closestIndex !== activeIndex && !isManualScrollRef.current) {
-          setActiveIndex(closestIndex)
-        }
-      }, 100)
-    }
+    itemRefs.current.forEach((el) => {
+      if (el) observer.observe(el)
+    })
 
-    scroller.addEventListener('scroll', handleScroll, { passive: true })
-    return () => {
-      scroller.removeEventListener('scroll', handleScroll)
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current)
-      }
-    }
-  }, [activeIndex])
+    return () => observer.disconnect()
+  }, [timelineData])
 
-  // Auto-scroll effect (like Slick's autoplay)
-  useEffect(() => {
-    if (!isTimelineVisible) return
-    if (outerPaused) return
-    if (milestones.length <= 1) return
+  const borderColor = (color) =>
+    color === 'sky' ? 'border-sky-400' : 'border-[#007BFF]'
+  const hoverBorderColor = () => 'hover:border-l-sky-500'
+  const phaseTextColor = (color) =>
+    color === 'sky' ? 'text-sky-600' : 'text-[#007BFF]'
+  const titleHoverColor = (color) =>
+    color === 'sky' ? 'group-hover:text-sky-500' : 'group-hover:text-[#007BFF]'
+  const dotBorder = (color) =>
+    color === 'sky' ? 'border-sky-400' : 'border-[#007BFF]'
+  const dotBg = (color) =>
+    color === 'sky' ? 'bg-sky-400' : 'bg-[#007BFF]'
 
-    const id = window.setInterval(() => {
-      setActiveIndex((prevIndex) => {
-        const nextIndex = (prevIndex + 1) % milestones.length
-        scrollToIndex(nextIndex, true)
-        return nextIndex
-      })
-    }, AUTO_SLIDE_MS)
-
-    return () => window.clearInterval(id)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [outerPaused, isTimelineVisible, milestones.length])
-
-  // Navigation handlers
-  const goToPrev = () => {
-    const newIndex = activeIndex === 0 ? milestones.length - 1 : activeIndex - 1
-    scrollToIndex(newIndex)
+  // Scroll navigation
+  const scrollByItems = (dir) => {
+    const container = scrollContainerRef.current
+    if (!container) return
+    // Each item is roughly 1/3 of the container height
+    const amount = container.clientHeight * 0.85
+    container.scrollBy({ top: dir * amount, behavior: 'smooth' })
   }
-
-  const goToNext = () => {
-    const newIndex = (activeIndex + 1) % milestones.length
-    scrollToIndex(newIndex)
-  }
-
-  // Drag-to-scroll handlers
-  const handleMouseDown = (e) => {
-    const scroller = scrollerRef.current
-    if (!scroller) return
-
-    isDraggingRef.current = true
-    dragStartXRef.current = e.pageX - scroller.offsetLeft
-    scrollLeftRef.current = scroller.scrollLeft
-    scroller.style.cursor = 'grabbing'
-    scroller.style.userSelect = 'none'
-  }
-
-  const handleMouseMove = (e) => {
-    if (!isDraggingRef.current) return
-
-    e.preventDefault()
-    const scroller = scrollerRef.current
-    if (!scroller) return
-
-    const x = e.pageX - scroller.offsetLeft
-    const walk = (x - dragStartXRef.current) * 1.5 // Scroll speed multiplier
-    scroller.scrollLeft = scrollLeftRef.current - walk
-  }
-
-  const handleMouseUp = () => {
-    const scroller = scrollerRef.current
-    if (!scroller) return
-
-    isDraggingRef.current = false
-    scroller.style.cursor = 'grab'
-    scroller.style.userSelect = ''
-  }
-
-  const handleMouseLeave = () => {
-    if (isDraggingRef.current) {
-      handleMouseUp()
-    }
-  }
-
 
   return (
-    <div id="work" className="w-full px-[12%] py-20 scroll-mt-20">
+    <section
+      id="work"
+      ref={sectionRef}
+      className="py-24 scroll-mt-20 relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(to bottom, #FFFFFF, #F0F9FF)',
+        zoom: 0.8,
+      }}
+    >
+      {/* Subtle texture overlay */}
       <div
-        ref={headerRef}
-        className={`animate-on-scroll ${isHeaderVisible ? 'animate-fade-in-down' : ''}`}
-      >
-        <h4 className="text-center mb-2 text-lg font-Ovo hidden sm:block">Lịch trình</h4>
-        <h2 className="text-center text-4xl sm:text-5xl font-Ovo mb-4"><span className="hidden sm:inline">Timeline </span>Bầu Cử 2026</h2>
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, #007BFF 1px, transparent 0)`,
+          backgroundSize: '40px 40px',
+        }}
+      />
 
-      </div>
-
-      <div
-        ref={timelineRef}
-        className="max-w-6xl mx-auto"
-      >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
         <div
-          className={`animate-on-scroll ${isTimelineVisible ? 'animate-fade-in-left' : ''}`}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          className={`text-center mb-10 transition-all duration-700 ${sectionVisible
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-8'
+            }`}
         >
+          <span className="text-sky-600 font-bold tracking-[0.2em] uppercase text-xs mb-2 block">
+            Lộ trình thực hiện
+          </span>
+          <h2 className="mt-2 font-Ovo text-3xl sm:text-4xl lg:text-5xl text-gray-900">
+            Timeline Bầu Cử 2026
+          </h2>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-sky-300 to-[#007BFF] mx-auto mt-4 rounded-full" />
+          <p className="mt-4 text-sm text-slate-400">
+            Kéo lên xuống để xem các mốc thời gian • Đang ở{' '}
+            <span className="text-[#007BFF] font-semibold">{timelineData[currentIndex]?.phase}</span>
+          </p>
+        </div>
+
+        {/* Scrollable Timeline Container */}
+        <div className="relative">
+          {/* Scroll Up Button */}
+          <button
+            onClick={() => scrollByItems(-1)}
+            className="absolute -top-2 left-1/2 -translate-x-1/2 z-30 w-10 h-10 rounded-full bg-white border border-slate-200 shadow-lg flex items-center justify-center hover:bg-sky-50 hover:border-sky-300 hover:shadow-xl transition-all group"
+            aria-label="Cuộn lên"
+          >
+            <svg className="w-5 h-5 text-slate-400 group-hover:text-[#007BFF] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+            </svg>
+          </button>
+
+          {/* Top / Bottom fade masks */}
+          <div className="pointer-events-none absolute top-0 left-0 right-0 h-16 z-20 bg-gradient-to-b from-white to-transparent rounded-t-2xl" />
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 z-20 bg-gradient-to-t from-[#F0F9FF] to-transparent rounded-b-2xl" />
+
+          {/* Scroll container — shows ~3 items */}
           <div
-            className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/15"
+            ref={scrollContainerRef}
+            className="overflow-y-auto scroll-smooth relative rounded-2xl tl-scroll-hide"
             style={{
-              backgroundColor: '#8B5A2B'
+              height: '680px',
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
             }}
           >
-            {/* Background image with 50% opacity overlay */}
-            <div
-              className="absolute inset-0 z-0"
-              style={{
-                backgroundImage: 'url(/assets/anhnencaro.jpeg)',
-                backgroundPosition: 'center center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                opacity: 0.5
-              }}
-            />
-            {/* top dots like sample */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-4 z-20 flex items-center gap-1.5">
-              {milestones.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  aria-label={`Chuyển tới mốc ${i + 1}`}
-                  onClick={() => scrollToIndex(i)}
-                  className={`h-2 rounded-full transition-all duration-300 ${i === activeIndex ? 'w-7 bg-white/90' : 'w-2 bg-white/35 hover:bg-white/55'
-                    }`}
-                />
-              ))}
-            </div>
 
-            {/* scroll area */}
-            <div className="px-5 sm:px-10 lg:px-16 pt-16 pb-8">
+            <div className="relative py-8 timeline-scroll-container">
+              {/* Center vertical line (desktop) */}
               <div
-                ref={scrollerRef}
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleMouseMove}
-                onMouseUp={handleMouseUp}
-                onMouseLeave={handleMouseLeave}
-                className="relative z-10 flex gap-0 overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] cursor-grab active:cursor-grabbing"
-              >
-                <style>{`
-                  .timeline-scroll::-webkit-scrollbar { display: none; }
-                  
-                  /* Phase title marquee - scrolls RIGHT to LEFT on hover, faster speed */
-                  @keyframes phase-marquee {
-                    0%, 10% { 
-                      transform: translateX(calc(100% - 190px)); 
-                    }
-                    90%, 100% { 
-                      transform: translateX(0);
-                    }
-                  }
-                  
-                  .group:hover .phase-title-animated {
-                    animation: phase-marquee 3s linear infinite;
-                  }
-                `}</style>
+                className="hidden md:block absolute left-1/2 -translate-x-1/2 w-[3px] z-0 rounded-sm"
+                style={{
+                  top: '2rem',
+                  bottom: '2rem',
+                  background:
+                    'linear-gradient(to bottom, #BAE6FD, #007BFF, #BAE6FD)',
+                }}
+              />
 
-                <div className="shrink-0 w-[8vw] min-w-[8px]" />
+              {/* Mobile left line */}
+              <div
+                className="md:hidden absolute left-6 w-[3px] z-0 rounded-sm"
+                style={{
+                  top: '2rem',
+                  bottom: '2rem',
+                  background:
+                    'linear-gradient(to bottom, #BAE6FD, #007BFF, #BAE6FD)',
+                }}
+              />
 
-                {milestones.map((m, i) => (
-                  <div
-                    key={`${m.date}-${i}`}
-                    data-milestone-index={i}
-                    className="shrink-0 w-[206px] snap-center px-2"
-                  >
-                    <div className="grid grid-rows-[150px_48px_48px]">
-                      {/* Card (fixed height for uniform layout) */}
-                      <div
-                        className={`group h-[150px] rounded-xl bg-white/95 dark:bg-darkHover/35 border transition-all duration-300 shadow-sm hover:bg-[#b58a2a]/90 hover:border-white/60 ${i === activeIndex
-                          ? 'border-white/70 dark:border-white/25 shadow-xl ring-1 ring-white/40 dark:ring-white/15'
-                          : 'border-white/45 dark:border-white/15 hover:shadow-xl hover:border-white/70 dark:hover:border-white/25 hover:ring-1 hover:ring-white/35 dark:hover:ring-white/15 hover:scale-[1.01]'
-                          }`}
-                      >
-                        <div className="h-full p-4 flex flex-col">
-                          {/* Phase Title - Fixed 18px + 8px margin = 26px */}
-                          <div className="w-full h-[18px] mb-2 overflow-hidden relative">
-                            <span className="absolute left-0 top-0 text-xs text-gray-500 dark:text-gray-300 font-Montserrat tracking-wide leading-[18px] group-hover:text-white/90 whitespace-nowrap will-change-transform phase-title-animated">
-                              {m.phaseTitle}
-                            </span>
-                          </div>
-                          {/* Content area - Fixed 92px (150 - 32 padding - 26 header) */}
-                          <div className="h-[92px] font-Ovo antialiased">
-                            <MilestoneContent items={m.items} special={m.special} isOuterPaused={outerPaused} />
-                          </div>
-                        </div>
-                      </div>
+              <div className="space-y-10 md:space-y-14">
+                {timelineData.map((item, i) => {
+                  const isLeft = i % 2 === 0
+                  const visible = visibleItems.has(i)
+                  const isCurrent = i === currentIndex
+                  const delay = `${i * 120}ms`
 
-                      {/* Line + dot row */}
-                      <div className="relative flex items-center">
-                        <div className="-mx-2 w-[calc(100%+16px)] h-[3px] bg-white/55 dark:bg-white/25" />
-                        <div className="absolute left-1/2 -translate-x-1/2">
-                          <div className="w-6 h-6 rounded-full bg-[#da7d20] shadow-md flex items-center justify-center ring-2 ring-white/70 dark:ring-white/20">
-                            <div className="w-2.5 h-2.5 rounded-full bg-white" />
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Date pill row */}
-                      <div className="flex items-start justify-center pt-2">
+                  return (
+                    <div
+                      key={i}
+                      ref={(el) => (itemRefs.current[i] = el)}
+                      data-idx={i}
+                      className="flex flex-col md:flex-row items-center justify-between group relative"
+                    >
+                      {/* Left content or spacer */}
+                      {isLeft ? (
                         <div
-                          className={`px-6 py-2 rounded-full text-sm font-Montserrat shadow-md border whitespace-nowrap ${m.special
-                            ? 'bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white border-white/25'
-                            : 'bg-white/95 text-[#7a3f10] border-white/60'
+                          className={`w-full md:w-5/12 order-2 md:order-1 pl-14 md:pl-0 ${visible ? 'tl-card-left' : 'tl-hidden'
                             }`}
+                          style={{ '--tl-delay': delay }}
                         >
-                          {m.date}
+                          <TimelineCard
+                            item={item}
+                            isCurrent={isCurrent}
+                            borderColor={borderColor}
+                            hoverBorderColor={hoverBorderColor}
+                            phaseTextColor={phaseTextColor}
+                            titleHoverColor={titleHoverColor}
+                          />
                         </div>
+                      ) : (
+                        <div
+                          className={`w-full md:w-5/12 order-3 md:order-1 text-center md:text-right md:pr-10 hidden md:block ${visible ? 'tl-number-anim' : 'tl-hidden'
+                            }`}
+                          style={{ '--tl-delay': `${parseInt(delay) + 200}ms` }}
+                        >
+                          <span className="text-5xl font-bold text-slate-200/80 group-hover:text-sky-200 transition-colors duration-500 select-none">
+                            {String(i + 1).padStart(2, '0')}
+                          </span>
+                        </div>
+                      )}
+
+                      {/* Center dot */}
+                      <div
+                        className={`
+                          w-10 h-10 rounded-full bg-white border-4 z-10 order-1 md:order-2 my-3 md:my-0
+                          flex items-center justify-center group-hover:scale-110
+                          absolute left-1 md:relative md:left-auto
+                          ${dotBorder(item.color)}
+                          ${isCurrent ? 'ring-4 ring-sky-100 scale-110 tl-glow-current' : 'shadow-lg shadow-sky-200'}
+                          ${visible ? 'tl-dot-anim' : 'tl-hidden'}
+                        `}
+                        style={{ '--tl-delay': `${parseInt(delay) + 100}ms` }}
+                      >
+                        <div
+                          className={`w-3 h-3 ${dotBg(item.color)} rounded-full ${isCurrent || item.highlight || item.urgent ? 'animate-pulse' : ''
+                            }`}
+                        />
                       </div>
+
+                      {/* Right content or spacer */}
+                      {isLeft ? (
+                        <div
+                          className={`w-full md:w-5/12 order-3 md:order-3 text-center md:text-left md:pl-10 hidden md:block ${visible ? 'tl-number-anim' : 'tl-hidden'
+                            }`}
+                          style={{ '--tl-delay': `${parseInt(delay) + 200}ms` }}
+                        >
+                          <span className="text-5xl font-bold text-slate-200/80 group-hover:text-sky-200 transition-colors duration-500 select-none">
+                            {String(i + 1).padStart(2, '0')}
+                          </span>
+                        </div>
+                      ) : (
+                        <div
+                          className={`w-full md:w-5/12 order-2 md:order-3 pl-14 md:pl-0 ${visible ? 'tl-card-right' : 'tl-hidden'
+                            }`}
+                          style={{ '--tl-delay': delay }}
+                        >
+                          <TimelineCard
+                            item={item}
+                            isCurrent={isCurrent}
+                            borderColor={borderColor}
+                            hoverBorderColor={hoverBorderColor}
+                            phaseTextColor={phaseTextColor}
+                            titleHoverColor={titleHoverColor}
+                          />
+                        </div>
+                      )}
                     </div>
-                  </div>
-                ))}
-
-                <div className="shrink-0 w-[8vw] min-w-[8px]" />
+                  )
+                })}
               </div>
-
-
-
-
             </div>
           </div>
+
+          {/* Scroll Down Button */}
+          <button
+            onClick={() => scrollByItems(1)}
+            className="absolute -bottom-2 left-1/2 -translate-x-1/2 z-30 w-10 h-10 rounded-full bg-white border border-slate-200 shadow-lg flex items-center justify-center hover:bg-sky-50 hover:border-sky-300 hover:shadow-xl transition-all group"
+            aria-label="Cuộn xuống"
+          >
+            <svg className="w-5 h-5 text-slate-400 group-hover:text-[#007BFF] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
         </div>
       </div>
-
-
-    </div>
+    </section>
   )
 }
+
+/* ─── Timeline Card ─── */
+const TimelineCard = ({ item, isCurrent, borderColor, hoverBorderColor, phaseTextColor, titleHoverColor }) => (
+  <div
+    className={`
+      bg-white p-5 rounded-2xl shadow-lg border-l-4 border-y border-r border-slate-100
+      tl-card-hover
+      ${borderColor(item.color)} ${hoverBorderColor()}
+      ${isCurrent ? 'ring-2 ring-sky-200 shadow-sky-100 shadow-xl' : ''}
+    `}
+  >
+    {/* Current indicator */}
+    {isCurrent && (
+      <div className="flex items-center gap-1.5 mb-2">
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#007BFF] opacity-75" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#007BFF]" />
+        </span>
+        <span className="text-[10px] font-bold text-[#007BFF] uppercase tracking-wider">Đang diễn ra</span>
+      </div>
+    )}
+
+    {/* Header */}
+    <div className="flex justify-between items-start mb-2">
+      <span
+        className={`text-xs font-bold ${phaseTextColor(item.color)} uppercase tracking-wider bg-sky-50 px-2 py-1 rounded`}
+      >
+        {item.phase}
+      </span>
+      <span className="text-xs text-slate-400 font-mono">{item.date}</span>
+    </div>
+
+    {/* Title */}
+    <h3
+      className={`font-Outfit font-bold text-lg mb-1.5 text-slate-800 ${titleHoverColor(item.color)} transition-colors`}
+    >
+      {item.title}
+    </h3>
+
+    {/* Description */}
+    <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
+
+    {/* Progress bar — only shown when progress is not null */}
+    {typeof item.progress === 'number' && (
+      <>
+        <div className="mt-3 h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+          <div
+            className={`h-full rounded-full relative overflow-hidden transition-all duration-700 ${item.progress >= 100 ? 'bg-emerald-500' : 'bg-[#007BFF]'
+              }`}
+            style={{ width: `${item.progress}%` }}
+          >
+            {item.progress < 100 && (
+              <div
+                className="absolute inset-0 bg-white/30 w-full h-full"
+                style={{ animation: 'shimmer 2s infinite' }}
+              />
+            )}
+          </div>
+        </div>
+        <div className="flex justify-between mt-1 text-[10px] text-slate-400 uppercase font-bold">
+          <span>Tiến độ</span>
+          {item.progress >= 100 ? (
+            <span className="text-emerald-500">✓ Hoàn thành</span>
+          ) : (
+            <span className="text-[#007BFF]">{item.progress}%</span>
+          )}
+        </div>
+      </>
+    )}
+
+    {/* Urgent badge */}
+    {item.urgent && (
+      <div className="mt-3 flex items-center space-x-2 text-xs text-sky-600 font-bold bg-sky-50 p-2 rounded border border-sky-100">
+        <span className="text-sm animate-bounce">⚠️</span>
+        <span>Sắp hết hạn - Ưu tiên xử lý</span>
+      </div>
+    )}
+
+    {/* Highlight glow for election day */}
+    {item.highlight && (
+      <div className="mt-3 flex items-center space-x-2 text-xs text-white font-bold bg-gradient-to-r from-[#007BFF] to-sky-400 p-2.5 rounded-lg shadow-md">
+        <span className="text-sm">🗳️</span>
+        <span>Ngày Bầu cử toàn quốc</span>
+      </div>
+    )}
+  </div>
+)
 
 export default Work

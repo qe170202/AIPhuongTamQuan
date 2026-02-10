@@ -43,7 +43,7 @@ const About = () => {
       className="w-full px-[12%] pt-16 pb-10 scroll-mt-28 [zoom:0.86]"
     >
       {/* Header giữ trên, canh giữa */}
-      <div 
+      <div
         ref={headerRef}
         className={`animate-on-scroll ${isHeaderVisible ? 'animate-fade-in-down' : ''}`}
       >
@@ -58,7 +58,7 @@ const About = () => {
       {/* Hai cột 30/70: bên trái carousel (chỗ khung đỏ), bên phải đoạn văn + 3 thẻ */}
       <div className="flex w-full flex-col lg:flex-row items-stretch gap-8 lg:gap-10 my-16">
         {/* Cột 50% - Carousel cao bằng cột 50%, có khung viền */}
-        <div 
+        <div
           ref={carouselRef}
           className={`w-full lg:w-1/2 shrink-0 flex flex-col min-h-0 animate-on-scroll ${isCarouselVisible ? 'animate-fade-in-right' : ''}`}
         >
@@ -66,9 +66,8 @@ const About = () => {
             {CAROUSEL_IMAGES.map((img, i) => (
               <div
                 key={img.src}
-                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                  i === activeIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                }`}
+                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${i === activeIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
               >
                 <img
                   src={img.src}
@@ -82,11 +81,10 @@ const About = () => {
                 <button
                   key={i}
                   onClick={() => setActiveIndex(i)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    i === activeIndex
-                      ? 'bg-white scale-125 shadow'
-                      : 'bg-white/50 hover:bg-white/80'
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${i === activeIndex
+                    ? 'bg-white scale-125 shadow'
+                    : 'bg-white/50 hover:bg-white/80'
+                    }`}
                   aria-label={`Xem ảnh ${i + 1}`}
                 />
               ))}
@@ -95,7 +93,7 @@ const About = () => {
         </div>
 
         {/* Cột 50% - Chỉ đoạn văn + 4 thẻ (2x2) */}
-        <div 
+        <div
           ref={contentRef}
           className={`w-full lg:w-1/2 min-w-0 flex flex-col justify-center animate-on-scroll ${isContentVisible ? 'animate-fade-in-left' : ''}`}
         >
@@ -105,7 +103,7 @@ const About = () => {
             cấp nhiệm kỳ 2026 - 2031!
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            <li 
+            <li
               onClick={() => setIsModalOpen(true)}
               className="border border-gray-300 dark:border-white/30 rounded-xl p-5 sm:p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50 transition-all"
             >
@@ -223,14 +221,14 @@ const About = () => {
                 Số đại biểu được bầu: 4
               </p>
             </li>
-            
+
           </ul>
         </div>
       </div>
 
       {/* Modal chi tiết Đơn vị bầu cử số 1 */}
       {isModalOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
           onClick={() => setIsModalOpen(false)}
         >
@@ -239,7 +237,7 @@ const About = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header với gradient */}
-            <div className="sticky top-0 z-10 bg-gradient-to-r from-[#b820e6] via-[#c94ae0] to-[#da7d20] p-4 rounded-t-2xl">
+            <div className="sticky top-0 z-10 bg-gradient-to-r from-[#1d4ed8] via-[#3b82f6] to-[#06b6d4] p-4 rounded-t-2xl">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1">
@@ -275,9 +273,9 @@ const About = () => {
             <div className="p-4 space-y-4">
               {/* Thông tin tổng quan */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="bg-gradient-to-br from-[#b820e6]/10 to-[#da7d20]/10 dark:from-[#b820e6]/20 dark:to-[#da7d20]/20 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-br from-[#1d4ed8]/10 to-[#06b6d4]/10 dark:from-[#1d4ed8]/20 dark:to-[#06b6d4]/20 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
@@ -291,9 +289,9 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-[#b820e6]/10 to-[#da7d20]/10 dark:from-[#b820e6]/20 dark:to-[#da7d20]/20 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-br from-[#1d4ed8]/10 to-[#06b6d4]/10 dark:from-[#1d4ed8]/20 dark:to-[#06b6d4]/20 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -311,7 +309,7 @@ const About = () => {
               {/* Danh sách khu phố */}
               <div className="bg-gray-50 dark:bg-darkHover/30 rounded-xl p-3 border border-gray-200 dark:border-white/10">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
@@ -333,15 +331,15 @@ const About = () => {
                     <span className="font-medium text-gray-700 dark:text-gray-300 mb-1">Khu phố 9</span>
                     <span className="text-lg font-semibold text-gray-900 dark:text-white">921 Cử Tri</span>
                   </div>
-                
+
                 </div>
               </div>
 
               {/* Thông tin bầu cử */}
               <div className="space-y-2">
-                <div className="bg-gradient-to-r from-[#b820e6]/5 to-[#da7d20]/5 dark:from-[#b820e6]/10 dark:to-[#da7d20]/10 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-r from-[#1d4ed8]/5 to-[#06b6d4]/5 dark:from-[#1d4ed8]/10 dark:to-[#06b6d4]/10 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20] flex-shrink-0">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4] flex-shrink-0">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -358,7 +356,7 @@ const About = () => {
                   </div>
                 </div>
 
-               
+
               </div>
             </div>
 
@@ -377,7 +375,7 @@ const About = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header với gradient */}
-            <div className="sticky top-0 z-10 bg-gradient-to-r from-[#b820e6] via-[#c94ae0] to-[#da7d20] p-4 rounded-t-2xl">
+            <div className="sticky top-0 z-10 bg-gradient-to-r from-[#1d4ed8] via-[#3b82f6] to-[#06b6d4] p-4 rounded-t-2xl">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1">
@@ -413,15 +411,15 @@ const About = () => {
             <div className="p-4 space-y-4">
               {/* Thông tin tổng quan */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="bg-gradient-to-br from-[#b820e6]/10 to-[#da7d20]/10 dark:from-[#b820e6]/20 dark:to-[#da7d20]/20 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-br from-[#1d4ed8]/10 to-[#06b6d4]/10 dark:from-[#1d4ed8]/20 dark:to-[#06b6d4]/20 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
                     </div>
                     <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase">
-                    Cử Tri
+                      Cử Tri
                     </h3>
                   </div>
                   <p className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -429,9 +427,9 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-[#b820e6]/10 to-[#da7d20]/10 dark:from-[#b820e6]/20 dark:to-[#da7d20]/20 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-br from-[#1d4ed8]/10 to-[#06b6d4]/10 dark:from-[#1d4ed8]/20 dark:to-[#06b6d4]/20 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -449,7 +447,7 @@ const About = () => {
               {/* Danh sách khu phố */}
               <div className="bg-gray-50 dark:bg-darkHover/30 rounded-xl p-3 border border-gray-200 dark:border-white/10">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
@@ -476,9 +474,9 @@ const About = () => {
 
               {/* Thông tin bầu cử */}
               <div className="space-y-2">
-                <div className="bg-gradient-to-r from-[#b820e6]/5 to-[#da7d20]/5 dark:from-[#b820e6]/10 dark:to-[#da7d20]/10 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-r from-[#1d4ed8]/5 to-[#06b6d4]/5 dark:from-[#1d4ed8]/10 dark:to-[#06b6d4]/10 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20] flex-shrink-0">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4] flex-shrink-0">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -495,7 +493,7 @@ const About = () => {
                   </div>
                 </div>
 
-               
+
               </div>
             </div>
 
@@ -514,7 +512,7 @@ const About = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header với gradient */}
-            <div className="sticky top-0 z-10 bg-gradient-to-r from-[#b820e6] via-[#c94ae0] to-[#da7d20] p-4 rounded-t-2xl">
+            <div className="sticky top-0 z-10 bg-gradient-to-r from-[#1d4ed8] via-[#3b82f6] to-[#06b6d4] p-4 rounded-t-2xl">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1">
@@ -550,15 +548,15 @@ const About = () => {
             <div className="p-4 space-y-4">
               {/* Thông tin tổng quan */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="bg-gradient-to-br from-[#b820e6]/10 to-[#da7d20]/10 dark:from-[#b820e6]/20 dark:to-[#da7d20]/20 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-br from-[#1d4ed8]/10 to-[#06b6d4]/10 dark:from-[#1d4ed8]/20 dark:to-[#06b6d4]/20 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
                     </div>
                     <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase">
-                    Cử Tri
+                      Cử Tri
                     </h3>
                   </div>
                   <p className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -566,9 +564,9 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-[#b820e6]/10 to-[#da7d20]/10 dark:from-[#b820e6]/20 dark:to-[#da7d20]/20 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-br from-[#1d4ed8]/10 to-[#06b6d4]/10 dark:from-[#1d4ed8]/20 dark:to-[#06b6d4]/20 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -586,7 +584,7 @@ const About = () => {
               {/* Danh sách khu phố */}
               <div className="bg-gray-50 dark:bg-darkHover/30 rounded-xl p-3 border border-gray-200 dark:border-white/10">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
@@ -613,9 +611,9 @@ const About = () => {
 
               {/* Thông tin bầu cử */}
               <div className="space-y-2">
-                <div className="bg-gradient-to-r from-[#b820e6]/5 to-[#da7d20]/5 dark:from-[#b820e6]/10 dark:to-[#da7d20]/10 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-r from-[#1d4ed8]/5 to-[#06b6d4]/5 dark:from-[#1d4ed8]/10 dark:to-[#06b6d4]/10 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20] flex-shrink-0">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4] flex-shrink-0">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -626,7 +624,7 @@ const About = () => {
                         Địa điểm diễn ra bầu cử
                       </h3>
                       <p className="text-base text-gray-900 dark:text-white">
-                       Nhà văn hóa khu phố 6,7,8
+                        Nhà văn hóa khu phố 6,7,8
                       </p>
                     </div>
                   </div>
@@ -650,7 +648,7 @@ const About = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header với gradient */}
-            <div className="sticky top-0 z-10 bg-gradient-to-r from-[#b820e6] via-[#c94ae0] to-[#da7d20] p-4 rounded-t-2xl">
+            <div className="sticky top-0 z-10 bg-gradient-to-r from-[#1d4ed8] via-[#3b82f6] to-[#06b6d4] p-4 rounded-t-2xl">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1">
@@ -686,15 +684,15 @@ const About = () => {
             <div className="p-4 space-y-4">
               {/* Thông tin tổng quan */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="bg-gradient-to-br from-[#b820e6]/10 to-[#da7d20]/10 dark:from-[#b820e6]/20 dark:to-[#da7d20]/20 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-br from-[#1d4ed8]/10 to-[#06b6d4]/10 dark:from-[#1d4ed8]/20 dark:to-[#06b6d4]/20 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
                     </div>
                     <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase">
-                    Cử Tri
+                      Cử Tri
                     </h3>
                   </div>
                   <p className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -702,9 +700,9 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-[#b820e6]/10 to-[#da7d20]/10 dark:from-[#b820e6]/20 dark:to-[#da7d20]/20 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-br from-[#1d4ed8]/10 to-[#06b6d4]/10 dark:from-[#1d4ed8]/20 dark:to-[#06b6d4]/20 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -714,7 +712,7 @@ const About = () => {
                     </h3>
                   </div>
                   <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                  04 <span className="text-lg text-gray-600 dark:text-gray-400">đại biểu</span>
+                    04 <span className="text-lg text-gray-600 dark:text-gray-400">đại biểu</span>
                   </p>
                 </div>
               </div>
@@ -722,7 +720,7 @@ const About = () => {
               {/* Danh sách khu phố */}
               <div className="bg-gray-50 dark:bg-darkHover/30 rounded-xl p-3 border border-gray-200 dark:border-white/10">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
@@ -750,9 +748,9 @@ const About = () => {
 
               {/* Thông tin bầu cử */}
               <div className="space-y-2">
-                <div className="bg-gradient-to-r from-[#b820e6]/5 to-[#da7d20]/5 dark:from-[#b820e6]/10 dark:to-[#da7d20]/10 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-r from-[#1d4ed8]/5 to-[#06b6d4]/5 dark:from-[#1d4ed8]/10 dark:to-[#06b6d4]/10 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20] flex-shrink-0">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4] flex-shrink-0">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -760,7 +758,7 @@ const About = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase mb-1">
-                      Địa điểm diễn ra bầu cử
+                        Địa điểm diễn ra bầu cử
                       </h3>
                       <p className="text-base text-gray-900 dark:text-white">
                         Nhà văn hóa khu phố An Quý Bắc, An Quý Nam, An Sơn
@@ -769,7 +767,7 @@ const About = () => {
                   </div>
                 </div>
 
-                
+
               </div>
             </div>
 
@@ -788,7 +786,7 @@ const About = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header với gradient */}
-            <div className="sticky top-0 z-10 bg-gradient-to-r from-[#b820e6] via-[#c94ae0] to-[#da7d20] p-4 rounded-t-2xl">
+            <div className="sticky top-0 z-10 bg-gradient-to-r from-[#1d4ed8] via-[#3b82f6] to-[#06b6d4] p-4 rounded-t-2xl">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1">
@@ -822,9 +820,9 @@ const About = () => {
             <div className="p-4 space-y-4">
               {/* Thông tin tổng quan */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="bg-gradient-to-br from-[#b820e6]/10 to-[#da7d20]/10 dark:from-[#b820e6]/20 dark:to-[#da7d20]/20 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-br from-[#1d4ed8]/10 to-[#06b6d4]/10 dark:from-[#1d4ed8]/20 dark:to-[#06b6d4]/20 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                       <svg
                         className="w-5 h-5 text-white"
                         fill="none"
@@ -849,9 +847,9 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-[#b820e6]/10 to-[#da7d20]/10 dark:from-[#b820e6]/20 dark:to-[#da7d20]/20 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-br from-[#1d4ed8]/10 to-[#06b6d4]/10 dark:from-[#1d4ed8]/20 dark:to-[#06b6d4]/20 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                       <svg
                         className="w-5 h-5 text-white"
                         fill="none"
@@ -880,7 +878,7 @@ const About = () => {
               {/* Danh sách khu phố */}
               <div className="bg-gray-50 dark:bg-darkHover/30 rounded-xl p-3 border border-gray-200 dark:border-white/10">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20]">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4]">
                     <svg
                       className="w-5 h-5 text-white"
                       fill="none"
@@ -928,9 +926,9 @@ const About = () => {
 
               {/* Thông tin bầu cử */}
               <div className="space-y-2">
-                <div className="bg-gradient-to-r from-[#b820e6]/5 to-[#da7d20]/5 dark:from-[#b820e6]/10 dark:to-[#da7d20]/10 rounded-xl p-3 border border-[#b820e6]/20 dark:border-[#b820e6]/30">
+                <div className="bg-gradient-to-r from-[#1d4ed8]/5 to-[#06b6d4]/5 dark:from-[#1d4ed8]/10 dark:to-[#06b6d4]/10 rounded-xl p-3 border border-[#1d4ed8]/20 dark:border-[#1d4ed8]/30">
                   <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#b820e6] to-[#da7d20] flex-shrink-0">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#1d4ed8] to-[#06b6d4] flex-shrink-0">
                       <svg
                         className="w-5 h-5 text-white"
                         fill="none"
@@ -960,7 +958,7 @@ const About = () => {
                   </div>
                 </div>
 
-                
+
               </div>
             </div>
           </div>

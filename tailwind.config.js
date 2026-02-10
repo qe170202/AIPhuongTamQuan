@@ -10,7 +10,8 @@ export default {
                 Inter: ["Inter", "Outfit", "system-ui", "sans-serif"],
                 Outfit: ["Outfit", "Inter", "system-ui", "sans-serif"],
                 Ovo: ["Lora", "Noto Serif", "Georgia", "serif"],
-                Montserrat: ["Montserrat", "Outfit", "Inter", "system-ui", "sans-serif"]
+                Montserrat: ["Montserrat", "Outfit", "Inter", "system-ui", "sans-serif"],
+                BeVietnamPro: ["Be Vietnam Pro", "Inter", "system-ui", "sans-serif"]
             },
             animation: {
                 spin_slow: 'spin 6s linear infinite'
