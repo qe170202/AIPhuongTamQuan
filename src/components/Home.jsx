@@ -1,9 +1,10 @@
-import { useState, useRef, useEffect, useMemo } from 'react'
+import { useState, useRef, useEffect, useMemo, useCallback } from 'react'
 import { createChatBotMessage } from 'react-chatbot-kit'
 import MessageParser from '../chatbot/MessageParser'
 import ActionProvider from '../chatbot/ActionProvider'
 import config from '../chatbot/config.jsx' // Cập nhật đường dẫn
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
+import MarkdownMessage from './MarkdownMessage'
 
 const Home = () => {
   const [containerRef, isVisible] = useIntersectionObserver({ threshold: 0.1 })
@@ -28,6 +29,8 @@ const Home = () => {
   });
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
+  const [showResetDialog, setShowResetDialog] = useState(false)
+  const [copiedId, setCopiedId] = useState(null)
   const [leftBannerIndex, setLeftBannerIndex] = useState(0)
   const [rightBannerIndex, setRightBannerIndex] = useState(0)
   const messagesEndRef = useRef(null)
@@ -183,6 +186,40 @@ const Home = () => {
     return date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
   };
 
+  // Reset chat to initial state
+  const handleResetChat = useCallback(() => {
+    const initial = config.initialMessages.map(msg => ({
+      id: Date.now() + Math.random(),
+      text: msg.message,
+      sender: 'assistant',
+      timestamp: new Date(),
+      widget: msg.widget,
+      payload: msg.payload,
+    }));
+    setMessages(initial);
+    localStorage.removeItem('chat_messages');
+    setShowResetDialog(false);
+  }, []);
+
+  // Copy message text to clipboard
+  const handleCopy = useCallback(async (text, messageId) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedId(messageId);
+      setTimeout(() => setCopiedId(null), 2000);
+    } catch {
+      // Fallback for older browsers
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      setCopiedId(messageId);
+      setTimeout(() => setCopiedId(null), 2000);
+    }
+  }, []);
+
   return (
     <div id="top" className="w-full pt-24 pb-6">
       <div className="flex gap-4 justify-center items-start px-4">
@@ -249,6 +286,18 @@ const Home = () => {
                   <div className="px-2.5 py-1.5 rounded-lg border border-[#007BFF]/20 shadow-sm whitespace-nowrap font-medium" style={{ background: '#E3F2FD', color: '#007BFF' }}>
                     🛡️ Thông tin xác thực
                   </div>
+                  {/* Nút Reset Chat */}
+                  <button
+                    onClick={() => setShowResetDialog(true)}
+                    className="p-1.5 rounded-lg border border-[#007BFF]/20 shadow-sm hover:bg-red-50 hover:border-red-300 transition-all duration-200 group/reset"
+                    style={{ background: '#E3F2FD' }}
+                    title="Xóa hội thoại"
+                    aria-label="Xóa hội thoại"
+                  >
+                    <svg className="w-4 h-4 text-[#007BFF] group-hover/reset:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
@@ -262,38 +311,77 @@ const Home = () => {
                   gist: {} // Thêm các state khác nếu cần, ví dụ: state từ mapStateToProps của widget
                 };
 
+                const isBot = message.sender === 'assistant';
+
                 return (
                   <div
                     key={message.id}
                     className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
                   >
-                    <div
-                      className={`max-w-[75%] md:max-w-[60%] rounded-2xl px-4 py-3 shadow-sm ${message.sender === 'user'
-                        ? 'text-white rounded-br-sm'
-                        : 'bg-white text-gray-800 border border-[#007BFF]/10 rounded-bl-sm'
-                        }`}
-                      style={message.sender === 'user' ? { background: 'linear-gradient(135deg, #007BFF, #00BFFF)' } : {}}
-                    >
-                      <p className="text-sm md:text-base leading-relaxed whitespace-pre-wrap break-words">
-                        {message.text}
-                      </p>
-                      {WidgetComponent && (
-                        <div className="mt-2">
-                          <WidgetComponent
-                            actionProvider={actionProviderRef.current}
-                            state={botState}
-                            payload={message.payload} // Truyền payload để widget có thể truy cập suggestions
-                          />
+                    <div className={`chat-bubble-wrapper max-w-[75%] md:max-w-[60%]`}>
+                      <div
+                        className={`rounded-2xl px-4 py-3 shadow-sm ${message.sender === 'user'
+                          ? 'text-white rounded-br-sm'
+                          : 'bg-white text-gray-800 border border-[#007BFF]/10 rounded-bl-sm'
+                          }`}
+                        style={message.sender === 'user' ? { background: 'linear-gradient(135deg, #007BFF, #00BFFF)' } : {}}
+                      >
+                        {/* Markdown cho bot, plain text cho user */}
+                        {isBot ? (
+                          <div className="text-sm md:text-base leading-relaxed">
+                            <MarkdownMessage text={message.text} />
+                          </div>
+                        ) : (
+                          <p className="text-sm md:text-base leading-relaxed whitespace-pre-wrap break-words">
+                            {message.text}
+                          </p>
+                        )}
+                        {WidgetComponent && (
+                          <div className="mt-2">
+                            <WidgetComponent
+                              actionProvider={actionProviderRef.current}
+                              state={botState}
+                              payload={message.payload}
+                            />
+                          </div>
+                        )}
+                        <span
+                          className={`text-xs mt-1 block ${message.sender === 'user'
+                            ? 'text-white/70'
+                            : 'text-gray-500 dark:text-gray-400'
+                            }`}
+                        >
+                          {formatTime(message.timestamp)}
+                        </span>
+                      </div>
+
+                      {/* Nút Copy — chỉ hiện cho tin nhắn bot */}
+                      {isBot && (
+                        <div className="relative mt-1 flex justify-start">
+                          <button
+                            onClick={() => handleCopy(message.text, message.id)}
+                            className="copy-btn flex items-center gap-1 px-2 py-1 rounded-md text-xs text-gray-400 hover:text-[#007BFF] hover:bg-[#007BFF]/5 transition-all duration-200"
+                            title="Sao chép"
+                            aria-label="Sao chép tin nhắn"
+                          >
+                            {copiedId === message.id ? (
+                              <>
+                                <svg className="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span className="text-emerald-500">Đã copy</span>
+                              </>
+                            ) : (
+                              <>
+                                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                                <span>Copy</span>
+                              </>
+                            )}
+                          </button>
                         </div>
                       )}
-                      <span
-                        className={`text-xs mt-1 block ${message.sender === 'user'
-                          ? 'text-white/70'
-                          : 'text-gray-500 dark:text-gray-400'
-                          }`}
-                      >
-                        {formatTime(message.timestamp)}
-                      </span>
                     </div>
                   </div>
                 );
@@ -369,6 +457,39 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Dialog xác nhận Reset Chat */}
+      {showResetDialog && (
+        <div className="reset-dialog-overlay" onClick={() => setShowResetDialog(false)}>
+          <div className="reset-dialog" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="p-2 rounded-full bg-red-100">
+                <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900">Xóa hội thoại?</h3>
+            </div>
+            <p className="text-sm text-gray-600 mb-5">
+              Toàn bộ tin nhắn sẽ bị xóa và không thể khôi phục. Bạn có chắc chắn muốn tiếp tục?
+            </p>
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={() => setShowResetDialog(false)}
+                className="px-4 py-2 rounded-xl text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors"
+              >
+                Hủy
+              </button>
+              <button
+                onClick={handleResetChat}
+                className="px-4 py-2 rounded-xl text-sm font-medium text-white bg-red-500 hover:bg-red-600 transition-colors shadow-sm"
+              >
+                Xóa tất cả
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
