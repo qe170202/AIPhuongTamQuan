@@ -5116,384 +5116,6 @@
     "topic": "local_tamquan_personnel"
   },
   {
-    "id": "TQ_KVBP_01",
-    "question": "Thông tin bầu cử tại Khu phố 1 (Khu vực bỏ phiếu số 1)?",
-    "questions": [
-      "Khu phố 1 bỏ phiếu ở đâu?",
-      "Số lượng cử tri Khu phố 1?",
-      "Khu vực bỏ phiếu số 1 là khu phố nào?"
-    ],
-    "answer": "Khu phố 1 thuộc Khu vực bỏ phiếu số 1. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 1. Số lượng cử tri: 1.418 người.",
-    "keywords": [
-      "Khu phố 1",
-      "Khu vực bỏ phiếu số 1",
-      "Nhà Văn hóa Khu phố 1",
-      "1418 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_02",
-    "question": "Thông tin bầu cử tại Khu phố 2 (Khu vực bỏ phiếu số 2)?",
-    "questions": [
-      "Khu phố 2 bỏ phiếu ở đâu?",
-      "Số lượng cử tri Khu phố 2?",
-      "Khu vực bỏ phiếu số 2 là khu phố nào?"
-    ],
-    "answer": "Khu phố 2 thuộc Khu vực bỏ phiếu số 2. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 2. Số lượng cử tri: 1.102 người.",
-    "keywords": [
-      "Khu phố 2",
-      "Khu vực bỏ phiếu số 2",
-      "Nhà Văn hóa Khu phố 2",
-      "1102 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_03",
-    "question": "Thông tin bầu cử tại Khu phố 9 (Khu vực bỏ phiếu số 3)?",
-    "questions": [
-      "Khu phố 9 bỏ phiếu ở đâu?",
-      "Số lượng cử tri Khu phố 9?",
-      "Khu vực bỏ phiếu số 3 là khu phố nào?"
-    ],
-    "answer": "Khu phố 9 thuộc Khu vực bỏ phiếu số 3. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 9. Số lượng cử tri: 921 người.",
-    "keywords": [
-      "Khu phố 9",
-      "Khu vực bỏ phiếu số 3",
-      "Nhà Văn hóa Khu phố 9",
-      "921 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_04",
-    "question": "Thông tin bầu cử tại Khu phố 3 (Khu vực bỏ phiếu số 4)?",
-    "questions": [
-      "Khu phố 3 bỏ phiếu ở đâu?",
-      "Số lượng cử tri Khu phố 3?",
-      "Khu vực bỏ phiếu số 4 là khu phố nào?"
-    ],
-    "answer": "Khu phố 3 thuộc Khu vực bỏ phiếu số 4. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 3. Số lượng cử tri: 1.239 người.",
-    "keywords": [
-      "Khu phố 3",
-      "Khu vực bỏ phiếu số 4",
-      "Nhà Văn hóa Khu phố 3",
-      "1239 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_05",
-    "question": "Thông tin bầu cử tại Khu phố 4 (Khu vực bỏ phiếu số 5)?",
-    "questions": [
-      "Khu phố 4 bỏ phiếu ở đâu?",
-      "Số lượng cử tri Khu phố 4?",
-      "Khu vực bỏ phiếu số 5 là khu phố nào?"
-    ],
-    "answer": "Khu phố 4 thuộc Khu vực bỏ phiếu số 5. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 4. Số lượng cử tri: 1.138 người.",
-    "keywords": [
-      "Khu phố 4",
-      "Khu vực bỏ phiếu số 5",
-      "Nhà Văn hóa Khu phố 4",
-      "1138 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_06",
-    "question": "Thông tin bầu cử tại Khu phố 5 (Khu vực bỏ phiếu số 6)?",
-    "questions": [
-      "Khu phố 5 bỏ phiếu ở đâu?",
-      "Số lượng cử tri Khu phố 5?",
-      "Khu vực bỏ phiếu số 6 là khu phố nào?"
-    ],
-    "answer": "Khu phố 5 thuộc Khu vực bỏ phiếu số 6. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 5. Số lượng cử tri: 1.175 người.",
-    "keywords": [
-      "Khu phố 5",
-      "Khu vực bỏ phiếu số 6",
-      "Nhà Văn hóa Khu phố 5",
-      "1175 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_07",
-    "question": "Thông tin bầu cử tại Khu phố 6 (Khu vực bỏ phiếu số 7)?",
-    "questions": [
-      "Khu phố 6 bỏ phiếu ở đâu?",
-      "Số lượng cử tri Khu phố 6?",
-      "Khu vực bỏ phiếu số 7 là khu phố nào?"
-    ],
-    "answer": "Khu phố 6 thuộc Khu vực bỏ phiếu số 7. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 6. Số lượng cử tri: 1.142 người.",
-    "keywords": [
-      "Khu phố 6",
-      "Khu vực bỏ phiếu số 7",
-      "Nhà Văn hóa Khu phố 6",
-      "1142 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_08",
-    "question": "Thông tin bầu cử tại Khu phố 7 (Khu vực bỏ phiếu số 8)?",
-    "questions": [
-      "Khu phố 7 bỏ phiếu ở đâu?",
-      "Số lượng cử tri Khu phố 7?",
-      "Khu vực bỏ phiếu số 8 là khu phố nào?"
-    ],
-    "answer": "Khu phố 7 thuộc Khu vực bỏ phiếu số 8. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 7. Số lượng cử tri: 1.081 người.",
-    "keywords": [
-      "Khu phố 7",
-      "Khu vực bỏ phiếu số 8",
-      "Nhà Văn hóa Khu phố 7",
-      "1081 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_09",
-    "question": "Thông tin bầu cử tại Khu phố 8 (Khu vực bỏ phiếu số 9)?",
-    "questions": [
-      "Khu phố 8 bỏ phiếu ở đâu?",
-      "Số lượng cử tri Khu phố 8?",
-      "Khu vực bỏ phiếu số 9 là khu phố nào?"
-    ],
-    "answer": "Khu phố 8 thuộc Khu vực bỏ phiếu số 9. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 8. Số lượng cử tri: 1.481 người.",
-    "keywords": [
-      "Khu phố 8",
-      "Khu vực bỏ phiếu số 9",
-      "Nhà Văn hóa Khu phố 8",
-      "1481 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_10",
-    "question": "Thông tin bầu cử tại Khu phố An Quý Bắc (Khu vực bỏ phiếu số 10)?",
-    "questions": [
-      "Khu phố An Quý Bắc bỏ phiếu ở đâu?",
-      "Số lượng cử tri An Quý Bắc?",
-      "Khu vực bỏ phiếu số 10 là khu phố nào?"
-    ],
-    "answer": "Khu phố An Quý Bắc thuộc Khu vực bỏ phiếu số 10. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố An Quý Bắc. Số lượng cử tri: 1.351 người.",
-    "keywords": [
-      "An Quý Bắc",
-      "Khu vực bỏ phiếu số 10",
-      "Nhà Văn hóa An Quý Bắc",
-      "1351 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_11",
-    "question": "Thông tin bầu cử tại Khu phố An Quý Nam (Khu vực bỏ phiếu số 11)?",
-    "questions": [
-      "Khu phố An Quý Nam bỏ phiếu ở đâu?",
-      "Số lượng cử tri An Quý Nam?",
-      "Khu vực bỏ phiếu số 11 là khu phố nào?"
-    ],
-    "answer": "Khu phố An Quý Nam thuộc Khu vực bỏ phiếu số 11. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố An Quý Nam. Số lượng cử tri: 1.042 người.",
-    "keywords": [
-      "An Quý Nam",
-      "Khu vực bỏ phiếu số 11",
-      "Nhà Văn hóa An Quý Nam",
-      "1042 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_12",
-    "question": "Thông tin bầu cử tại Khu phố An Sơn (Khu vực bỏ phiếu số 12)?",
-    "questions": [
-      "Khu phố An Sơn bỏ phiếu ở đâu?",
-      "Số lượng cử tri An Sơn?",
-      "Khu vực bỏ phiếu số 12 là khu phố nào?"
-    ],
-    "answer": "Khu phố An Sơn thuộc Khu vực bỏ phiếu số 12. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố An Sơn. Số lượng cử tri: 1.755 người.",
-    "keywords": [
-      "An Sơn",
-      "Khu vực bỏ phiếu số 12",
-      "Nhà Văn hóa An Sơn",
-      "1755 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_13",
-    "question": "Thông tin bầu cử tại Khu phố Tân An (Khu vực bỏ phiếu số 13)?",
-    "questions": [
-      "Khu phố Tân An bỏ phiếu ở đâu?",
-      "Số lượng cử tri Tân An?",
-      "Khu vực bỏ phiếu số 13 là khu phố nào?"
-    ],
-    "answer": "Khu phố Tân An thuộc Khu vực bỏ phiếu số 13. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Tân An. Số lượng cử tri: 732 người.",
-    "keywords": [
-      "Tân An",
-      "Khu vực bỏ phiếu số 13",
-      "Nhà Văn hóa Tân An",
-      "732 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_14",
-    "question": "Thông tin bầu cử tại Khu phố Hội An Tây (Khu vực bỏ phiếu số 14)?",
-    "questions": [
-      "Khu phố Hội An Tây bỏ phiếu ở đâu?",
-      "Số lượng cử tri Hội An Tây?",
-      "Khu vực bỏ phiếu số 14 là khu phố nào?"
-    ],
-    "answer": "Khu phố Hội An Tây thuộc Khu vực bỏ phiếu số 14. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Hội An Tây. Số lượng cử tri: 586 người.",
-    "keywords": [
-      "Hội An Tây",
-      "Khu vực bỏ phiếu số 14",
-      "Nhà Văn hóa Hội An Tây",
-      "586 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_15",
-    "question": "Thông tin bầu cử tại Khu phố Tân Trung (Khu vực bỏ phiếu số 15)?",
-    "questions": [
-      "Khu phố Tân Trung bỏ phiếu ở đâu?",
-      "Số lượng cử tri Tân Trung?",
-      "Khu vực bỏ phiếu số 15 là khu phố nào?"
-    ],
-    "answer": "Khu phố Tân Trung thuộc Khu vực bỏ phiếu số 15. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Tân Trung. Số lượng cử tri: 724 người.",
-    "keywords": [
-      "Tân Trung",
-      "Khu vực bỏ phiếu số 15",
-      "Nhà Văn hóa Tân Trung",
-      "724 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_16",
-    "question": "Thông tin bầu cử tại Khu phố Thành Sơn Tây (Khu vực bỏ phiếu số 16)?",
-    "questions": [
-      "Khu phố Thành Sơn Tây bỏ phiếu ở đâu?",
-      "Số lượng cử tri Thành Sơn Tây?",
-      "Khu vực bỏ phiếu số 16 là khu phố nào?"
-    ],
-    "answer": "Khu phố Thành Sơn Tây thuộc Khu vực bỏ phiếu số 16. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Thành Sơn Tây. Số lượng cử tri: 785 người.",
-    "keywords": [
-      "Thành Sơn Tây",
-      "Khu vực bỏ phiếu số 16",
-      "Nhà Văn hóa Thành Sơn Tây",
-      "785 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_17",
-    "question": "Thông tin bầu cử tại Khu phố Thành Sơn (Khu vực bỏ phiếu số 17)?",
-    "questions": [
-      "Khu phố Thành Sơn bỏ phiếu ở đâu?",
-      "Số lượng cử tri Thành Sơn?",
-      "Khu vực bỏ phiếu số 17 là khu phố nào?"
-    ],
-    "answer": "Khu phố Thành Sơn thuộc Khu vực bỏ phiếu số 17. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Thành Sơn. Số lượng cử tri: 661 người.",
-    "keywords": [
-      "Thành Sơn",
-      "Khu vực bỏ phiếu số 17",
-      "Nhà Văn hóa Thành Sơn",
-      "661 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
-    "id": "TQ_KVBP_18",
-    "question": "Thông tin bầu cử tại Khu phố Hội An (Khu vực bỏ phiếu số 18)?",
-    "questions": [
-      "Khu phố Hội An bỏ phiếu ở đâu?",
-      "Số lượng cử tri Hội An?",
-      "Khu vực bỏ phiếu số 18 là khu phố nào?"
-    ],
-    "answer": "Khu phố Hội An thuộc Khu vực bỏ phiếu số 18. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Hội An. Số lượng cử tri: 738 người.",
-    "keywords": [
-      "Hội An",
-      "Khu vực bỏ phiếu số 18",
-      "Nhà Văn hóa Hội An",
-      "738 cử tri"
-    ],
-    "tags": [
-      "địa điểm bỏ phiếu",
-      "số liệu cử tri"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
     "id": "TQ_UBBC_QD22",
     "question": "Danh sách nhân sự và nhiệm vụ của Tiểu ban Nhân sự ?",
     "questions": [
@@ -5876,6 +5498,598 @@
     "tags": [
       "địa bàn",
       "Đơn vị số 5"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC1_Updated",
+    "question": "Thông tin cử tri và danh sách ứng cử viên tại Đơn vị bầu cử số 1 phường Tam Quan?",
+    "questions": [
+      "Danh sách 7 người ứng cử và số lượng cử tri Đơn vị số 1?",
+      "Đơn vị bầu cử số 1 gồm bao nhiêu cử tri và những ai ứng cử?"
+    ],
+    "answer": "Đơn vị bầu cử số 1 (gồm Khu phố 1, 2 và 9) có tổng cộng **3.325 cử tri** (KP 1: 1.377; KP 2: 1.060; KP 9: 888). Danh sách 07 người ứng cử gồm [1]:\n1. Lê Đức Anh: Đảng ủy viên, Phó Chủ tịch Ủy ban MTTQVN phường, Bí thư Đoàn TNCS Hồ Chí Minh phường Tam Quan [1].\n2. Nguyễn Văn Được: Chi hội trưởng Chi hội Cựu chiến binh Khu phố 2, phường Tam Quan [1].\n3. Trịnh Văn Mười: Đảng ủy viên, Phó Chủ tịch Thường trực Ủy ban MTTQVN phường, Chủ tịch Hội Nông dân phường Tam Quan [1].\n4. Phạm Thị Bích Phương: Giáo viên Trường mầm non Búp măng [1].\n5. La Long Quyết: Ủy viên Ban Thường vụ Đảng ủy, Phó Chủ tịch UBND phường Tam Quan [1].\n6. Huỳnh Thị Tường Vy: Ủy viên Ban Thường vụ Đảng ủy, Chủ nhiệm Ủy ban Kiểm tra Đảng ủy phường Tam Quan [1].\n7. Nguyễn Thị Hồng Yến: Đoàn viên Chi đoàn Khu phố 9, phường Tam Quan [1].",
+    "keywords": [
+      "Đơn vị 1",
+      "3.325 cử tri",
+      "Lê Đức Anh",
+      "La Long Quyết"
+    ],
+    "tags": [
+      "cử tri chính thức",
+      "danh sách ứng cử",
+      "Đơn vị 1"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC2_Updated",
+    "question": "Thông tin cử tri và danh sách ứng cử viên tại Đơn vị bầu cử số 2 phường Tam Quan?",
+    "questions": [
+      "Danh sách 7 người ứng cử và số lượng cử tri Đơn vị số 2?",
+      "Đơn vị bầu cử số 2 gồm bao nhiêu cử tri và những ai ứng cử?"
+    ],
+    "answer": "Đơn vị bầu cử số 2 (gồm Khu phố 3, 4 và 5) có tổng cộng **3.453 cử tri** (KP 3: 1.205; KP 4: 1.110; KP 5: 1.138). Danh sách 07 người ứng cử gồm [2]:\n1. Đặng Văn Á (Đặng Đức Á): Bí thư chi bộ Khu phố 3, phường Tam Quan [2].\n2. Phạm Thị Hạnh: Kinh doanh, buôn bán [2].\n3. Nguyễn Văn Hiếu: Trụ trì chùa An Thái [2].\n4. Nguyễn Thị Kim Nguyên: Chi hội trưởng Chi hội Phụ nữ Khu phố 5, phường Tam Quan [2].\n5. Nguyễn Thị Thanh Thúy: Ủy viên Ủy ban Kiểm tra Đảng ủy phường Tam Quan [2].\n6. Huỳnh Ngọc Trường: Ủy viên Ban Thường vụ Đảng ủy, Chỉ huy trưởng Ban Chỉ huy Quân sự phường Tam Quan [2].\n7. Trương Thị Thúy Ức: Phó Bí thư Đảng ủy, Chủ tịch UBND phường Tam Quan [2].",
+    "keywords": [
+      "Đơn vị 2",
+      "3.453 cử tri",
+      "Trương Thị Thúy Ức",
+      "Huỳnh Ngọc Trường"
+    ],
+    "tags": [
+      "cử tri chính thức",
+      "danh sách ứng cử",
+      "Đơn vị 2"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC3_Updated",
+    "question": "Thông tin cử tri và danh sách ứng cử viên tại Đơn vị bầu cử số 3 phường Tam Quan?",
+    "questions": [
+      "Danh sách 7 người ứng cử và số lượng cử tri Đơn vị số 3?",
+      "Đơn vị bầu cử số 3 gồm bao nhiêu cử tri và những ai ứng cử?"
+    ],
+    "answer": "Đơn vị bầu cử số 3 (gồm Khu phố 6, 7 và 8) có tổng cộng **3.582 cử tri** (KP 6: 1.099; KP 7: 1.036; KP 8: 1.447). Danh sách 07 người ứng cử gồm [3]:\n1. Lê Tấn Đảm: Trưởng Khu phố 8, phường Tam Quan [3].\n2. Võ Thanh Điệp: Ủy viên Ban Thường vụ Đảng ủy, Trưởng ban Ban xây dựng Đảng Đảng ủy phường Tam Quan [3].\n3. Võ Đông Giang: Đảng ủy viên, Trưởng phòng Văn hóa - Xã hội phường Tam Quan [3].\n4. Huỳnh Xuân Hùng: Trưởng Ban Công tác Mặt trận Khu phố 6, phường Tam Quan [3].\n5. Dương Thị Kim Ngân: Chi hội phó Chi hội Nông dân Khu phố 7, phường Tam Quan [3].\n6. Nguyễn Văn Trung: Chi hội phó Chi hội Nông dân Khu phố 8, phường Tam Quan [3].\n7. Lê Quốc Việt: Ủy viên Ban Thường vụ Đảng ủy, Trưởng Công an phường Tam Quan [3].",
+    "keywords": [
+      "Đơn vị 3",
+      "3.582 cử tri",
+      "Võ Thanh Điệp",
+      "Lê Quốc Việt"
+    ],
+    "tags": [
+      "cử tri chính thức",
+      "danh sách ứng cử",
+      "Đơn vị 3"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC4_Updated",
+    "question": "Thông tin cử tri và danh sách ứng cử viên tại Đơn vị bầu cử số 4 phường Tam Quan?",
+    "questions": [
+      "Danh sách 7 người ứng cử và số lượng cử tri Đơn vị số 4?",
+      "Đơn vị bầu cử số 4 gồm bao nhiêu cử tri và những ai ứng cử?"
+    ],
+    "answer": "Đơn vị bầu cử số 4 (gồm các Khu phố An Quý Bắc, An Quý Nam và An Sơn) có tổng cộng **4.020 cử tri** (An Quý Bắc: 1.321; An Quý Nam: 1.013; An Sơn: 1.686). Danh sách 07 người ứng cử gồm [4]:\n1. Trần Ngọc Trâm Anh: Hội viên Chi hội Phụ nữ, Khu phố An Sơn, phường Tam Quan [4].\n2. Hoàng Thị Kim Giang: Đảng ủy viên, Phó Chủ tịch UBMTTQVN, Chủ tịch Hội LHPN phường Tam Quan [4].\n3. Nguyễn Thành Long: Trưởng khu phố An Quý Nam, phường Tam Quan [4].\n4. Nguyễn Hoàng Nhật: Đảng ủy viên, Phó Chủ tịch HĐND phường Tam Quan [4].\n5. Nguyễn Thị Nhung: Phó Bí thư Thường trực Đảng ủy phường Tam Quan [4].\n6. Đỗ Quốc Thống: Hội viên Chi hội Nông dân Khu phố An Quý Bắc, phường Tam Quan [4].\n7. Lê Thị Tuyết: Chi hội trưởng Chi hội Phụ nữ Khu phố An Quý Nam, phường Tam Quan [4].",
+    "keywords": [
+      "Đơn vị 4",
+      "4.020 cử tri",
+      "Nguyễn Thị Nhung",
+      "Hoàng Thị Kim Giang"
+    ],
+    "tags": [
+      "cử tri chính thức",
+      "danh sách ứng cử",
+      "Đơn vị 4"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC5_Updated",
+    "question": "Thông tin cử tri và danh sách ứng cử viên tại Đơn vị bầu cử số 5 phường Tam Quan?",
+    "questions": [
+      "Danh sách 7 người ứng cử và số lượng cử tri Đơn vị số 5?",
+      "Đơn vị bầu cử số 5 gồm bao nhiêu cử tri và những ai ứng cử?"
+    ],
+    "answer": "Đơn vị bầu cử số 5 (gồm các Khu phố Tân An, Hội An Tây, Tân Trung, Thành Sơn Tây, Thành Sơn và Hội An) có tổng cộng **4.071 cử tri** (Tân An: 701; Hội An Tây: 565; Tân Trung: 699; Thành Sơn Tây: 749; Thành Sơn: 641; Hội An: 716). Danh sách 07 người ứng cử gồm [5]:\n1. Lê Minh Đức: Bí thư Đảng ủy, Chủ tịch HĐND phường Tam Quan [5].\n2. Cao Minh Khánh: Trưởng Ban Công tác Mặt trận Khu phố Hội An, phường Tam Quan [5].\n3. Đỗ Thị Phương Nhung: Phó Trưởng Ban Văn hóa - Xã hội HĐND phường Tam Quan [5].\n4. Trần Văn Quyết: Ủy viên Ban Thường vụ Đảng ủy, Chủ tịch UBMTTQVN phường Tam Quan [5].\n5. Nguyễn Thị Tế: Chi hội phó Chi hội Phụ nữ Khu phố Thành Sơn Tây, phường Tam Quan [5].\n6. Ngô Văn Thinh: Chi hội trưởng Chi hội Nông dân Khu phố Tân Trung, phường Tam Quan [5].\n7. Đào Văn Trung: Bí thư Chi bộ Khu phố Hội An Tây, phường Tam Quan [5].",
+    "keywords": [
+      "Đơn vị 5",
+      "4.071 cử tri",
+      "Lê Minh Đức",
+      "Trần Văn Quyết"
+    ],
+    "tags": [
+      "cử tri chính thức",
+      "danh sách ứng cử",
+      "Đơn vị 5"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC1_Updated",
+    "question": "Thông tin cử tri và danh sách ứng cử viên tại Đơn vị bầu cử số 1 phường Tam Quan?",
+    "questions": [
+      "Danh sách 7 người ứng cử và số lượng cử tri Đơn vị số 1?",
+      "Đơn vị bầu cử số 1 gồm bao nhiêu cử tri và những ai ứng cử?"
+    ],
+    "answer": "Đơn vị bầu cử số 1 (gồm Khu phố 1, 2 và 9) có tổng cộng 3.325 cử tri (KP 1: 1.377; KP 2: 1.060; KP 9: 888). Danh sách 07 người ứng cử gồm:\n1. Lê Đức Anh: Đảng ủy viên, Phó Chủ tịch Ủy ban MTTQVN phường, Bí thư Đoàn TNCS Hồ Chí Minh phường Tam Quan.\n2. Nguyễn Văn Được: Chi hội trưởng Chi hội Cựu chiến binh Khu phố 2, phường Tam Quan.\n3. Trịnh Văn Mười: Đảng ủy viên, Phó Chủ tịch Thường trực Ủy ban MTTQVN phường, Chủ tịch Hội Nông dân phường Tam Quan.\n4. Phạm Thị Bích Phương: Giáo viên Trường mầm non Búp măng.\n5. La Long Quyết: Ủy viên Ban Thường vụ Đảng ủy, Phó Chủ tịch UBND phường Tam Quan.\n6. Huỳnh Thị Tường Vy: Ủy viên Ban Thường vụ Đảng ủy, Chủ nhiệm Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n7. Nguyễn Thị Hồng Yến: Đoàn viên Chi đoàn Khu phố 9, phường Tam Quan.",
+    "keywords": [
+      "Đơn vị 1",
+      "3.325 cử tri",
+      "Lê Đức Anh",
+      "La Long Quyết"
+    ],
+    "tags": [
+      "cử tri chính thức",
+      "danh sách ứng cử",
+      "Đơn vị 1"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC2_Updated",
+    "question": "Thông tin cử tri và danh sách ứng cử viên tại Đơn vị bầu cử số 2 phường Tam Quan?",
+    "questions": [
+      "Danh sách 7 người ứng cử và số lượng cử tri Đơn vị số 2?",
+      "Đơn vị bầu cử số 2 gồm bao nhiêu cử tri và những ai ứng cử?"
+    ],
+    "answer": "Đơn vị bầu cử số 2 (gồm Khu phố 3, 4 và 5) có tổng cộng 3.453 cử tri (KP 3: 1.205; KP 4: 1.110; KP 5: 1.138). Danh sách 07 người ứng cử gồm:\n1. Đặng Văn Á (Đặng Đức Á): Bí thư chi bộ Khu phố 3, phường Tam Quan.\n2. Phạm Thị Hạnh: Kinh doanh, buôn bán.\n3. Nguyễn Văn Hiếu: Trụ trì chùa An Thái.\n4. Nguyễn Thị Kim Nguyên: Chi hội trưởng Chi hội Phụ nữ Khu phố 5, phường Tam Quan.\n5. Nguyễn Thị Thanh Thúy: Ủy viên Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n6. Huỳnh Ngọc Trường: Ủy viên Ban Thường vụ Đảng ủy, Chỉ huy trưởng Ban Chỉ huy Quân sự phường Tam Quan.\n7. Trương Thị Thúy Ức: Phó Bí thư Đảng ủy, Chủ tịch UBND phường Tam Quan.",
+    "keywords": [
+      "Đơn vị 2",
+      "3.453 cử tri",
+      "Trương Thị Thúy Ức",
+      "Huỳnh Ngọc Trường"
+    ],
+    "tags": [
+      "cử tri chính thức",
+      "danh sách ứng cử",
+      "Đơn vị 2"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC3_Updated",
+    "question": "Thông tin cử tri và danh sách ứng cử viên tại Đơn vị bầu cử số 3 phường Tam Quan?",
+    "questions": [
+      "Danh sách 7 người ứng cử và số lượng cử tri Đơn vị số 3?",
+      "Đơn vị bầu cử số 3 gồm bao nhiêu cử tri và những ai ứng cử?"
+    ],
+    "answer": "Đơn vị bầu cử số 3 (gồm Khu phố 6, 7 và 8) có tổng cộng 3.582 cử tri (KP 6: 1.099; KP 7: 1.036; KP 8: 1.447). Danh sách 07 người ứng cử gồm:\n1. Lê Tấn Đảm: Trưởng Khu phố 8, phường Tam Quan.\n2. Võ Thanh Điệp: Ủy viên Ban Thường vụ Đảng ủy, Trưởng ban Ban xây dựng Đảng Đảng ủy phường Tam Quan.\n3. Võ Đông Giang: Đảng ủy viên, Trưởng phòng Văn hóa - Xã hội phường Tam Quan.\n4. Huỳnh Xuân Hùng: Trưởng Ban Công tác Mặt trận Khu phố 6, phường Tam Quan.\n5. Dương Thị Kim Ngân: Chi hội phó Chi hội Nông dân Khu phố 7, phường Tam Quan.\n6. Nguyễn Văn Trung: Chi hội phó Chi hội Nông dân Khu phố 8, phường Tam Quan.\n7. Lê Quốc Việt: Ủy viên Ban Thường vụ Đảng ủy, Trưởng Công an phường Tam Quan.",
+    "keywords": [
+      "Đơn vị 3",
+      "3.582 cử tri",
+      "Võ Thanh Điệp",
+      "Lê Quốc Việt"
+    ],
+    "tags": [
+      "cử tri chính thức",
+      "danh sách ứng cử",
+      "Đơn vị 3"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC4_Updated",
+    "question": "Thông tin cử tri và danh sách ứng cử viên tại Đơn vị bầu cử số 4 phường Tam Quan?",
+    "questions": [
+      "Danh sách 7 người ứng cử và số lượng cử tri Đơn vị số 4?",
+      "Đơn vị bầu cử số 4 gồm bao nhiêu cử tri và những ai ứng cử?"
+    ],
+    "answer": "Đơn vị bầu cử số 4 (gồm các Khu phố An Quý Bắc, An Quý Nam và An Sơn) có tổng cộng 4.020 cử tri (An Quý Bắc: 1.321; An Quý Nam: 1.013; An Sơn: 1.686). Danh sách 07 người ứng cử gồm:\n1. Trần Ngọc Trâm Anh: Hội viên Chi hội Phụ nữ, Khu phố An Sơn, phường Tam Quan.\n2. Hoàng Thị Kim Giang: Đảng ủy viên, Phó Chủ tịch UBMTTQVN, Chủ tịch Hội LHPN phường Tam Quan.\n3. Nguyễn Thành Long: Trưởng khu phố An Quý Nam, phường Tam Quan.\n4. Nguyễn Hoàng Nhật: Đảng ủy viên, Phó Chủ tịch HĐND phường Tam Quan.\n5. Nguyễn Thị Nhung: Phó Bí thư Thường trực Đảng ủy phường Tam Quan.\n6. Đỗ Quốc Thống: Hội viên Chi hội Nông dân Khu phố An Quý Bắc, phường Tam Quan.\n7. Lê Thị Tuyết: Chi hội trưởng Chi hội Phụ nữ Khu phố An Quý Nam, phường Tam Quan.",
+    "keywords": [
+      "Đơn vị 4",
+      "4.020 cử tri",
+      "Nguyễn Thị Nhung",
+      "Hoàng Thị Kim Giang"
+    ],
+    "tags": [
+      "cử tri chính thức",
+      "danh sách ứng cử",
+      "Đơn vị 4"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC5_Updated",
+    "question": "Thông tin cử tri và danh sách ứng cử viên tại Đơn vị bầu cử số 5 phường Tam Quan?",
+    "questions": [
+      "Danh sách 7 người ứng cử và số lượng cử tri Đơn vị số 5?",
+      "Đơn vị bầu cử số 5 gồm bao nhiêu cử tri và những ai ứng cử?"
+    ],
+    "answer": "Đơn vị bầu cử số 5 (gồm các Khu phố Tân An, Hội An Tây, Tân Trung, Thành Sơn Tây, Thành Sơn và Hội An) có tổng cộng 4.071 cử tri (Tân An: 701; Hội An Tây: 565; Tân Trung: 699; Thành Sơn Tây: 749; Thành Sơn: 641; Hội An: 716). Danh sách 07 người ứng cử gồm:\n1. Lê Minh Đức: Bí thư Đảng ủy, Chủ tịch HĐND phường Tam Quan.\n2. Cao Minh Khánh: Trưởng Ban Công tác Mặt trận Khu phố Hội An, phường Tam Quan.\n3. Đỗ Thị Phương Nhung: Phó Trưởng Ban Văn hóa - Xã hội HĐND phường Tam Quan.\n4. Trần Văn Quyết: Ủy viên Ban Thường vụ Đảng ủy, Chủ tịch UBMTTQVN phường Tam Quan.\n5. Nguyễn Thị Tế: Chi hội phó Chi hội Phụ nữ Khu phố Thành Sơn Tây, phường Tam Quan.\n6. Ngô Văn Thinh: Chi hội trưởng Chi hội Nông dân Khu phố Tân Trung, phường Tam Quan.\n7. Đào Văn Trung: Bí thư Chi bộ Khu phố Hội An Tây, phường Tam Quan.",
+    "keywords": [
+      "Đơn vị 5",
+      "4.071 cử tri",
+      "Lê Minh Đức",
+      "Trần Văn Quyết"
+    ],
+    "tags": [
+      "cử tri chính thức",
+      "danh sách ứng cử",
+      "Đơn vị 5"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_KVBP_01",
+    "question": "Thông tin bầu cử tại Khu phố 1 (Khu vực bỏ phiếu số 1)?",
+    "questions": [
+      "Khu phố 1 bỏ phiếu ở đâu?",
+      "Số lượng cử tri Khu phố 1?",
+      "Khu vực bỏ phiếu số 1 là khu phố nào?"
+    ],
+    "answer": "Khu phố 1 thuộc Khu vực bỏ phiếu số 1, Đơn vị bầu cử số 1. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 1. Số lượng cử tri: 1.377 người. Danh sách 07 người ứng cử gồm:\n1. Lê Đức Anh: Đảng ủy viên, Phó Chủ tịch Ủy ban MTTQVN phường, Bí thư Đoàn TNCS Hồ Chí Minh phường Tam Quan.\n2. Nguyễn Văn Được: Chi hội trưởng Chi hội Cựu chiến binh Khu phố 2, phường Tam Quan.\n3. Trịnh Văn Mười: Đảng ủy viên, Phó Chủ tịch Thường trực Ủy ban MTTQVN phường, Chủ tịch Hội Nông dân phường Tam Quan.\n4. Phạm Thị Bích Phương: Giáo viên Trường mầm non Búp măng.\n5. La Long Quyết: Ủy viên Ban Thường vụ Đảng ủy, Phó Chủ tịch UBND phường Tam Quan.\n6. Huỳnh Thị Tường Vy: Ủy viên Ban Thường vụ Đảng ủy, Chủ nhiệm Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n7. Nguyễn Thị Hồng Yến: Đoàn viên Chi đoàn Khu phố 9, phường Tam Quan.",
+    "keywords": [
+      "Khu phố 1",
+      "1.377 cử tri",
+      "Nhà Văn hóa Khu phố 1"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_02",
+    "question": "Thông tin bầu cử tại Khu phố 2 (Khu vực bỏ phiếu số 2)?",
+    "questions": [
+      "Khu phố 2 bỏ phiếu ở đâu?",
+      "Số lượng cử tri Khu phố 2?",
+      "Khu vực bỏ phiếu số 2 là khu phố nào?"
+    ],
+    "answer": "Khu phố 2 thuộc Khu vực bỏ phiếu số 2, Đơn vị bầu cử số 1. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 2. Số lượng cử tri: 1.060 người. Danh sách 07 người ứng cử gồm:\n1. Lê Đức Anh: Đảng ủy viên, Phó Chủ tịch Ủy ban MTTQVN phường, Bí thư Đoàn TNCS Hồ Chí Minh phường Tam Quan.\n2. Nguyễn Văn Được: Chi hội trưởng Chi hội Cựu chiến binh Khu phố 2, phường Tam Quan.\n3. Trịnh Văn Mười: Đảng ủy viên, Phó Chủ tịch Thường trực Ủy ban MTTQVN phường, Chủ tịch Hội Nông dân phường Tam Quan.\n4. Phạm Thị Bích Phương: Giáo viên Trường mầm non Búp măng.\n5. La Long Quyết: Ủy viên Ban Thường vụ Đảng ủy, Phó Chủ tịch UBND phường Tam Quan.\n6. Huỳnh Thị Tường Vy: Ủy viên Ban Thường vụ Đảng ủy, Chủ nhiệm Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n7. Nguyễn Thị Hồng Yến: Đoàn viên Chi đoàn Khu phố 9, phường Tam Quan.",
+    "keywords": [
+      "Khu phố 2",
+      "1.060 cử tri",
+      "Nhà Văn hóa Khu phố 2"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_03",
+    "question": "Thông tin bầu cử tại Khu phố 9 (Khu vực bỏ phiếu số 3)?",
+    "questions": [
+      "Khu phố 9 bỏ phiếu ở đâu?",
+      "Số lượng cử tri Khu phố 9?",
+      "Khu vực bỏ phiếu số 3 là khu phố nào?"
+    ],
+    "answer": "Khu phố 9 thuộc Khu vực bỏ phiếu số 3, Đơn vị bầu cử số 1. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 9. Số lượng cử tri: 888 người. Danh sách 07 người ứng cử gồm:\n1. Lê Đức Anh: Đảng ủy viên, Phó Chủ tịch Ủy ban MTTQVN phường, Bí thư Đoàn TNCS Hồ Chí Minh phường Tam Quan.\n2. Nguyễn Văn Được: Chi hội trưởng Chi hội Cựu chiến binh Khu phố 2, phường Tam Quan.\n3. Trịnh Văn Mười: Đảng ủy viên, Phó Chủ tịch Thường trực Ủy ban MTTQVN phường, Chủ tịch Hội Nông dân phường Tam Quan.\n4. Phạm Thị Bích Phương: Giáo viên Trường mầm non Búp măng.\n5. La Long Quyết: Ủy viên Ban Thường vụ Đảng ủy, Phó Chủ tịch UBND phường Tam Quan.\n6. Huỳnh Thị Tường Vy: Ủy viên Ban Thường vụ Đảng ủy, Chủ nhiệm Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n7. Nguyễn Thị Hồng Yến: Đoàn viên Chi đoàn Khu phố 9, phường Tam Quan.",
+    "keywords": [
+      "Khu phố 9",
+      "888 cử tri",
+      "Nhà Văn hóa Khu phố 9"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_04",
+    "question": "Thông tin bầu cử tại Khu phố 3 (Khu vực bỏ phiếu số 4)?",
+    "questions": [
+      "Khu phố 3 bỏ phiếu ở đâu?",
+      "Số lượng cử tri Khu phố 3?",
+      "Khu vực bỏ phiếu số 4 là khu phố nào?"
+    ],
+    "answer": "Khu phố 3 thuộc Khu vực bỏ phiếu số 4, Đơn vị bầu cử số 2. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 3. Số lượng cử tri: 1.205 người. Danh sách 07 người ứng cử gồm:\n1. Đặng Văn Á (Đặng Đức Á): Bí thư chi bộ Khu phố 3, phường Tam Quan.\n2. Phạm Thị Hạnh: Kinh doanh, buôn bán.\n3. Nguyễn Văn Hiếu: Trụ trì chùa An Thái.\n4. Nguyễn Thị Kim Nguyên: Chi hội trưởng Chi hội Phụ nữ Khu phố 5, phường Tam Quan.\n5. Nguyễn Thị Thanh Thúy: Ủy viên Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n6. Huỳnh Ngọc Trường: Ủy viên Ban Thường vụ Đảng ủy, Chỉ huy trưởng Ban Chỉ huy Quân sự phường Tam Quan.\n7. Trương Thị Thúy Ức: Phó Bí thư Đảng ủy, Chủ tịch UBND phường Tam Quan.",
+    "keywords": [
+      "Khu phố 3",
+      "1.205 cử tri",
+      "Nhà Văn hóa Khu phố 3"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_05",
+    "question": "Thông tin bầu cử tại Khu phố 4 (Khu vực bỏ phiếu số 5)?",
+    "questions": [
+      "Khu phố 4 bỏ phiếu ở đâu?",
+      "Số lượng cử tri Khu phố 4?",
+      "Khu vực bỏ phiếu số 5 là khu phố nào?"
+    ],
+    "answer": "Khu phố 4 thuộc Khu vực bỏ phiếu số 5, Đơn vị bầu cử số 2. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 4. Số lượng cử tri: 1.110 người. Danh sách 07 người ứng cử gồm:\n1. Đặng Văn Á (Đặng Đức Á): Bí thư chi bộ Khu phố 3, phường Tam Quan.\n2. Phạm Thị Hạnh: Kinh doanh, buôn bán.\n3. Nguyễn Văn Hiếu: Trụ trì chùa An Thái.\n4. Nguyễn Thị Kim Nguyên: Chi hội trưởng Chi hội Phụ nữ Khu phố 5, phường Tam Quan.\n5. Nguyễn Thị Thanh Thúy: Ủy viên Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n6. Huỳnh Ngọc Trường: Ủy viên Ban Thường vụ Đảng ủy, Chỉ huy trưởng Ban Chỉ huy Quân sự phường Tam Quan.\n7. Trương Thị Thúy Ức: Phó Bí thư Đảng ủy, Chủ tịch UBND phường Tam Quan.",
+    "keywords": [
+      "Khu phố 4",
+      "1.110 cử tri",
+      "Nhà Văn hóa Khu phố 4"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_06",
+    "question": "Thông tin bầu cử tại Khu phố 5 (Khu vực bỏ phiếu số 6)?",
+    "questions": [
+      "Khu phố 5 bỏ phiếu ở đâu?",
+      "Số lượng cử tri Khu phố 5?",
+      "Khu vực bỏ phiếu số 6 là khu phố nào?"
+    ],
+    "answer": "Khu phố 5 thuộc Khu vực bỏ phiếu số 6, Đơn vị bầu cử số 2. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 5. Số lượng cử tri: 1.138 người. Danh sách 07 người ứng cử gồm:\n1. Đặng Văn Á (Đặng Đức Á): Bí thư chi bộ Khu phố 3, phường Tam Quan.\n2. Phạm Thị Hạnh: Kinh doanh, buôn bán.\n3. Nguyễn Văn Hiếu: Trụ trì chùa An Thái.\n4. Nguyễn Thị Kim Nguyên: Chi hội trưởng Chi hội Phụ nữ Khu phố 5, phường Tam Quan.\n5. Nguyễn Thị Thanh Thúy: Ủy viên Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n6. Huỳnh Ngọc Trường: Ủy viên Ban Thường vụ Đảng ủy, Chỉ huy trưởng Ban Chỉ huy Quân sự phường Tam Quan.\n7. Trương Thị Thúy Ức: Phó Bí thư Đảng ủy, Chủ tịch UBND phường Tam Quan.",
+    "keywords": [
+      "Khu phố 5",
+      "1.138 cử tri",
+      "Nhà Văn hóa Khu phố 5"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_07",
+    "question": "Thông tin bầu cử tại Khu phố 6 (Khu vực bỏ phiếu số 7)?",
+    "questions": [
+      "Khu phố 6 bỏ phiếu ở đâu?",
+      "Số lượng cử tri Khu phố 6?",
+      "Khu vực bỏ phiếu số 7 là khu phố nào?"
+    ],
+    "answer": "Khu phố 6 thuộc Khu vực bỏ phiếu số 7, Đơn vị bầu cử số 3. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 6. Số lượng cử tri: 1.099 người. Danh sách 07 người ứng cử gồm:\n1. Lê Tấn Đảm: Trưởng Khu phố 8, phường Tam Quan.\n2. Võ Thanh Điệp: Ủy viên Ban Thường vụ Đảng ủy, Trưởng ban Ban xây dựng Đảng Đảng ủy phường Tam Quan.\n3. Võ Đông Giang: Đảng ủy viên, Trưởng phòng Văn hóa - Xã hội phường Tam Quan.\n4. Huỳnh Xuân Hùng: Trưởng Ban Công tác Mặt trận Khu phố 6, phường Tam Quan.\n5. Dương Thị Kim Ngân: Chi hội phó Chi hội Nông dân Khu phố 7, phường Tam Quan.\n6. Nguyễn Văn Trung: Chi hội phó Chi hội Nông dân Khu phố 8, phường Tam Quan.\n7. Lê Quốc Việt: Ủy viên Ban Thường vụ Đảng ủy, Trưởng Công an phường Tam Quan.",
+    "keywords": [
+      "Khu phố 6",
+      "1.099 cử tri",
+      "Nhà Văn hóa Khu phố 6"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_08",
+    "question": "Thông tin bầu cử tại Khu phố 7 (Khu vực bỏ phiếu số 8)?",
+    "questions": [
+      "Khu phố 7 bỏ phiếu ở đâu?",
+      "Số lượng cử tri Khu phố 7?",
+      "Khu vực bỏ phiếu số 8 là khu phố nào?"
+    ],
+    "answer": "Khu phố 7 thuộc Khu vực bỏ phiếu số 8, Đơn vị bầu cử số 3. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 7. Số lượng cử tri: 1.036 người. Danh sách 07 người ứng cử gồm:\n1. Lê Tấn Đảm: Trưởng Khu phố 8, phường Tam Quan.\n2. Võ Thanh Điệp: Ủy viên Ban Thường vụ Đảng ủy, Trưởng ban Ban xây dựng Đảng Đảng ủy phường Tam Quan.\n3. Võ Đông Giang: Đảng ủy viên, Trưởng phòng Văn hóa - Xã hội phường Tam Quan.\n4. Huỳnh Xuân Hùng: Trưởng Ban Công tác Mặt trận Khu phố 6, phường Tam Quan.\n5. Dương Thị Kim Ngân: Chi hội phó Chi hội Nông dân Khu phố 7, phường Tam Quan.\n6. Nguyễn Văn Trung: Chi hội phó Chi hội Nông dân Khu phố 8, phường Tam Quan.\n7. Lê Quốc Việt: Ủy viên Ban Thường vụ Đảng ủy, Trưởng Công an phường Tam Quan.",
+    "keywords": [
+      "Khu phố 7",
+      "1.036 cử tri",
+      "Nhà Văn hóa Khu phố 7"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_09",
+    "question": "Thông tin bầu cử tại Khu phố 8 (Khu vực bỏ phiếu số 9)?",
+    "questions": [
+      "Khu phố 8 bỏ phiếu ở đâu?",
+      "Số lượng cử tri Khu phố 8?",
+      "Khu vực bỏ phiếu số 9 là khu phố nào?"
+    ],
+    "answer": "Khu phố 8 thuộc Khu vực bỏ phiếu số 9, Đơn vị bầu cử số 3. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố 8. Số lượng cử tri: 1.447 người. Danh sách 07 người ứng cử gồm:\n1. Lê Tấn Đảm: Trưởng Khu phố 8, phường Tam Quan.\n2. Võ Thanh Điệp: Ủy viên Ban Thường vụ Đảng ủy, Trưởng ban Ban xây dựng Đảng Đảng ủy phường Tam Quan.\n3. Võ Đông Giang: Đảng ủy viên, Trưởng phòng Văn hóa - Xã hội phường Tam Quan.\n4. Huỳnh Xuân Hùng: Trưởng Ban Công tác Mặt trận Khu phố 6, phường Tam Quan.\n5. Dương Thị Kim Ngân: Chi hội phó Chi hội Nông dân Khu phố 7, phường Tam Quan.\n6. Nguyễn Văn Trung: Chi hội phó Chi hội Nông dân Khu phố 8, phường Tam Quan.\n7. Lê Quốc Việt: Ủy viên Ban Thường vụ Đảng ủy, Trưởng Công an phường Tam Quan.",
+    "keywords": [
+      "Khu phố 8",
+      "1.447 cử tri",
+      "Nhà Văn hóa Khu phố 8"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_10",
+    "question": "Thông tin bầu cử tại Khu phố An Quý Bắc (Khu vực bỏ phiếu số 10)?",
+    "questions": [
+      "Khu phố An Quý Bắc bỏ phiếu ở đâu?",
+      "Số lượng cử tri An Quý Bắc?",
+      "Khu vực bỏ phiếu số 10 là khu phố nào?"
+    ],
+    "answer": "Khu phố An Quý Bắc thuộc Khu vực bỏ phiếu số 10, Đơn vị bầu cử số 4. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố An Quý Bắc. Số lượng cử tri: 1.321 người. Danh sách 07 người ứng cử gồm:\n1. Trần Ngọc Trâm Anh: Hội viên Chi hội Phụ nữ, Khu phố An Sơn, phường Tam Quan.\n2. Hoàng Thị Kim Giang: Đảng ủy viên, Phó Chủ tịch UBMTTQVN, Chủ tịch Hội LHPN phường Tam Quan.\n3. Nguyễn Thành Long: Trưởng khu phố An Quý Nam, phường Tam Quan.\n4. Nguyễn Hoàng Nhật: Đảng ủy viên, Phó Chủ tịch HĐND phường Tam Quan.\n5. Nguyễn Thị Nhung: Phó Bí thư Thường trực Đảng ủy phường Tam Quan.\n6. Đỗ Quốc Thống: Hội viên Chi hội Nông dân Khu phố An Quý Bắc, phường Tam Quan.\n7. Lê Thị Tuyết: Chi hội trưởng Chi hội Phụ nữ Khu phố An Quý Nam, phường Tam Quan.",
+    "keywords": [
+      "An Quý Bắc",
+      "1.321 cử tri",
+      "Nhà Văn hóa An Quý Bắc"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_11",
+    "question": "Thông tin bầu cử tại Khu phố An Quý Nam (Khu vực bỏ phiếu số 11)?",
+    "questions": [
+      "Khu phố An Quý Nam bỏ phiếu ở đâu?",
+      "Số lượng cử tri An Quý Nam?",
+      "Khu vực bỏ phiếu số 11 là khu phố nào?"
+    ],
+    "answer": "Khu phố An Quý Nam thuộc Khu vực bỏ phiếu số 11, Đơn vị bầu cử số 4. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố An Quý Nam. Số lượng cử tri: 1.013 người. Danh sách 07 người ứng cử gồm:\n1. Trần Ngọc Trâm Anh: Hội viên Chi hội Phụ nữ, Khu phố An Sơn, phường Tam Quan.\n2. Hoàng Thị Kim Giang: Đảng ủy viên, Phó Chủ tịch UBMTTQVN, Chủ tịch Hội LHPN phường Tam Quan.\n3. Nguyễn Thành Long: Trưởng khu phố An Quý Nam, phường Tam Quan.\n4. Nguyễn Hoàng Nhật: Đảng ủy viên, Phó Chủ tịch HĐND phường Tam Quan.\n5. Nguyễn Thị Nhung: Phó Bí thư Thường trực Đảng ủy phường Tam Quan.\n6. Đỗ Quốc Thống: Hội viên Chi hội Nông dân Khu phố An Quý Bắc, phường Tam Quan.\n7. Lê Thị Tuyết: Chi hội trưởng Chi hội Phụ nữ Khu phố An Quý Nam, phường Tam Quan.",
+    "keywords": [
+      "An Quý Nam",
+      "1.013 cử tri",
+      "Nhà Văn hóa An Quý Nam"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_12",
+    "question": "Thông tin bầu cử tại Khu phố An Sơn (Khu vực bỏ phiếu số 12)?",
+    "questions": [
+      "Khu phố An Sơn bỏ phiếu ở đâu?",
+      "Số lượng cử tri An Sơn?",
+      "Khu vực bỏ phiếu số 12 là khu phố nào?"
+    ],
+    "answer": "Khu phố An Sơn thuộc Khu vực bỏ phiếu số 12, Đơn vị bầu cử số 4. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố An Sơn. Số lượng cử tri: 1.686 người. Danh sách 07 người ứng cử gồm:\n1. Trần Ngọc Trâm Anh: Hội viên Chi hội Phụ nữ, Khu phố An Sơn, phường Tam Quan.\n2. Hoàng Thị Kim Giang: Đảng ủy viên, Phó Chủ tịch UBMTTQVN, Chủ tịch Hội LHPN phường Tam Quan.\n3. Nguyễn Thành Long: Trưởng khu phố An Quý Nam, phường Tam Quan.\n4. Nguyễn Hoàng Nhật: Đảng ủy viên, Phó Chủ tịch HĐND phường Tam Quan.\n5. Nguyễn Thị Nhung: Phó Bí thư Thường trực Đảng ủy phường Tam Quan.\n6. Đỗ Quốc Thống: Hội viên Chi hội Nông dân Khu phố An Quý Bắc, phường Tam Quan.\n7. Lê Thị Tuyết: Chi hội trưởng Chi hội Phụ nữ Khu phố An Quý Nam, phường Tam Quan.",
+    "keywords": [
+      "An Sơn",
+      "1.686 cử tri",
+      "Nhà Văn hóa An Sơn"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_13",
+    "question": "Thông tin bầu cử tại Khu phố Tân An (Khu vực bỏ phiếu số 13)?",
+    "questions": [
+      "Khu phố Tân An bỏ phiếu ở đâu?",
+      "Số lượng cử tri Tân An?",
+      "Khu vực bỏ phiếu số 13 là khu phố nào?"
+    ],
+    "answer": "Khu phố Tân An thuộc Khu vực bỏ phiếu số 13, Đơn vị bầu cử số 5. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Tân An. Số lượng cử tri: 701 người. Danh sách 07 người ứng cử gồm:\n1. Lê Minh Đức: Bí thư Đảng ủy, Chủ tịch HĐND phường Tam Quan.\n2. Cao Minh Khánh: Trưởng Ban Công tác Mặt trận Khu phố Hội An, phường Tam Quan.\n3. Đỗ Thị Phương Nhung: Phó Trưởng Ban Văn hóa - Xã hội HĐND phường Tam Quan.\n4. Trần Văn Quyết: Ủy viên Ban Thường vụ Đảng ủy, Chủ tịch UBMTTQVN phường Tam Quan.\n5. Nguyễn Thị Tế: Chi hội phó Chi hội Phụ nữ Khu phố Thành Sơn Tây, phường Tam Quan.\n6. Ngô Văn Thinh: Chi hội trưởng Chi hội Nông dân Khu phố Tân Trung, phường Tam Quan.\n7. Đào Văn Trung: Bí thư Chi bộ Khu phố Hội An Tây, phường Tam Quan.",
+    "keywords": [
+      "Tân An",
+      "701 cử tri",
+      "Nhà Văn hóa Tân An"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_14",
+    "question": "Thông tin bầu cử tại Khu phố Hội An Tây (Khu vực bỏ phiếu số 14)?",
+    "questions": [
+      "Khu phố Hội An Tây bỏ phiếu ở đâu?",
+      "Số lượng cử tri Hội An Tây?",
+      "Khu vực bỏ phiếu số 14 là khu phố nào?"
+    ],
+    "answer": "Khu phố Hội An Tây thuộc Khu vực bỏ phiếu số 14, Đơn vị bầu cử số 5. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Hội An Tây. Số lượng cử tri: 565 người. Danh sách 07 người ứng cử gồm:\n1. Lê Minh Đức: Bí thư Đảng ủy, Chủ tịch HĐND phường Tam Quan.\n2. Cao Minh Khánh: Trưởng Ban Công tác Mặt trận Khu phố Hội An, phường Tam Quan.\n3. Đỗ Thị Phương Nhung: Phó Trưởng Ban Văn hóa - Xã hội HĐND phường Tam Quan.\n4. Trần Văn Quyết: Ủy viên Ban Thường vụ Đảng ủy, Chủ tịch UBMTTQVN phường Tam Quan.\n5. Nguyễn Thị Tế: Chi hội phó Chi hội Phụ nữ Khu phố Thành Sơn Tây, phường Tam Quan.\n6. Ngô Văn Thinh: Chi hội trưởng Chi hội Nông dân Khu phố Tân Trung, phường Tam Quan.\n7. Đào Văn Trung: Bí thư Chi bộ Khu phố Hội An Tây, phường Tam Quan.",
+    "keywords": [
+      "Hội An Tây",
+      "565 cử tri",
+      "Nhà Văn hóa Hội An Tây"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_15",
+    "question": "Thông tin bầu cử tại Khu phố Tân Trung (Khu vực bỏ phiếu số 15)?",
+    "questions": [
+      "Khu phố Tân Trung bỏ phiếu ở đâu?",
+      "Số lượng cử tri Tân Trung?",
+      "Khu vực bỏ phiếu số 15 là khu phố nào?"
+    ],
+    "answer": "Khu phố Tân Trung thuộc Khu vực bỏ phiếu số 15, Đơn vị bầu cử số 5. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Tân Trung. Số lượng cử tri: 699 người. Danh sách 07 người ứng cử gồm:\n1. Lê Minh Đức: Bí thư Đảng ủy, Chủ tịch HĐND phường Tam Quan.\n2. Cao Minh Khánh: Trưởng Ban Công tác Mặt trận Khu phố Hội An, phường Tam Quan.\n3. Đỗ Thị Phương Nhung: Phó Trưởng Ban Văn hóa - Xã hội HĐND phường Tam Quan.\n4. Trần Văn Quyết: Ủy viên Ban Thường vụ Đảng ủy, Chủ tịch UBMTTQVN phường Tam Quan.\n5. Nguyễn Thị Tế: Chi hội phó Chi hội Phụ nữ Khu phố Thành Sơn Tây, phường Tam Quan.\n6. Ngô Văn Thinh: Chi hội trưởng Chi hội Nông dân Khu phố Tân Trung, phường Tam Quan.\n7. Đào Văn Trung: Bí thư Chi bộ Khu phố Hội An Tây, phường Tam Quan.",
+    "keywords": [
+      "Tân Trung",
+      "699 cử tri",
+      "Nhà Văn hóa Tân Trung"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_16",
+    "question": "Thông tin bầu cử tại Khu phố Thành Sơn Tây (Khu vực bỏ phiếu số 16)?",
+    "questions": [
+      "Khu phố Thành Sơn Tây bỏ phiếu ở đâu?",
+      "Số lượng cử tri Thành Sơn Tây?",
+      "Khu vực bỏ phiếu số 16 là khu phố nào?"
+    ],
+    "answer": "Khu phố Thành Sơn Tây thuộc Khu vực bỏ phiếu số 16, Đơn vị bầu cử số 5. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Thành Sơn Tây. Số lượng cử tri: 749 người. Danh sách 07 người ứng cử gồm:\n1. Lê Minh Đức: Bí thư Đảng ủy, Chủ tịch HĐND phường Tam Quan.\n2. Cao Minh Khánh: Trưởng Ban Công tác Mặt trận Khu phố Hội An, phường Tam Quan.\n3. Đỗ Thị Phương Nhung: Phó Trưởng Ban Văn hóa - Xã hội HĐND phường Tam Quan.\n4. Trần Văn Quyết: Ủy viên Ban Thường vụ Đảng ủy, Chủ tịch UBMTTQVN phường Tam Quan.\n5. Nguyễn Thị Tế: Chi hội phó Chi hội Phụ nữ Khu phố Thành Sơn Tây, phường Tam Quan.\n6. Ngô Văn Thinh: Chi hội trưởng Chi hội Nông dân Khu phố Tân Trung, phường Tam Quan.\n7. Đào Văn Trung: Bí thư Chi bộ Khu phố Hội An Tây, phường Tam Quan.",
+    "keywords": [
+      "Thành Sơn Tây",
+      "749 cử tri",
+      "Nhà Văn hóa Thành Sơn Tây"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_17",
+    "question": "Thông tin bầu cử tại Khu phố Thành Sơn (Khu vực bỏ phiếu số 17)?",
+    "questions": [
+      "Khu phố Thành Sơn bỏ phiếu ở đâu?",
+      "Số lượng cử tri Thành Sơn?",
+      "Khu vực bỏ phiếu số 17 là khu phố nào?"
+    ],
+    "answer": "Khu phố Thành Sơn thuộc Khu vực bỏ phiếu số 17, Đơn vị bầu cử số 5. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Thành Sơn. Số lượng cử tri: 641 người. Danh sách 07 người ứng cử gồm:\n1. Lê Minh Đức: Bí thư Đảng ủy, Chủ tịch HĐND phường Tam Quan.\n2. Cao Minh Khánh: Trưởng Ban Công tác Mặt trận Khu phố Hội An, phường Tam Quan.\n3. Đỗ Thị Phương Nhung: Phó Trưởng Ban Văn hóa - Xã hội HĐND phường Tam Quan.\n4. Trần Văn Quyết: Ủy viên Ban Thường vụ Đảng ủy, Chủ tịch UBMTTQVN phường Tam Quan.\n5. Nguyễn Thị Tế: Chi hội phó Chi hội Phụ nữ Khu phố Thành Sơn Tây, phường Tam Quan.\n6. Ngô Văn Thinh: Chi hội trưởng Chi hội Nông dân Khu phố Tân Trung, phường Tam Quan.\n7. Đào Văn Trung: Bí thư Chi bộ Khu phố Hội An Tây, phường Tam Quan.",
+    "keywords": [
+      "Thành Sơn",
+      "641 cử tri",
+      "Nhà Văn hóa Thành Sơn"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_KVBP_18",
+    "question": "Thông tin bầu cử tại Khu phố Hội An (Khu vực bỏ phiếu số 18)?",
+    "questions": [
+      "Khu phố Hội An bỏ phiếu ở đâu?",
+      "Số lượng cử tri Hội An?",
+      "Khu vực bỏ phiếu số 18 là khu phố nào?"
+    ],
+    "answer": "Khu phố Hội An thuộc Khu vực bỏ phiếu số 18, Đơn vị bầu cử số 5. Địa điểm bỏ phiếu: Nhà Văn hóa Khu phố Hội An. Số lượng cử tri: 716 người. Danh sách 07 người ứng cử gồm:\n1. Lê Minh Đức: Bí thư Đảng ủy, Chủ tịch HĐND phường Tam Quan.\n2. Cao Minh Khánh: Trưởng Ban Công tác Mặt trận Khu phố Hội An, phường Tam Quan.\n3. Đỗ Thị Phương Nhung: Phó Trưởng Ban Văn hóa - Xã hội HĐND phường Tam Quan.\n4. Trần Văn Quyết: Ủy viên Ban Thường vụ Đảng ủy, Chủ tịch UBMTTQVN phường Tam Quan.\n5. Nguyễn Thị Tế: Chi hội phó Chi hội Phụ nữ Khu phố Thành Sơn Tây, phường Tam Quan.\n6. Ngô Văn Thinh: Chi hội trưởng Chi hội Nông dân Khu phố Tân Trung, phường Tam Quan.\n7. Đào Văn Trung: Bí thư Chi bộ Khu phố Hội An Tây, phường Tam Quan.",
+    "keywords": [
+      "Hội An",
+      "716 cử tri",
+      "Nhà Văn hóa Hội An"
+    ],
+    "tags": [
+      "địa điểm bỏ phiếu",
+      "số liệu cử tri"
+    ],
+    "topic": "local_tamquan_polling"
+  },
+  {
+    "id": "TQ_Full_Candidate_List_2026_2031",
+    "question": "Phường Tam Quan có bao nhiêu người ứng cử đại biểu HĐND nhiệm kỳ 2026 – 2031 và danh sách cụ thể là gì?",
+    "questions": [
+      "Tổng số người ứng cử đại biểu HĐND phường Tam Quan nhiệm kỳ 2026-2031 là bao nhiêu?",
+      "Danh sách chính thức những người ứng cử đại biểu HĐND phường Tam Quan nhiệm kỳ 2026-2031?"
+    ],
+    "answer": "Phường Tam Quan có tổng cộng 35 người ứng cử đại biểu Hội đồng nhân dân nhiệm kỳ 2026 – 2031 tại 05 đơn vị bầu cử. Danh sách cụ thể (Họ tên + Chức vụ) như sau:\n\n**Đơn vị bầu cử số 1 (Khu phố 1, 2 và 9):**\n1. Lê Đức Anh: Đảng ủy viên, Phó Chủ tịch Ủy ban MTTQVN phường, Bí thư Đoàn TNCS Hồ Chí Minh phường Tam Quan.\n2. Nguyễn Văn Được: Chi hội trưởng Chi hội Cựu chiến binh Khu phố 2, phường Tam Quan.\n3. Trịnh Văn Mười: Đảng ủy viên, Phó Chủ tịch Thường trực Ủy ban MTTQVN phường, Chủ tịch Hội Nông dân phường Tam Quan.\n4. Phạm Thị Bích Phương: Giáo viên Trường mầm non Búp măng.\n5. La Long Quyết: Ủy viên Ban Thường vụ Đảng ủy, Phó Chủ tịch UBND phường Tam Quan.\n6. Huỳnh Thị Tường Vy: Ủy viên Ban Thường vụ Đảng ủy, Chủ nhiệm Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n7. Nguyễn Thị Hồng Yến: Đoàn viên Chi đoàn Khu phố 9, phường Tam Quan.\n\n**Đơn vị bầu cử số 2 (Khu phố 3, 4 và 5):**\n1. Đặng Văn Á (Đặng Đức Á): Bí thư chi bộ Khu phố 3, phường Tam Quan.\n2. Phạm Thị Hạnh: Kinh doanh, buôn bán.\n3. Nguyễn Văn Hiếu: Trụ trì chùa An Thái.\n4. Nguyễn Thị Kim Nguyên: Chi hội trưởng Chi hội Phụ nữ Khu phố 5, phường Tam Quan.\n5. Nguyễn Thị Thanh Thúy: Ủy viên Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n6. Huỳnh Ngọc Trường: Ủy viên Ban Thường vụ Đảng ủy, Chỉ huy trưởng Ban Chỉ huy Quân sự phường Tam Quan.\n7. Trương Thị Thúy Ức: Phó Bí thư Đảng ủy, Chủ tịch UBND phường Tam Quan.\n\n**Đơn vị bầu cử số 3 (Khu phố 6, 7 và 8):**\n1. Lê Tấn Đảm: Trưởng Khu phố 8, phường Tam Quan.\n2. Võ Thanh Điệp: Ủy viên Ban Thường vụ Đảng ủy, Trưởng ban Ban xây dựng Đảng Đảng ủy phường Tam Quan.\n3. Võ Đông Giang: Đảng ủy viên, Trưởng phòng Văn hóa - Xã hội phường Tam Quan.\n4. Huỳnh Xuân Hùng: Trưởng Ban Công tác Mặt trận Khu phố 6, phường Tam Quan.\n5. Dương Thị Kim Ngân: Chi hội phó Chi hội Nông dân Khu phố 7, phường Tam Quan.\n6. Nguyễn Văn Trung: Chi hội phó Chi hội Nông dân Khu phố 8, phường Tam Quan.\n7. Lê Quốc Việt: Ủy viên Ban Thường vụ Đảng ủy, Trưởng Công an phường Tam Quan.\n\n**Đơn vị bầu cử số 4 (An Quý Bắc, An Quý Nam và An Sơn):**\n1. Trần Ngọc Trâm Anh: Hội viên Chi hội Phụ nữ, Khu phố An Sơn, phường Tam Quan.\n2. Hoàng Thị Kim Giang: Đảng ủy viên, Phó Chủ tịch UBMTTQVN, Chủ tịch Hội LHPN phường Tam Quan.\n3. Nguyễn Thành Long: Trưởng khu phố An Quý Nam, phường Tam Quan.\n4. Nguyễn Hoàng Nhật: Đảng ủy viên, Phó Chủ tịch HĐND phường Tam Quan.\n5. Nguyễn Thị Nhung: Phó Bí thư Thường trực Đảng ủy phường Tam Quan.\n6. Đỗ Quốc Thống: Hội viên Chi hội Nông dân Khu phố An Quý Bắc, phường Tam Quan.\n7. Lê Thị Tuyết: Chi hội trưởng Chi hội Phụ nữ Khu phố An Quý Nam, phường Tam Quan.\n\n**Đơn vị bầu cử số 5 (Tân An, Hội An Tây, Tân Trung, Thành Sơn Tây, Thành Sơn và Hội An):**\n1. Lê Minh Đức: Bí thư Đảng ủy, Chủ tịch HĐND phường Tam Quan.\n2. Cao Minh Khánh: Trưởng Ban Công tác Mặt trận Khu phố Hội An, phường Tam Quan.\n3. Đỗ Thị Phương Nhung: Phó Trưởng Ban Văn hóa - Xã hội HĐND phường Tam Quan.\n4. Trần Văn Quyết: Ủy viên Ban Thường vụ Đảng ủy, Chủ tịch UBMTTQVN phường Tam Quan.\n5. Nguyễn Thị Tế: Chi hội phó Chi hội Phụ nữ Khu phố Thành Sơn Tây, phường Tam Quan.\n6. Ngô Văn Thinh: Chi hội trưởng Chi hội Nông dân Khu phố Tân Trung, phường Tam Quan.\n7. Đào Văn Trung: Bí thư Chi bộ Khu phố Hội An Tây, phường Tam Quan.",
+    "keywords": [
+      "35 người ứng cử",
+      "đại biểu HĐND",
+      "Tam Quan",
+      "2026-2031",
+      "danh sách chính thức"
+    ],
+    "tags": [
+      "danh sách ứng cử",
+      "HĐND phường",
+      "tổng hợp"
     ],
     "topic": "danh_sach_ung_cu"
   }
