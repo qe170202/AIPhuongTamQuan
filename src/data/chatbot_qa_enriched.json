@@ -5639,28 +5639,6 @@
     "topic": "local_tamquan_organization"
   },
   {
-    "id": "TQ_KVBP_QD96",
-    "question": "các khu vực bỏ phiếu tại phường Tam Quan?",
-    "questions": [
-      "Phường Tam Quan thành lập bao nhiêu khu vực bỏ phiếu?",
-      "Có bao nhiêu đơn vị bầu cử tại phường Tam Quan?",
-      "danh sách các khu vực bỏ phiếu phường Tam Quan?"
-    ],
-    "answer": "Theo Quyết định số 96/QĐ-UBND ngày 01/01/2026, phường Tam Quan thành lập 18 khu vực bỏ phiếu bầu cử đại biểu Quốc hội khóa XVI và đại biểu Hội đồng nhân dân các cấp nhiệm kỳ 2026-2031 tại 05 (năm) đơn vị bầu cử trên địa bàn phường. ",
-    "keywords": [
-      "thành lập khu vực bỏ phiếu",
-      "Quyết định 96",
-      "18 khu vực bỏ phiếu",
-      "05 đơn vị bầu cử"
-    ],
-    "tags": [
-      "tổ chức",
-      "khu vực bỏ phiếu",
-      "Quyết định 96"
-    ],
-    "topic": "local_tamquan_polling"
-  },
-  {
     "id": "GL_CAT_CV910_CBCS",
     "question": "Cán bộ, chiến sĩ Công an thực hiện bỏ phiếu bầu cử tại đâu?",
     "questions": [
@@ -5702,5 +5680,203 @@
       "tạm giam"
     ],
     "topic": "police_election_gialai"
+  },
+  {
+    "id": "TQ_DVBC1_Q08",
+    "question": "Danh sách các ứng cử viên tại Đơn vị bầu cử số 1 phường Tam Quan.",
+    "questions": [
+      "Danh sách những người ứng cử tại đơn vị bầu cử số 1 gồm những ai?",
+      "danh sách thành viên đơn vị bầu cử số 1"
+    ],
+    "answer": "1. Lê Đức Anh: Đảng ủy viên, Phó Chủ tịch Ủy ban MTTQVN phường, Bí thư Đoàn TNCS Hồ Chí Minh phường Tam Quan.\n2. Nguyễn Văn Được: Chi hội trưởng Chi hội Cựu chiến binh Khu phố 2, phường Tam Quan.\n3. Trịnh Văn Mười: Đảng ủy viên, Phó Chủ tịch Thường trực Ủy ban MTTQVN phường, Chủ tịch Hội Nông dân phường Tam Quan.\n4. Phạm Thị Bích Phương: Giáo viên Trường mầm non Búp măng.\n5. La Long Quyết: Ủy viên Ban Thường vụ Đảng ủy, Phó Chủ tịch UBND phường Tam Quan.\n6. Huỳnh Thị Tường Vy: Ủy viên Ban Thường vụ Đảng ủy, Chủ nhiệm Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n7. Nguyễn Thị Hồng Yến: Đoàn viên Chi đoàn Khu phố 9, phường Tam Quan.",
+    "keywords": [
+      "danh sách 7 người",
+      "Đơn vị số 1",
+      "Tam Quan"
+    ],
+    "tags": [
+      "danh sách tổng hợp",
+      "Đơn vị bầu cử số 1"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC2_FullList",
+    "question": "Danh sách các ứng cử viên tại Đơn vị bầu cử số 2 phường Tam Quan.",
+    "questions": [
+      "Danh sách những người ứng cử tại đơn vị bầu cử số 2 gồm những ai?",
+      "danh sách thành viên đơn vị bầu cử số 2"
+    ],
+    "answer": "Danh sách chính thức 07 người ứng cử tại Đơn vị bầu cử số 2 bao gồm:\n1. Đặng Văn Á (Đặng Đức Á): Bí thư chi bộ Khu phố 3, phường Tam Quan.\n2. Phạm Thị Hạnh: Kinh doanh, buôn bán.\n3. Nguyễn Văn Hiếu: Trụ trì chùa An Thái.\n4. Nguyễn Thị Kim Nguyên: Chi hội trưởng Chi hội Phụ nữ Khu phố 5, phường Tam Quan.\n5. Nguyễn Thị Thanh Thúy: Ủy viên Ủy ban Kiểm tra Đảng ủy phường Tam Quan.\n6. Huỳnh Ngọc Trường: Ủy viên Ban Thường vụ Đảng ủy, Chỉ huy trưởng Ban Chỉ huy Quân sự phường Tam Quan.\n7. Trương Thị Thúy Ức: Phó Bí thư Đảng ủy, Chủ tịch UBND phường Tam Quan.",
+    "keywords": [
+      "danh sách 7 người",
+      "Đơn vị số 2",
+      "Tam Quan"
+    ],
+    "tags": [
+      "danh sách tổng hợp",
+      "Đơn vị số 2"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC3_FullList",
+    "question": "Danh sách các ứng cử viên tại Đơn vị bầu cử số 3 phường Tam Quan.",
+    "questions": [
+      "Danh sách những người ứng cử tại đơn vị bầu cử số 3 gồm những ai?",
+      "danh sách thành viên đơn vị bầu cử số 3"
+    ],
+    "answer": "Danh sách chính thức 07 người ứng cử tại Đơn vị bầu cử số 3 (bao gồm các Khu phố 6, 7 và 8) là:\n1. Lê Tấn Đảm: Trưởng Khu phố 8, phường Tam Quan.\n2. Võ Thanh Điệp: Ủy viên Ban Thường vụ Đảng ủy, Trưởng ban Ban xây dựng Đảng Đảng ủy phường Tam Quan.\n3. Võ Đông Giang: Đảng ủy viên, Trưởng phòng Văn hóa - Xã hội phường Tam Quan.\n4. Huỳnh Xuân Hùng: Trưởng Ban Công tác Mặt trận Khu phố 6, phường Tam Quan.\n5. Dương Thị Kim Ngân: Chi hội phó Chi hội Nông dân Khu phố 7, phường Tam Quan.\n6. Nguyễn Văn Trung: Chi hội phó Chi hội Nông dân Khu phố 8, phường Tam Quan.\n7. Lê Quốc Việt: Ủy viên Ban Thường vụ Đảng ủy, Trưởng Công an phường Tam Quan.",
+    "keywords": [
+      "danh sách 7 người",
+      "Đơn vị số 3",
+      "Tam Quan"
+    ],
+    "tags": [
+      "danh sách tổng hợp",
+      "Đơn vị số 3"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC4_FullList",
+    "question": "Danh sách các ứng cử viên tại Đơn vị bầu cử số 4 phường Tam Quan.",
+    "questions": [
+      "Danh sách những người ứng cử tại đơn vị bầu cử số 4 gồm những ai?",
+      "danh sách thành viên đơn vị bầu cử số 4"
+    ],
+    "answer": "Danh sách chính thức 07 người ứng cử tại Đơn vị bầu cử số 4 (bao gồm các Khu phố An Quý Bắc, An Quý Nam và An Sơn) là:\n1. Trần Ngọc Trâm Anh: Hội viên Chi hội Phụ nữ, Khu phố An Sơn, phường Tam Quan.\n2. Hoàng Thị Kim Giang: Đảng ủy viên, Phó Chủ tịch UBMTTQVN, Chủ tịch Hội LHPN phường Tam Quan.\n3. Nguyễn Thành Long: Trưởng khu phố An Quý Nam, phường Tam Quan.\n4. Nguyễn Hoàng Nhật: Đảng ủy viên, Phó Chủ tịch HĐND phường Tam Quan.\n5. Nguyễn Thị Nhung: Phó Bí thư Thường trực Đảng ủy phường Tam Quan.\n6. Đỗ Quốc Thống: Hội viên Chi hội Nông dân Khu phố An Quý Bắc, phường Tam Quan.\n7. Lê Thị Tuyết: Chi hội trưởng Chi hội Phụ nữ Khu phố An Quý Nam, phường Tam Quan.",
+    "keywords": [
+      "danh sách 7 người",
+      "Đơn vị số 4",
+      "Tam Quan"
+    ],
+    "tags": [
+      "danh sách tổng hợp",
+      "Đơn vị số 4"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC5_FullList",
+    "question": "Danh sách các ứng cử viên tại Đơn vị bầu cử số 5 phường Tam Quan.",
+    "questions": [
+      "Danh sách những người ứng cử tại đơn vị bầu cử số 5 gồm những ai?",
+      "danh sách thành viên đơn vị bầu cử số 5"
+    ],
+    "answer": "Danh sách chính thức 07 người ứng cử tại Đơn vị bầu cử số 5 (bao gồm các Khu phố Tân An, Hội An Tây, Tân Trung, Thành Sơn Tây, Thành Sơn và Hội An) là:\n1. Lê Minh Đức: Bí thư Đảng ủy, Chủ tịch HĐND phường Tam Quan.\n2. Cao Minh Khánh: Trưởng Ban Công tác Mặt trận Khu phố Hội An, phường Tam Quan.\n3. Đỗ Thị Phương Nhung: Phó Trưởng Ban Văn hóa - Xã hội HĐND phường Tam Quan.\n4. Trần Văn Quyết: Ủy viên Ban Thường vụ Đảng ủy, Chủ tịch UBMTTQVN phường Tam Quan.\n5. Nguyễn Thị Tế: Chi hội phó Chi hội Phụ nữ Khu phố Thành Sơn Tây, phường Tam Quan.\n6. Ngô Văn Thinh: Chi hội trưởng Chi hội Nông dân Khu phố Tân Trung, phường Tam Quan.\n7. Đào Văn Trung: Bí thư Chi bộ Khu phố Hội An Tây, phường Tam Quan.",
+    "keywords": [
+      "danh sách 7 người",
+      "Đơn vị số 5",
+      "Tam Quan"
+    ],
+    "tags": [
+      "danh sách tổng hợp",
+      "Đơn vị số 5"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC1_Geography",
+    "question": "Đơn vị bầu cử số 1 gồm những khu phố nào?",
+    "questions": [
+      "Khu phố nào thuộc đơn vị bầu cử số 1?",
+      "Địa bàn của đơn vị bầu cử số 1 phường Tam Quan gồm những khu dân cư nào?"
+    ],
+    "answer": "Đơn vị bầu cử số 1 phường Tam Quan bao gồm các **Khu phố 1, 2 và 9**.",
+    "keywords": [
+      "Đơn vị số 1",
+      "Khu phố 1",
+      "Khu phố 2",
+      "Khu phố 9"
+    ],
+    "tags": [
+      "địa bàn",
+      "Đơn vị số 1"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC2_Geography",
+    "question": "Đơn vị bầu cử số 2 gồm những khu phố nào?",
+    "questions": [
+      "Khu phố nào thuộc đơn vị bầu cử số 2?",
+      "Địa bàn của đơn vị bầu cử số 2 phường Tam Quan gồm những khu phố nào?"
+    ],
+    "answer": "Đơn vị bầu cử số 2 phường Tam Quan bao gồm các **Khu phố 3, 4 và 5**.",
+    "keywords": [
+      "Đơn vị số 2",
+      "Khu phố 3",
+      "Khu phố 4",
+      "Khu phố 5"
+    ],
+    "tags": [
+      "địa bàn",
+      "Đơn vị số 2"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC3_Geography",
+    "question": "Đơn vị bầu cử số 3 gồm những khu phố nào?",
+    "questions": [
+      "Khu phố nào thuộc đơn vị bầu cử số 3?",
+      "Địa bàn của đơn vị bầu cử số 3 phường Tam Quan gồm những khu phố nào?"
+    ],
+    "answer": "Đơn vị bầu cử số 3 phường Tam Quan bao gồm các **Khu phố 6, 7 và 8**.",
+    "keywords": [
+      "Đơn vị số 3",
+      "Khu phố 6",
+      "Khu phố 7",
+      "Khu phố 8"
+    ],
+    "tags": [
+      "địa bàn",
+      "Đơn vị số 3"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC4_Geography",
+    "question": "Đơn vị bầu cử số 4 những khu phố nào?",
+    "questions": [
+      "Khu phố nào thuộc đơn vị bầu cử số 4?",
+      "Địa bàn của đơn vị bầu cử số 4 phường Tam Quan gồm những khu phố nào?"
+    ],
+    "answer": "Đơn vị bầu cử số 4 phường Tam Quan bao gồm các **Khu phố An Quý Bắc, An Quý Nam và An Sơn**.",
+    "keywords": [
+      "Đơn vị số 4",
+      "An Quý Bắc",
+      "An Quý Nam",
+      "An Sơn"
+    ],
+    "tags": [
+      "địa bàn",
+      "Đơn vị số 4"
+    ],
+    "topic": "danh_sach_ung_cu"
+  },
+  {
+    "id": "TQ_DVBC5_Geography",
+    "question": "Đơn vị bầu cử số 5 gồm những khu phố nào?",
+    "questions": [
+      "Khu phố nào thuộc đơn vị bầu cử số 5?",
+      "Địa bàn của đơn vị bầu cử số 5 phường Tam Quan gồm những khu phố nào?"
+    ],
+    "answer": "Đơn vị bầu cử số 5 phường Tam Quan bao gồm các **Khu phố Tân An, Hội An Tây, Tân Trung, Thành Sơn Tây, Thành Sơn và Hội An**.",
+    "keywords": [
+      "Đơn vị số 5",
+      "Tân An",
+      "Hội An Tây",
+      "Tân Trung",
+      "Thành Sơn Tây",
+      "Thành Sơn",
+      "Hội An"
+    ],
+    "tags": [
+      "địa bàn",
+      "Đơn vị số 5"
+    ],
+    "topic": "danh_sach_ung_cu"
   }
 ]
