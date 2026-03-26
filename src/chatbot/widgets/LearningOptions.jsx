@@ -4,7 +4,7 @@ const LearningOptions = (props) => {
   const options = [
     { text: "Phường Tam Quan có tổng cộng bao nhiêu khu vực bỏ phiếu và tổng số cử tri là bao nhiêu?", handler: () => props.actionProvider.handleUserQuery("Phường Tam Quan có tổng cộng bao nhiêu khu vực bỏ phiếu và tổng số cử tri là bao nhiêu?") },
     { text: "Thế nào là bầu cử dân chủ, đúng pháp luật?", handler: () => props.actionProvider.handleUserQuery("Thế nào là bầu cử dân chủ, đúng pháp luật?") },
-    { text: "Ngày bầu cử và quy định?", handler: () => props.actionProvider.handleUserQuery("Ngày bầu cử") },
+    { text: "Phường Tam Quan có bao nhiêu người trúng cử đại biểu HĐND nhiệm kỳ 2026 – 2031 và danh sách cụ thể là gì?", handler: () => props.actionProvider.handleUserQuery("Phường Tam Quan có bao nhiêu người trúng cử đại biểu HĐND nhiệm kỳ 2026 – 2031 và danh sách cụ thể là gì?") },
     { text: "Phường Tam Quan có bao nhiêu người ứng cử đại biểu HĐND nhiệm kỳ 2026 – 2031 và danh sách cụ thể là gì?", handler: () => props.actionProvider.handleUserQuery("Phường Tam Quan có bao nhiêu người ứng cử đại biểu HĐND nhiệm kỳ 2026 – 2031 và danh sách cụ thể là gì?") },
   ];
   return (
