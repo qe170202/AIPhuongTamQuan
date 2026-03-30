@@ -128,7 +128,7 @@ const electionData = [
         role: 'Đảng ủy viên, Phó Chủ tịch Hội đồng nhân dân phường Tam Quan.',
         gender: 'male',
         initials: 'NHN',
-        image: '/assets/anhthanhvien/hoangnhat.jpg',
+        image: '/assets/anhthanhvien/hoangnhat1.jpg',
       },
       {
         name: 'Nguyễn Thị Nhung',
