@@ -2,6 +2,7 @@ import { useMemo, useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
 const navLinks = [
+  { href: 'elected', label: 'Trúng cử' },
   { href: 'top', label: 'AI Chat' },
   { href: 'about', label: 'Thông tin' },
   { href: 'work', label: 'Lịch Trình' },

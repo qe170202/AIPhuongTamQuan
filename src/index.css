@@ -479,3 +479,593 @@ body {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     animation: header-slide-up 0.25s ease-out;
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   ELECTED REPRESENTATIVES SECTION
+   ═══════════════════════════════════════════════════════════════════ */
+
+.elected-section {
+    position: relative;
+    padding: 5.5rem 0 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(165deg, #fafbfe 0%, #f0f4ff 30%, #e8f0fe 60%, #f5f0ff 100%);
+    scroll-margin-top: 5rem;
+}
+
+/* Background decorations */
+.elected-bg-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image:
+        radial-gradient(circle at 1px 1px, #1d4ed8 0.8px, transparent 0);
+    background-size: 32px 32px;
+    pointer-events: none;
+}
+
+.elected-bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    opacity: 0.12;
+}
+
+.elected-bg-glow-1 {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    top: -100px;
+    right: -150px;
+}
+
+.elected-bg-glow-2 {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    bottom: -80px;
+    left: -120px;
+}
+
+.elected-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ─── Section Header ─── */
+.elected-header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.elected-header-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.elected-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 1rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.08), rgba(139, 92, 246, 0.08));
+    border: 1px solid rgba(29, 78, 216, 0.15);
+    color: #1d4ed8;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.elected-header-badge-icon {
+    width: 1rem;
+    height: 1rem;
+    color: #f59e0b;
+}
+
+.elected-title {
+    font-family: 'Be Vietnam Pro', 'Outfit', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.elected-title-highlight {
+    background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.elected-subtitle {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 0.95rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.elected-title-divider {
+    width: 3rem;
+    height: 3px;
+    margin: 0.75rem auto 0;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+}
+
+/* ─── Filter Tabs ─── */
+.elected-tabs-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+.elected-tabs {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.elected-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.elected-tab {
+    padding: 0.45rem 1rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #64748b;
+    border-radius: 0.75rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.elected-tab:hover {
+    color: #1d4ed8;
+    background: rgba(29, 78, 216, 0.05);
+}
+
+.elected-tab-active {
+    color: white !important;
+    background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+/* ─── Unit Info Sub-Header ─── */
+.ep-unit-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1.25rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    animation: ep-unit-fade-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes ep-unit-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ep-unit-info-badge {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(29, 78, 216, 0.2);
+}
+
+.ep-unit-info-icon {
+    width: 1rem;
+    height: 1rem;
+    color: white;
+}
+
+.ep-unit-info-text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.ep-unit-info-title {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+.ep-unit-info-areas {
+    font-size: 0.7rem;
+    color: #64748b;
+    line-height: 1.3;
+}
+
+.ep-unit-info-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.75rem;
+    background: rgba(29, 78, 216, 0.06);
+    flex-shrink: 0;
+}
+
+.ep-unit-info-count-num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #1d4ed8;
+    line-height: 1;
+}
+
+.ep-unit-info-count-label {
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ─── Profiles Grid ─── */
+.ep-profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+/* ─── Profile Card (Vertical, Premium) ─── */
+.ep-profile-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem 1.25rem;
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    cursor: default;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: ep-card-appear 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: var(--ep-card-delay, 0ms);
+}
+
+@keyframes ep-card-appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.ep-profile-card-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.ep-profile-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(29, 78, 216, 0.12), 0 8px 20px rgba(0, 0, 0, 0.06);
+    border-color: rgba(29, 78, 216, 0.12);
+}
+
+/* ─── Auto-highlight (programmatic hover) ─── */
+.ep-profile-card-highlight {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(29, 78, 216, 0.12), 0 8px 20px rgba(0, 0, 0, 0.06);
+    border-color: rgba(29, 78, 216, 0.12);
+}
+
+.ep-profile-card-highlight .ep-profile-avatar {
+    transform: scale(1.15);
+}
+
+.ep-profile-card-highlight .ep-profile-photo {
+    transform: scale(1.08);
+}
+
+.ep-profile-card-highlight .ep-profile-name {
+    color: #1d4ed8;
+}
+
+.ep-profile-card-highlight .ep-profile-divider {
+    width: 4rem;
+}
+
+.ep-profile-card-highlight .ep-profile-shine {
+    animation: ep-shine-sweep 0.8s ease forwards;
+}
+
+@keyframes ep-shine-sweep {
+    from { left: -100%; }
+    to { left: 150%; }
+}
+
+/* Top gradient accent bar */
+.ep-profile-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+/* ─── Avatar ─── */
+.ep-profile-avatar-wrap {
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+.ep-profile-avatar {
+    width: 5.5rem;
+    height: 6.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+}
+
+/* Photo avatar */
+.ep-profile-avatar-img {
+    background: white;
+    border: 2.5px solid rgba(29, 78, 216, 0.15);
+}
+
+.ep-profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 0.5rem;
+    transition: transform 0.4s ease;
+}
+
+.ep-profile-card:hover .ep-profile-photo {
+    transform: scale(1.08);
+}
+
+.ep-profile-card:hover .ep-profile-avatar {
+    transform: scale(1.15);
+}
+
+.ep-profile-avatar-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.03em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Gender badge */
+.ep-profile-gender {
+    position: absolute;
+    bottom: 0;
+    right: -3px;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Name */
+.ep-profile-name {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    margin: 0 0 0.4rem;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.ep-profile-card:hover .ep-profile-name {
+    color: #1d4ed8;
+}
+
+/* Divider */
+.ep-profile-divider {
+    width: 2rem;
+    height: 2px;
+    border-radius: 9999px;
+    margin-bottom: 0.4rem;
+    transition: width 0.3s ease;
+}
+
+.ep-profile-card:hover .ep-profile-divider {
+    width: 4rem;
+}
+
+/* Role */
+.ep-profile-role {
+    font-size: 0.73rem;
+    color: #64748b;
+    text-align: center;
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* Shine effect */
+.ep-profile-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.7s ease;
+    pointer-events: none;
+}
+
+.ep-profile-card:hover .ep-profile-shine {
+    left: 150%;
+}
+
+/* ═══ Responsive ═══ */
+@media (max-width: 1024px) {
+    .ep-profiles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .elected-section {
+        padding: 3rem 0 4rem;
+    }
+
+    .ep-profiles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.875rem;
+    }
+
+    .ep-profile-card {
+        padding: 2rem 1rem 1.5rem;
+        border-radius: 1.25rem;
+    }
+
+    .ep-profile-avatar {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .ep-profile-avatar-text {
+        font-size: 0.95rem;
+    }
+
+    .ep-profile-name {
+        font-size: 0.88rem;
+    }
+
+    .ep-profile-role {
+        font-size: 0.72rem;
+    }
+
+    .elected-tabs {
+        gap: 0.25rem;
+        padding: 0.25rem;
+    }
+
+    .elected-tab {
+        padding: 0.45rem 0.75rem;
+        font-size: 0.72rem;
+    }
+
+    .ep-unit-info {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0.875rem 1rem;
+    }
+
+    .ep-unit-info-count {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .elected-container {
+        padding: 0 1rem;
+    }
+
+    .elected-title {
+        font-size: 1.5rem;
+    }
+
+    .ep-profiles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .ep-profile-card {
+        padding: 1.75rem 0.75rem 1.25rem;
+        border-radius: 1rem;
+    }
+
+    .ep-profile-avatar {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .ep-profile-avatar-text {
+        font-size: 0.8rem;
+    }
+
+    .ep-profile-gender {
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 0.55rem;
+    }
+
+    .ep-profile-name {
+        font-size: 0.82rem;
+    }
+
+    .ep-profile-role {
+        font-size: 0.68rem;
+        line-height: 1.45;
+    }
+}
